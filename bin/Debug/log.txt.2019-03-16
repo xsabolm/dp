@@ -1,0 +1,14 @@
+2019-03-16 11:29:25,440 [1] ERROR Error during connecting to databaseSystem.Data.SqlServerCe.SqlCeException (0x80004005): The database file cannot be found. Check the path to the database. [ Data Source = C:\Users\sabol\source\repos\DP_WpfApp\DP_WpfApp\bin\DebugstubaGreenTeamDataBase.sdf ]
+   at System.Data.SqlServerCe.SqlCeConnection.Open(Boolean silent)
+   at System.Data.SqlServerCe.SqlCeConnection.Open()
+   at connection.DataBaseServices.openConnection() in C:\Users\sabol\source\repos\DP_WpfApp\DP_WpfApp\DataBaseServices.cs:line 24
+2019-03-16 11:30:52,848 [1] INFO  Connected to database, databse path: C:\Users\sabol\source\repos\DP_WpfApp\DP_WpfApp\bin\Debug\stubaGreenTeamDataBase.sdf
+2019-03-16 11:30:53,618 [1] INFO  Select data from database, QUERRY: SELECT * FROM meranie;, count of rows in result: 2
+2019-03-16 15:31:57,099 [1] INFO  Connected to database, databse path: C:\Users\sabol\source\repos\DP_WpfApp\DP_WpfApp\bin\Debug\stubaGreenTeamDataBase.sdf
+2019-03-16 15:31:57,544 [1] INFO  Select data from database, QUERRY: SELECT * FROM meranie;, count of rows in result: 2
+2019-03-16 17:20:50,074 [1] INFO  Connected to database, databse path: C:\Users\sabol\source\repos\DP_WpfApp\DP_WpfApp\bin\Debug\stubaGreenTeamDataBase.sdf
+2019-03-16 17:20:51,237 [1] INFO  Select data from database, QUERRY: SELECT * FROM meranie;, count of rows in result: 2
+2019-03-16 17:23:25,200 [1] INFO  Connected to database, databse path: C:\Users\sabol\source\repos\DP_WpfApp\DP_WpfApp\bin\Debug\stubaGreenTeamDataBase.sdf
+2019-03-16 17:23:26,516 [1] INFO  Select data from database, QUERRY: SELECT * FROM meranie;, count of rows in result: 2
+2019-03-16 18:02:03,648 [1] INFO  Connected to database, databse path: C:\Users\sabol\source\repos\DP_WpfApp\DP_WpfApp\bin\Debug\stubaGreenTeamDataBase.sdf
+2019-03-16 18:02:05,077 [1] INFO  Select data from database, QUERRY: SELECT * FROM meranie;, count of rows in result: 2

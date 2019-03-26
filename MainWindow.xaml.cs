@@ -1,6 +1,8 @@
-﻿using Microsoft.Win32;
+﻿using connection;
+using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -24,21 +26,9 @@ namespace DP_WpfApp
     public partial class MainWindow : Window
     {
         public MainWindow()
-        {
+        {          
             InitializeComponent();
         }
 
-        private void btnOpenFile_Click(object sender, RoutedEventArgs e)
-        {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.ShowDialog();
-            txtBoxOpenFile.Text = openFileDialog.FileName;
-        }
-
-        private void btnACKOpenFile_Click(object sender, RoutedEventArgs e)
-        {
-            string contents = File.ReadAllText(txtBoxOpenFile.Text);
-            Console.Write(contents);
-        }
     }
 }

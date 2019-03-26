@@ -13,5 +13,7 @@ namespace DP_WpfApp
     /// </summary>
     public partial class App : Application
     {
+        private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+
     }
 }

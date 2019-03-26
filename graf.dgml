@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DirectedGraph GraphDirection="LeftToRight" xmlns="http://schemas.microsoft.com/vs/2009/dgml">
+  <Nodes>
+    <Node Id="Database" Label="stubaGreenTeamDataBase.sdf" Category="Database" Group="Expanded" />
+    <Node Id="disciplina" Label="disciplina" Category="Table" Group="Collapsed" />
+    <Node Id="disciplina_Id" Label="Id" Category="Field Primary" Description="int" />
+    <Node Id="disciplina_typ_discipliny" Label="typ_discipliny" Category="Field" Description="nvarchar(100)" />
+    <Node Id="disciplina_Id_merania" Label="Id_merania" Category="Field Foreign" Description="int" />
+    <Node Id="meranie" Label="meranie" Category="Table" Group="Collapsed" />
+    <Node Id="meranie_Id" Label="Id" Category="Field Primary" Description="int" />
+    <Node Id="meranie_cas_zacatia" Label="cas_zacatia" Category="Field" Description="datetime" />
+    <Node Id="meranie_typ" Label="typ" Category="Field" Description="bit" />
+    <Node Id="meranie_detaily" Label="detaily" Category="Field" Description="nchar(1000)" />
+    <Node Id="meranie_lokacia" Label="lokacia" Category="Field" Description="ntext" />
+    <Node Id="okruh" Label="okruh" Category="Table" Group="Collapsed" />
+    <Node Id="okruh_Id" Label="Id" Category="Field Primary" Description="int" />
+    <Node Id="okruh_Id_disciplina" Label="Id_disciplina" Category="Field Foreign" Description="int" />
+    <Node Id="okruh_cas_okruhu" Label="cas_okruhu" Category="Field" Description="bigint" />
+    <Node Id="sprava" Label="sprava" Category="Table" Group="Collapsed" />
+    <Node Id="sprava_Id" Label="Id" Category="Field Primary" Description="int" />
+    <Node Id="sprava_Id_disciplina" Label="Id_disciplina" Category="Field Foreign" Description="int" />
+    <Node Id="sprava_Id_okruh" Label="Id_okruh" Category="Field Foreign" Description="int" />
+    <Node Id="sprava_cas_prijatia_spravy" Label="cas_prijatia_spravy" Category="Field" Description="datetime" />
+  </Nodes>
+  <Links>
+    <Link Source="Database" Target="disciplina" Category="Contains" />
+    <Link Source="disciplina" Target="disciplina_Id" Category="Contains" />
+    <Link Source="disciplina" Target="disciplina_typ_discipliny" Category="Contains" />
+    <Link Source="disciplina" Target="disciplina_Id_merania" Category="Contains" />
+    <Link Source="disciplina_Id_merania" Target="meranie_Id" Label="Id_merania" Category="Foreign Key" />
+    <Link Source="Database" Target="meranie" Category="Contains" />
+    <Link Source="meranie" Target="meranie_Id" Category="Contains" />
+    <Link Source="meranie" Target="meranie_cas_zacatia" Category="Contains" />
+    <Link Source="meranie" Target="meranie_typ" Category="Contains" />
+    <Link Source="meranie" Target="meranie_detaily" Category="Contains" />
+    <Link Source="meranie" Target="meranie_lokacia" Category="Contains" />
+    <Link Source="Database" Target="okruh" Category="Contains" />
+    <Link Source="okruh" Target="okruh_Id" Category="Contains" />
+    <Link Source="okruh" Target="okruh_Id_disciplina" Category="Contains" />
+    <Link Source="okruh" Target="okruh_cas_okruhu" Category="Contains" />
+    <Link Source="okruh_Id_disciplina" Target="disciplina_Id" Label="Id_disciplina" Category="Foreign Key" />
+    <Link Source="Database" Target="sprava" Category="Contains" />
+    <Link Source="sprava" Target="sprava_Id" Category="Contains" />
+    <Link Source="sprava" Target="sprava_Id_disciplina" Category="Contains" />
+    <Link Source="sprava" Target="sprava_Id_okruh" Category="Contains" />
+    <Link Source="sprava" Target="sprava_cas_prijatia_spravy" Category="Contains" />
+    <Link Source="sprava_Id_disciplina" Target="disciplina_Id" Label="Id_disiciplina" Category="Foreign Key" />
+    <Link Source="sprava_Id_okruh" Target="okruh_Id" Label="Id_okruh" Category="Foreign Key" />
+  </Links>
+  <Styles>
+    <Style TargetType="Node" GroupLabel="Table" ValueLabel="True">
+      <Condition Expression="HasCategory('Table')" />
+      <Setter Property="Background" Value="#FFC0C0C0" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Schema" ValueLabel="True">
+      <Condition Expression="HasCategory('Schema')" />
+      <Setter Property="Background" Value="#FF7F9169" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Field Primary" ValueLabel="True">
+      <Condition Expression="HasCategory('Field Primary')" />
+      <Setter Property="Background" Value="#FF008000" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Field Optional" ValueLabel="True">
+      <Condition Expression="HasCategory('Field Optional')" />
+      <Setter Property="Background" Value="#FF808040" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Field Foreign" ValueLabel="True">
+      <Condition Expression="HasCategory('Field Foreign')" />
+      <Setter Property="Background" Value="#FF8080FF" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Field" ValueLabel="True">
+      <Condition Expression="HasCategory('Field')" />
+      <Setter Property="Background" Value="#FFC0A000" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Database" ValueLabel="True">
+      <Condition Expression="HasCategory('Database')" />
+      <Setter Property="Background" Value="#FFFFFFFF" />
+    </Style>
+  </Styles>
+</DirectedGraph>

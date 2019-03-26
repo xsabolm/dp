@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\sabol\source\repos\DP_WpfApp\DP_WpfApp\App.xaml
-2-212856448
+6-694177281
 
-8157797674
-19266091312
-BasicGraph.xaml;MainWindow.xaml;
+26-945090807
+371244844776
+BasicGraph.xaml;ConnectionControl.xaml;LapControl.xaml;LogControl.xaml;MainWindow.xaml;TableControl.xaml;
 
 False
 

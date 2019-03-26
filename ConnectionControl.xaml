@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="connection.ConnectionControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DP_WpfApp"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <TabControl Name="connection" Background="#FFBBFDC8" >
+            <TabItem Header="Live data"></TabItem>
+            <TabItem Header="Historic Data">
+                <Canvas>
+                    <Label Content="Vyber Meranie:" Canvas.Left="20" />
+                    <Button Canvas.Left="200" Canvas.Top="30" Width="50" x:Name="btnConnectToDatabase" Content="OK" Click="btnConnectToDataBase_Click"/>
+                    <ComboBox Canvas.Left="20" Canvas.Top="30" Width="150" Name="comboBoxMeranie" SelectionChanged="comboBoxMeranie_SelectionChanged"/>
+                    <TextBox Name="textView" Text="{Binding Path=DetailsInformation, Mode=OneWay}" Canvas.Left="20" Canvas.Top="100" Width="300" Height="300" TextWrapping="Wrap" AcceptsReturn="True" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto"/>
+     
+                    <TextBox/>
+                </Canvas>
+            </TabItem>
+            <TabItem Header="File Data">
+                <Canvas>
+                    <Button Canvas.Left="20" Canvas.Top="10" x:Name="btnOpenFile" Content="Open File" Click="btnOpenFile_Click"/>
+                    <TextBox Canvas.Left="20" Canvas.Top="40" Width="200" x:Name="txtBoxOpenFile" ></TextBox>
+                    <Button Canvas.Left="20" Canvas.Top="70" x:Name="btnACKOpenFile" Content="OK" Click="btnACKOpenFile_Click"/>
+                </Canvas>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</UserControl>

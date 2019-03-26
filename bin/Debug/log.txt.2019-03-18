@@ -1,0 +1,6 @@
+2019-03-18 09:31:49,405 [1] INFO  Connected to database, databse path: C:\Users\sabol\source\repos\DP_WpfApp\DP_WpfApp\bin\Debug\stubaGreenTeamDataBase.sdf
+2019-03-18 09:31:49,508 [1] INFO  Select data from database, QUERRY: SELECT * FROM meranie;, count of rows in result: 2
+2019-03-18 09:32:37,591 [1] INFO  Connected to database, databse path: C:\Users\sabol\source\repos\DP_WpfApp\DP_WpfApp\bin\Debug\stubaGreenTeamDataBase.sdf
+2019-03-18 09:32:37,758 [1] INFO  Select data from database, QUERRY: SELECT * FROM meranie;, count of rows in result: 2
+2019-03-18 09:33:38,181 [1] INFO  Connected to database, databse path: C:\Users\sabol\source\repos\DP_WpfApp\DP_WpfApp\bin\Debug\stubaGreenTeamDataBase.sdf
+2019-03-18 09:33:38,439 [1] INFO  Select data from database, QUERRY: SELECT * FROM meranie;, count of rows in result: 2
