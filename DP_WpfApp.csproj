@@ -114,15 +114,21 @@
     <Compile Include="BasicGraph.xaml.cs">
       <DependentUpon>BasicGraph.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ComboboxValue.cs" />
     <Compile Include="ConnectionControl.xaml.cs">
       <DependentUpon>ConnectionControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="DatabaseQueries.cs" />
     <Compile Include="DataBaseServices.cs" />
     <Compile Include="Disciplina.cs" />
+    <Compile Include="DisciplinaControl.xaml.cs">
+      <DependentUpon>DisciplinaControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="LapControl.xaml.cs">
       <DependentUpon>LapControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="LiveConnection.cs" />
+    <Compile Include="LiveConnectionView.cs" />
     <Compile Include="LoadModelFromDataBase.cs" />
     <Compile Include="LogControl.xaml.cs">
       <DependentUpon>LogControl.xaml</DependentUpon>
@@ -130,6 +136,7 @@
     <Compile Include="Meranie.cs" />
     <Compile Include="Model.cs" />
     <Compile Include="Observer.cs" />
+    <Compile Include="ObserverDisciplina.cs" />
     <Compile Include="ObserverMeranie.cs" />
     <Compile Include="Okruh.cs" />
     <Compile Include="SerialPortCommunication.cs" />
@@ -138,6 +145,7 @@
     <Compile Include="TableControl.xaml.cs">
       <DependentUpon>TableControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ViewDisciplina.cs" />
     <Compile Include="ViewMeranie.cs" />
     <Compile Include="ViewModel.cs" />
     <Page Include="BasicGraph.xaml">
@@ -145,6 +153,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ConnectionControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DisciplinaControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

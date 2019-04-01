@@ -1,0 +1,34 @@
+﻿<UserControl x:Class="DP_WpfApp.DisciplinaControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DP_WpfApp"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Canvas>
+        <Button Name="btn_startDisciplin" Content="Start Disciplin" Canvas.Left="10"  Canvas.Top="10" Height="25" Width="100" Visibility="{Binding Path=IsLiveData , Mode=OneWay}"></Button>
+        <Button Name="btn_endDisciplin" Content="End Disciplin" Canvas.Left="10" Canvas.Top="50" Height="25" Width="100" Visibility="{Binding Path=IsLiveData, Mode=OneWay}"></Button>
+        <ComboBox 
+            Name="combobox_discipliny" 
+            Canvas.Left="10" Canvas.Top="10" Height="25" Width="150" 
+            ItemsSource="{Binding Path=comboboxListDiscipliny}"
+            DisplayMemberPath="Label"
+            SelectedValue="{Binding CurrentSelection}" 
+            SelectionChanged="OnSelectionChanged"
+            Visibility="{Binding Path=IsHistoricData}">
+        </ComboBox>
+        <Label Name="id_label" Visibility="{Binding Path=IsHistoricData}"
+               Canvas.Left="200" Canvas.Top="10" Height="25" Width="100"
+               Content="id_label">
+        </Label>
+        <Label Name="name_label" Visibility="{Binding Path=IsHistoricData}"
+               Canvas.Left="200" Canvas.Top="35" Height="25" Width="150"
+               Content="name_label">
+        </Label>
+        <Label Name="typ_label" Visibility="{Binding Path=IsHistoricData}"
+               Canvas.Left="200" Canvas.Top="60" Height="25" Width="150"
+               Content="typ_label">
+        </Label>
+    </Canvas>
+</UserControl>

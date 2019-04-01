@@ -49,7 +49,7 @@ namespace DP_WpfApp
             foreach (DataRow row in table.Rows)
             {
                 int idDisciplina = Convert.ToInt32(row[DatabaseUtils.ID]);
-                listDisciplin.Add(new Disciplina(idDisciplina, idMeranie, DatabaseUtils.DISCIPLINY_TYP, getListOkruhov(idDisciplina)));
+                listDisciplin.Add(new Disciplina(idDisciplina, idMeranie, DatabaseUtils.DISCIPLINY_TYP, row[DatabaseUtils.DISCIPLINA_NAME].ToString(), getListOkruhov(idDisciplina)));
             }
 
             return listDisciplin;

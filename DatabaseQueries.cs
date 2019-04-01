@@ -18,6 +18,7 @@ namespace connection
         public static String ID = "Id";
         public static String DISCIPLINY_TYP = "typ_discipliny";
         public static String ID_MERANIA = "Id_merania";
+        public static String DISCIPLINA_NAME = "disciplina_name";
 
         public static String OKRUH_CAS = "cas_okruhu";
 
@@ -29,6 +30,7 @@ namespace connection
         public static String SELECT_ALL_DISCIPLINA = "SELECT * FROM disciplina ;";
         public static String SELECT_ALL_OKRUH = "SELECT * FROM okruh;";
         public static String SELECT_ALL_SPRAVA = "SELECT * FROM sprava;";
+        
 
         internal static String selectSpravyByDisciplina(int idDisciplina)
         {

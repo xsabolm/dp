@@ -19,16 +19,14 @@
         <TabControl>
             <TabItem Header="Telemetry view">
                 <DockPanel>
-                    <DockPanel Name="menu" DockPanel.Dock="Top" Height="50">
+                    <DockPanel Name="menu" DockPanel.Dock="Top" Height="100">
                         <DockPanel.Background>
                             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                                 <GradientStop Color="Black" Offset="0"/>
                                 <GradientStop Color="#8986F57A" Offset="1"/>
                             </LinearGradientBrush>
-                            
                         </DockPanel.Background>
-                        <Button Name="btn_startDisciplin" Content="Start Disciplin" HorizontalAlignment="Left" Height="25" Width="100"></Button>
-                        <Button Name="btn_endDisciplin" Content="End Disciplin" HorizontalAlignment="Center" Height="25" Width="100"></Button>
+                        <local:DisciplinaControl/>
                     </DockPanel>
                     <DockPanel >
                         <Grid>

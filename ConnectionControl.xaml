@@ -8,15 +8,27 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
         <TabControl Name="connection" Background="#FFBBFDC8" >
-            <TabItem Header="Live data"></TabItem>
+            <TabItem Header="Live data">
+                <Canvas>
+                    <Button Canvas.Left="200" Canvas.Top="30" Width="100" x:Name="btnLiveConnection" Content="Start Live Data" Click="btnLiveConnection_Click"/>
+                    <ComboBox Name="comboBoxPorts"
+                              Canvas.Left="20" Canvas.Top="30" Width="150"
+                              ItemsSource="{Binding Path=comboboxListPorts}"
+                              DisplayMemberPath="Label"
+                              SelectedValue="{Binding CurrentSelectionPort}"/>
+                </Canvas>
+            </TabItem>
             <TabItem Header="Historic Data">
                 <Canvas>
                     <Label Content="Vyber Meranie:" Canvas.Left="20" />
                     <Button Canvas.Left="200" Canvas.Top="30" Width="50" x:Name="btnConnectToDatabase" Content="OK" Click="btnConnectToDataBase_Click"/>
-                    <ComboBox Canvas.Left="20" Canvas.Top="30" Width="150" Name="comboBoxMeranie" SelectionChanged="comboBoxMeranie_SelectionChanged"/>
-                    <TextBox Name="textView" Text="{Binding Path=DetailsInformation, Mode=OneWay}" Canvas.Left="20" Canvas.Top="100" Width="300" Height="300" TextWrapping="Wrap" AcceptsReturn="True" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto"/>
-     
-                    <TextBox/>
+                    <ComboBox Name="comboBoxMeranie"
+                              Canvas.Left="20" Canvas.Top="30" Width="150"
+                              ItemsSource="{Binding Path=comboboxListMeranie}"
+                              DisplayMemberPath="Label"
+                              SelectedValue="{Binding CurrentSelectionFromCombobox}" 
+                              SelectionChanged="comboBoxMeranie_SelectionChanged"/>
+                    <TextBox Name="textView" Text="{Binding Path=DetailsInformation, Mode=OneWay}" Canvas.Left="20" Canvas.Top="100" Width="300" Height="300"  IsReadOnly="True" TextWrapping="Wrap" AcceptsReturn="True" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto"/>
                 </Canvas>
             </TabItem>
             <TabItem Header="File Data">

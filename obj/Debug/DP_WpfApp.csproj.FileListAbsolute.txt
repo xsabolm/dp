@@ -52,3 +52,5 @@ C:\Users\sabol\source\repos\DP_WpfApp\DP_WpfApp\bin\Debug\System.Data.SqlServerC
 C:\Users\sabol\source\repos\DP_WpfApp\DP_WpfApp\bin\Debug\EntityFramework.xml
 C:\Users\sabol\source\repos\DP_WpfApp\DP_WpfApp\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\sabol\source\repos\DP_WpfApp\DP_WpfApp\bin\Debug\EntityFramework.SqlServerCompact.xml
+C:\Users\sabol\source\repos\DP_WpfApp\DP_WpfApp\obj\Debug\DisciplinaControl.g.cs
+C:\Users\sabol\source\repos\DP_WpfApp\DP_WpfApp\obj\Debug\DisciplinaControl.baml

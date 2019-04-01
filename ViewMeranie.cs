@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,15 +14,16 @@ namespace DP_WpfApp
 
         public ViewMeranie(List<Meranie> allMerania)
         {
-            setListsFroCombobox(allMerania);
+            allMerania.ForEach((item => comboboxListMeranie.Add(new ComboboxValue { ID = item.ID, Label = item.ID + " /" + item.CasMerania })));
         }
 
+        private String detailsInformation = "";
 
-        private String detailsInformation = "TEST";
-        public List<String> comboboxListEntries;
-        public List<int> comboboxListIds;
+        public ObservableCollection<ComboboxValue> comboboxListMeranie { get; } = new ObservableCollection<ComboboxValue>();
+        private ComboboxValue currentSelectionFromCombobox;
 
-        public void viewNewMeranie(Meranie meranie) {
+        public void viewNewMeranie(Meranie meranie)
+        {
             StringBuilder builder = new StringBuilder();
             builder.Append("Meranie ID: " + meranie.ID);
             builder.AppendLine();
@@ -32,20 +34,6 @@ namespace DP_WpfApp
             builder.Append("Pocet disciplin: " + meranie.listDisciplin.Count);
 
             DetailsInformation = builder.ToString();
-            log.Info("Change textbox text");
-
-        }
-
-        public void setListsFroCombobox(List<Meranie> allMerania)
-        {
-            comboboxListEntries = new List<String>();
-            comboboxListIds = new List<int>();
-
-            foreach (Meranie m in allMerania)
-            {
-                comboboxListEntries.Add("Meranie ID:" + m.ID + "/ Datum:" + m.CasMerania);
-                comboboxListIds.Add(m.ID);
-            }
         }
 
         public string DetailsInformation
@@ -56,8 +44,18 @@ namespace DP_WpfApp
                 if (detailsInformation != value)
                 {
                     detailsInformation = value;
-                    OnPropertyChanged("DetailsInformation");
+                    OnPropertyChanged(nameof(DetailsInformation));
                 }
+            }
+        }
+
+        public ComboboxValue CurrentSelectionFromCombobox
+        {
+            get { return currentSelectionFromCombobox; }
+            set
+            {
+                currentSelectionFromCombobox = value;
+                OnPropertyChanged(nameof(CurrentSelectionFromCombobox));
             }
         }
     }

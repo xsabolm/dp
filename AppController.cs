@@ -14,44 +14,64 @@ namespace DP_WpfApp
         public static AppController get { get { return instance.Value; } }
 
         public ViewMeranie ViewMeranie { get => viewMeranie; set => viewMeranie = value; }
+        public ViewDisciplina ViewDisciplina { get => viewDisciplina; set => viewDisciplina = value; }
+
+        public bool IsLiveData { get => isLiveData; set => isLiveData = value; }
+        internal ViewLiveConnection ViewLiveConnection { get => viewLiveConnection; set => viewLiveConnection = value; }
+        public LiveConnection LiveConnection { get => liveConnection; set => liveConnection = value; }
 
         Model model;
-        Boolean isLiveData = false;
-        ObserverMeranie observerMeranie;
+        Boolean isLiveData = true;
+        //ObserverMeranie observerMeranie;
+        List<ObserverDisciplina> observerListDisciplina = new List<ObserverDisciplina>();
         ViewMeranie viewMeranie;
+        ViewDisciplina viewDisciplina;
+        ViewLiveConnection viewLiveConnection;
+        LiveConnection liveConnection;
 
         private AppController()
         {
-            this.model = new Model();
-            this.viewMeranie = new ViewMeranie(LoadModelFromDataBase.loadMernia());
+            model = new Model();
+            ViewMeranie = new ViewMeranie(LoadModelFromDataBase.loadMernia());
+            ViewDisciplina = new ViewDisciplina();
+            ViewLiveConnection = new ViewLiveConnection();
         }
 
         public void loadModel(int idMeranie, bool isLiveData)
         {
-            this.isLiveData = isLiveData;
-
-            if (isLiveData)
-            {
-                log.Info("create liveModel");
-                model.loadData();
-            }
-            else
-            {
-                log.Info("load historyModel");
-                model.loadData(idMeranie);
-
-            }
-
+            IsLiveData = isLiveData;
+            ViewDisciplina.setView(IsLiveData);
+            log.Info("load historyModel");
+            model.loadData(idMeranie);
             setObservers();
+        }
+
+        public void loadModel(bool isLiveData)
+        {
+            IsLiveData = isLiveData;
+            ViewDisciplina.setView(IsLiveData);
+            log.Info("create liveModel");
+            model.loadData();
+            //setObservers();
         }
 
         private void setObservers()
         {
-            observerMeranie = new ObserverMeranie(viewMeranie);
-            observerMeranie.Meranie = model.Meranie;
-            model.Meranie.Attach(observerMeranie);
+            model.Meranie.Attach(new ObserverMeranie(viewMeranie, model.Meranie));
             model.Meranie.Notify();
-            model.Meranie.Notify();
+
+            foreach (Disciplina disciplina in model.Meranie.listDisciplin)
+            {
+                disciplina.Attach(new ObserverDisciplina(ViewDisciplina, disciplina));
+                disciplina.Notify();
+            }
+        }
+
+        internal void setLiveConnection(String label)
+        {
+            log.Info("Port selected:"+label);
+            LiveConnection = new LiveConnection(label);
+            //AppController.get.loadModel(true);
         }
     }
 }

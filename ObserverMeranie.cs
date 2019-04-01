@@ -8,28 +8,24 @@ namespace DP_WpfApp
 {
     class ObserverMeranie : Observer
     {
-        private String observerID;
         private Boolean observerIsSet;
         private Meranie meranie;
         ViewMeranie view;
 
-        public ObserverMeranie(ViewMeranie view)
+        public ObserverMeranie(ViewMeranie view, Meranie m)
         {
-            this.view = view;
-            ObserverID = "Meranie Observer";
+            View = view;
+            Meranie = m;
             ObserverState = true;
         }
 
-        public string ObserverID { get => observerID; set => observerID = value; }
         public Boolean ObserverState { get => observerIsSet; set => observerIsSet = value; }
+        public ViewMeranie View { get => view; set => view = value; }
         internal Meranie Meranie { get => meranie; set => meranie = value; }
 
         public override void Update()
         {
-            if (ObserverState)
-            {
-                view.viewNewMeranie(Meranie);
-            }
+            if (ObserverState) { view.viewNewMeranie(Meranie); }
         }
 
     }

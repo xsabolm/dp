@@ -1,0 +1,48 @@
+2019-03-30 13:55:19,582 [1] INFO  load historyModel
+2019-03-30 13:55:19,787 [1] INFO  Observer was notified
+2019-03-30 13:55:19,790 [1] INFO  Observer was notified
+2019-03-30 13:55:19,792 [1] INFO  Observer was notified
+2019-03-30 13:55:19,793 [1] INFO  Observer was notified
+2019-03-30 13:55:22,032 [1] INFO  Selected value: 2
+2019-03-30 13:55:27,526 [1] INFO  Selected value: 4
+2019-03-30 13:55:31,390 [1] INFO  load historyModel
+2019-03-30 13:55:31,514 [1] INFO  Observer was notified
+2019-03-30 13:55:31,515 [1] INFO  Observer was notified
+2019-03-30 13:55:31,517 [1] INFO  Observer was notified
+2019-03-30 13:55:31,520 [1] INFO  Observer was notified
+2019-03-30 13:55:33,950 [1] INFO  Selected value: 2
+2019-03-30 13:55:37,885 [1] INFO  load historyModel
+2019-03-30 13:55:37,966 [1] INFO  Observer was notified
+2019-03-30 13:55:37,968 [1] INFO  Observer was notified
+2019-03-30 13:55:39,902 [1] INFO  Selected value: 3
+2019-03-30 13:58:14,317 [1] INFO  load historyModel
+2019-03-30 13:58:14,493 [1] INFO  Observer was notified
+2019-03-30 13:58:14,498 [1] INFO  Observer was notified
+2019-03-30 13:58:14,501 [1] INFO  Observer was notified
+2019-03-30 13:58:14,503 [1] INFO  Observer was notified
+2019-03-30 13:58:16,436 [1] INFO  Selected value: 1
+2019-03-30 13:58:19,847 [1] INFO  load historyModel
+2019-03-30 13:58:19,924 [1] INFO  Observer was notified
+2019-03-30 13:58:19,926 [1] INFO  Observer was notified
+2019-03-30 13:58:21,707 [1] INFO  Selected value: 3
+2019-03-30 14:03:00,756 [1] INFO  create liveModel
+2019-03-30 14:03:51,675 [1] INFO  create liveModel
+2019-03-30 14:03:51,726 [1] INFO  Port name: COM5
+2019-03-30 15:01:34,129 [1] INFO  create liveModel
+2019-03-30 15:01:34,177 [1] INFO  Port name: COM5
+2019-03-30 15:11:26,440 [1] INFO  Port selected:COM5
+2019-03-30 15:11:26,465 [1] INFO  create liveModel
+2019-03-30 15:28:26,632 [1] INFO  load historyModel
+2019-03-30 15:28:26,805 [1] INFO  Observer was notified
+2019-03-30 15:28:26,809 [1] INFO  Observer was notified
+2019-03-30 15:28:26,811 [1] INFO  Observer was notified
+2019-03-30 15:28:26,812 [1] INFO  Observer was notified
+2019-03-30 15:28:29,794 [1] INFO  Port selected:COM5
+2019-03-30 15:28:29,801 [1] INFO  create liveModel
+2019-03-30 15:28:31,081 [1] INFO  Port selected:COM5
+2019-03-30 15:28:31,083 [1] INFO  create liveModel
+2019-03-30 15:31:21,818 [1] INFO  Port selected:COM5
+2019-03-30 15:34:31,856 [1] INFO  Port selected:COM5
+2019-03-30 15:35:32,734 [1] INFO  Port selected:COM5
+2019-03-30 15:38:18,772 [1] INFO  Port selected:COM5
+2019-03-30 16:19:34,952 [1] INFO  Port selected:COM5
