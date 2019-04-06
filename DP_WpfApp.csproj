@@ -58,6 +58,9 @@
     <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
       <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="NHibernate, Version=5.2.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
       <HintPath>..\packages\NHibernate.5.2.4\lib\net461\NHibernate.dll</HintPath>
     </Reference>
@@ -120,33 +123,38 @@
     </Compile>
     <Compile Include="DatabaseQueries.cs" />
     <Compile Include="DataBaseServices.cs" />
-    <Compile Include="Disciplina.cs" />
+    <Compile Include="Discipline.cs" />
     <Compile Include="DisciplinaControl.xaml.cs">
       <DependentUpon>DisciplinaControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="JsonMsg.cs" />
     <Compile Include="LapControl.xaml.cs">
       <DependentUpon>LapControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="LiveConnection.cs" />
-    <Compile Include="LiveConnectionView.cs" />
+    <Compile Include="MainView.cs" />
+    <Compile Include="ViewLiveConnection.cs" />
     <Compile Include="LoadModelFromDataBase.cs" />
     <Compile Include="LogControl.xaml.cs">
       <DependentUpon>LogControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Meranie.cs" />
+    <Compile Include="Mensuration.cs" />
+    <Compile Include="MessageBoxes.cs" />
     <Compile Include="Model.cs" />
     <Compile Include="Observer.cs" />
-    <Compile Include="ObserverDisciplina.cs" />
-    <Compile Include="ObserverMeranie.cs" />
-    <Compile Include="Okruh.cs" />
+    <Compile Include="ObserverDiscipline.cs" />
+    <Compile Include="ObserverMensuration.cs" />
+    <Compile Include="ObserverRun.cs" />
+    <Compile Include="Run.cs" />
+    <Compile Include="ProcessingLiveData.cs" />
     <Compile Include="SerialPortCommunication.cs" />
-    <Compile Include="Sprava.cs" />
+    <Compile Include="Msg.cs" />
     <Compile Include="Subject.cs" />
     <Compile Include="TableControl.xaml.cs">
       <DependentUpon>TableControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ViewDisciplina.cs" />
-    <Compile Include="ViewMeranie.cs" />
+    <Compile Include="ViewDiscipline.cs" />
+    <Compile Include="ViewMensuration.cs" />
     <Compile Include="ViewModel.cs" />
     <Page Include="BasicGraph.xaml">
       <SubType>Designer</SubType>
@@ -176,7 +184,6 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Parser.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>

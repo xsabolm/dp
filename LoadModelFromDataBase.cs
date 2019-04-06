@@ -10,75 +10,77 @@ namespace DP_WpfApp
 {
     public static class LoadModelFromDataBase
     {
-        public static Meranie getAllMeranieObjectFromDataBase(int ID)
+        public static Mensuration getAllMensurationFromDataBase(int ID)
         {
-            DataTable table = DataBaseServices.getDataFromDatabase(DatabaseUtils.selectMeranieById(ID));
+            DataTable table = DataBaseServices.selectFromDatabase(DatabaseQueries.selectMensurationById(ID));
 
-            int id = Convert.ToInt32(table.Rows[0][DatabaseUtils.ID]);
-            DateTime casMerania = Convert.ToDateTime(table.Rows[0][DatabaseUtils.MERANIE_CAS]);
-            Boolean typ = Convert.ToBoolean(table.Rows[0][DatabaseUtils.MERANIE_TYP]);
-            String detaily = table.Rows[0][DatabaseUtils.MERANIE_DETAILY].ToString();
-            String lokacia = table.Rows[0][DatabaseUtils.MERANIE_LOKACIA].ToString();
-            List<Disciplina> listDisciplin = getListDisciplin(id);
+            int id = Convert.ToInt32(table.Rows[0][DatabaseQueries.ID]);
+            DateTime startTime = Convert.ToDateTime(table.Rows[0][DatabaseQueries.START_TIME]);
+            String comment = table.Rows[0][DatabaseQueries.COMMENT].ToString();
+            String locality = table.Rows[0][DatabaseQueries.LOCALITY].ToString();
+            List<Discipline> listDiscipline = getListDisciplin(id);
 
-            return new Meranie(id, casMerania, typ, detaily, lokacia, listDisciplin);
+            return new Mensuration(id, startTime, comment, locality, listDiscipline);
         }
 
-        internal static List<Meranie> loadMernia()
+        internal static List<Mensuration> loadMensuration()
         {
-            DataTable table = DataBaseServices.getDataFromDatabase(DatabaseUtils.SELECT_ALL_MERANIA);
-            List<Meranie> list = new List<Meranie>();
+            DataTable table = DataBaseServices.selectFromDatabase(DatabaseQueries.SELECT_ALL_MENSURATION);
+            List<Mensuration> list = new List<Mensuration>();
             foreach (DataRow row in table.Rows)
             {
-                int id = Convert.ToInt32(row[DatabaseUtils.ID]);
-                DateTime casMerania = Convert.ToDateTime(row[DatabaseUtils.MERANIE_CAS]);
-                Boolean typ = Convert.ToBoolean(row[DatabaseUtils.MERANIE_TYP]);
-                String detaily = row[DatabaseUtils.MERANIE_DETAILY].ToString();
-                String lokacia = row[DatabaseUtils.MERANIE_LOKACIA].ToString();
+                int id = Convert.ToInt32(row[DatabaseQueries.ID]);
+                DateTime startTime = Convert.ToDateTime(row[DatabaseQueries.START_TIME]);
+                String comment = row[DatabaseQueries.COMMENT].ToString();
+                String locality = row[DatabaseQueries.LOCALITY].ToString();
 
-                list.Add(new Meranie(id, casMerania, typ, detaily, lokacia));
+                list.Add(new Mensuration(id, startTime, comment, locality));
             }
             return list;
         }
 
-        static private List<Disciplina> getListDisciplin(int idMeranie)
+        static private List<Discipline> getListDisciplin(int idMensuration)
         {
-            List<Disciplina> listDisciplin = new List<Disciplina>();
-            DataTable table = DataBaseServices.getDataFromDatabase(DatabaseUtils.selectDisciplinaByMeranie(idMeranie));
+            List<Discipline> listDiscipline = new List<Discipline>();
+            DataTable table = DataBaseServices.selectFromDatabase(DatabaseQueries.selectDisciplineByMensurationId(idMensuration));
 
             foreach (DataRow row in table.Rows)
             {
-                int idDisciplina = Convert.ToInt32(row[DatabaseUtils.ID]);
-                listDisciplin.Add(new Disciplina(idDisciplina, idMeranie, DatabaseUtils.DISCIPLINY_TYP, row[DatabaseUtils.DISCIPLINA_NAME].ToString(), getListOkruhov(idDisciplina)));
+                int idDiscipline = Convert.ToInt32(row[DatabaseQueries.ID]);
+                listDiscipline.Add(new Discipline(idDiscipline, idMensuration, DatabaseQueries.COMMENT, row[DatabaseQueries.NAME].ToString(), getListRuns(idDiscipline)));
             }
 
-            return listDisciplin;
+            return listDiscipline;
         }
 
-        static private List<Okruh> getListOkruhov(int idDisciplina)
+        static private List<Run> getListRuns(int idDiscipline)
         {
-            List<Okruh> listOkruhov = new List<Okruh>();
-            DataTable table = DataBaseServices.getDataFromDatabase(DatabaseUtils.selectOkruhByDisciplina(idDisciplina));
+            List<Run> listRun = new List<Run>();
+            DataTable table = DataBaseServices.selectFromDatabase(DatabaseQueries.selectRunByDisciplineId(idDiscipline));
 
             foreach (DataRow row in table.Rows)
             {
-                int idOkruh = Convert.ToInt32(row[DatabaseUtils.ID]);
-                listOkruhov.Add(new Okruh(idOkruh, idDisciplina, Convert.ToInt32(row[DatabaseUtils.OKRUH_CAS]), getListSprav(idOkruh)));
+                DateTime finishTime = Convert.ToDateTime("1000-01-01");
+                int idRun = Convert.ToInt32(row[DatabaseQueries.ID]);
+                if ("null".Equals(row[DatabaseQueries.FINISH_TIME].ToString())) { finishTime = Convert.ToDateTime(row[DatabaseQueries.FINISH_TIME]); }
+                listRun.Add(new Run(idRun, idDiscipline, Convert.ToDateTime(row[DatabaseQueries.START_TIME]), finishTime, Convert.ToInt32(row[DatabaseQueries.RUN_NUMBER]) , row[DatabaseQueries.COMMENT].ToString(), getListMsg(idRun)));
             }
 
-            return listOkruhov;
+            return listRun;
         }
 
-        static private List<Sprava> getListSprav(int idOkruh)
+        static private List<Msg> getListMsg(int idOkruh)
         {
-            List<Sprava> listSprav = new List<Sprava>();
-            DataTable table = DataBaseServices.getDataFromDatabase(DatabaseUtils.selectSpravyByOkruh(idOkruh));
+            List<Msg> listMsg = new List<Msg>();
+            DataTable table = DataBaseServices.selectFromDatabase(DatabaseQueries.selectMsgByRunId(idOkruh));
 
             foreach (DataRow row in table.Rows)
             {
-                listSprav.Add(new Sprava(Convert.ToInt32(row[DatabaseUtils.ID]), idOkruh, Convert.ToDateTime(row[DatabaseUtils.SPRAVA_CAS_PRIJATIA])));
+               // listMsg.Add(new Msg(Convert.ToInt32(row[DatabaseQueries.ID]), idOkruh, Convert.ToDateTime(row[DatabaseQueries.RECEIPT_TIME])));
+                listMsg.Add(new Msg(row));
+
             }
-            return listSprav;
+            return listMsg;
         }
     }
 }

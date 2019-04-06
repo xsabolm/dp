@@ -11,59 +11,36 @@ namespace DP_WpfApp
     public class LiveConnection
     {
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
-        static bool _continue;
-        static SerialPort _serialPort;
+        static SerialPort port;
 
         public LiveConnection(String name)
         {
-            string message;
-            StringComparer stringComparer = StringComparer.OrdinalIgnoreCase;
-            Thread readThread = new Thread(Read);
-
-            _serialPort = new SerialPort();
-            _serialPort.PortName = name;;
-
-            // Set the read/write timeouts
-            _serialPort.ReadTimeout = 500;
-            _serialPort.WriteTimeout = 500;
-
-            _serialPort.Open();
-            _continue = true;
-            readThread.Start();
-
-
-            Console.WriteLine("Type QUIT to exit");
-
-            while (_continue)
-            {
-                message = Console.ReadLine();
-
-                if (stringComparer.Equals("quit", message))
-                {
-                    _continue = false;
-                }
-                else
-                {
-                    _serialPort.WriteLine("");
-                }
-            }
-
-            readThread.Join();
-            _serialPort.Close();
+            port = new SerialPort(name, 9600, Parity.None, 8, StopBits.One);
+            SerialPortProgram();
         }
-        public static void Read()
+
+        [STAThread]
+        private static void SerialPortProgram()
         {
-            while (_continue)
-            {
-                try
-                {
-                    string message = _serialPort.ReadExisting();
-                    Console.WriteLine(message);
-                }
-                catch (TimeoutException) { }
-            }
+            // Attach a method to be called when there
+            // is data waiting in the port's buffer 
+            port.DataReceived += new SerialDataReceivedEventHandler(port_DataReceived);
+            // Begin communications 
+            port.Open();
+            // Enter an application loop to keep this thread alive 
+            Console.ReadLine();
         }
+
+        private static void port_DataReceived(object sender, SerialDataReceivedEventArgs e)
+        {
+            // Show all the incoming data in the port's buffer
+            AppController.get.ProcessingLiveData.processing(port.ReadLine());
+        }
+
+        public void closePort()
+        {
+            port.Close();
+        }
+
     }
-
-
 }

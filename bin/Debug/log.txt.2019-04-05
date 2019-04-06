@@ -1,0 +1,277 @@
+2019-04-05 07:31:25,761 [1] INFO  SELECT * FROM mensuration;
+2019-04-05 07:32:22,772 [1] INFO  SELECT * FROM mensuration;
+2019-04-05 07:33:58,363 [1] INFO  SELECT * FROM mensuration;
+2019-04-05 07:34:04,123 [1] INFO  SELECT * FROM mensuration;
+2019-04-05 07:54:43,760 [1] INFO  SELECT * FROM mensuration;
+2019-04-05 07:54:50,114 [1] INFO  SELECT * FROM mensuration where ID=1;
+2019-04-05 07:54:50,149 [1] INFO  SELECT * FROM discipline where Id_mensuration=1;
+2019-04-05 07:54:50,176 [1] INFO  SELECT * FROM run where ID_discipline=1;
+2019-04-05 08:12:23,363 [1] INFO  SELECT * FROM mensuration;
+2019-04-05 08:12:29,891 [1] INFO  SELECT * FROM mensuration where ID=1;
+2019-04-05 08:12:29,923 [1] INFO  SELECT * FROM discipline where Id_mensuration=1;
+2019-04-05 08:12:29,947 [1] INFO  SELECT * FROM run where ID_discipline=1;
+2019-04-05 08:12:29,973 [1] INFO  SELECT * FROM msg where ID_run=1;
+2019-04-05 08:12:29,997 [1] INFO  Observer was notified
+2019-04-05 08:12:30,004 [1] INFO  Observer was notified
+2019-04-05 08:12:33,039 [1] INFO  Observer was notified
+2019-04-05 08:23:07,267 [1] INFO  SELECT * FROM mensuration;
+2019-04-05 08:23:13,000 [1] INFO  SELECT * FROM mensuration where ID=1;
+2019-04-05 08:23:13,026 [1] INFO  SELECT * FROM discipline where Id_mensuration=1;
+2019-04-05 08:23:13,051 [1] INFO  SELECT * FROM run where ID_discipline=1;
+2019-04-05 08:23:13,075 [1] INFO  SELECT * FROM msg where ID_run=1;
+2019-04-05 08:23:13,093 [1] INFO  Observer was notified
+2019-04-05 08:23:13,102 [1] INFO  Observer was notified
+2019-04-05 08:23:15,312 [1] INFO  Observer was notified
+2019-04-05 09:46:07,735 [1] INFO  SELECT * FROM mensuration;
+2019-04-05 11:21:32,900 [1] INFO  SELECT * FROM mensuration;
+2019-04-05 11:21:40,491 [1] INFO  SELECT * FROM mensuration where ID=7;
+2019-04-05 11:21:40,545 [1] INFO  SELECT * FROM discipline where Id_mensuration=7;
+2019-04-05 11:21:40,564 [1] INFO  Observer was notified
+2019-04-05 11:21:44,762 [1] INFO  SELECT * FROM mensuration where ID=1;
+2019-04-05 11:21:44,786 [1] INFO  SELECT * FROM discipline where Id_mensuration=1;
+2019-04-05 11:21:44,821 [1] INFO  SELECT * FROM run where ID_discipline=1;
+2019-04-05 11:21:44,853 [1] INFO  SELECT * FROM msg where ID_run=1;
+2019-04-05 11:21:44,865 [1] INFO  Observer was notified
+2019-04-05 11:21:44,872 [1] INFO  Observer was notified
+2019-04-05 11:21:49,348 [1] INFO  SELECT * FROM mensuration;
+2019-04-05 11:21:52,916 [7] INFO  ID msg: 1326
+2019-04-05 11:28:59,250 [1] INFO  SELECT * FROM mensuration;
+2019-04-05 11:30:52,449 [1] INFO  SELECT * FROM mensuration;
+2019-04-05 11:31:26,926 [8] INFO  ID msg: 1379
+2019-04-05 11:32:11,414 [1] INFO  SELECT * FROM mensuration;
+2019-04-05 11:34:31,237 [1] INFO  SELECT * FROM mensuration;
+2019-04-05 11:34:44,825 [8] INFO  ID msg: 1400
+2019-04-05 11:34:55,037 [8] INFO  ID msg: 1401
+2019-04-05 11:35:05,345 [8] INFO  ID msg: 1402
+2019-04-05 11:35:15,785 [8] INFO  ID msg: 1403
+2019-04-05 11:35:26,334 [8] INFO  ID msg: 1404
+2019-04-05 11:35:36,736 [10] INFO  ID msg: 1405
+2019-04-05 11:35:47,059 [10] INFO  ID msg: 1406
+2019-04-05 11:35:57,494 [10] INFO  ID msg: 1407
+2019-04-05 11:36:08,056 [10] INFO  ID msg: 1408
+2019-04-05 11:36:18,458 [10] INFO  ID msg: 1409
+2019-04-05 11:36:28,780 [9] INFO  ID msg: 1410
+2019-04-05 11:36:39,215 [9] INFO  ID msg: 1411
+2019-04-05 11:36:49,777 [9] INFO  ID msg: 1412
+2019-04-05 11:37:00,179 [9] INFO  ID msg: 1413
+2019-04-05 11:37:10,502 [9] INFO  ID msg: 1414
+2019-04-05 11:37:20,936 [9] INFO  ID msg: 1415
+2019-04-05 11:39:27,939 [1] INFO  SELECT * FROM mensuration;
+2019-04-05 11:43:02,197 [1] INFO  SELECT * FROM mensuration;
+2019-04-05 11:43:53,476 [1] INFO  SELECT * FROM mensuration;
+2019-04-05 11:45:26,596 [1] INFO  SELECT * FROM mensuration;
+2019-04-05 15:11:03,183 [1] INFO  SELECT * FROM mensuration;
+2019-04-05 15:11:30,944 [8] INFO  ID msg: 2647
+2019-04-05 15:13:35,049 [1] INFO  SELECT * FROM mensuration;
+2019-04-05 15:13:46,878 [8] INFO  ID msg: 2660
+2019-04-05 15:13:57,076 [8] INFO  ID msg: 2661
+2019-04-05 15:15:56,321 [1] INFO  SELECT * FROM mensuration;
+2019-04-05 15:16:02,447 [8] INFO  ID msg: 2673
+2019-04-05 15:16:12,559 [8] INFO  ID msg: 2674
+2019-04-05 15:16:15,378 [1] INFO  Inserting mensuration
+2019-04-05 15:16:22,998 [8] INFO  ID msg: 2675
+2019-04-05 15:16:33,563 [8] INFO  ID msg: 2676
+2019-04-05 15:16:43,951 [8] INFO  ID msg: 2677
+2019-04-05 15:22:12,845 [1] INFO  SELECT * FROM mensuration;
+2019-04-05 15:22:19,553 [1] INFO  SELECT * FROM mensuration where ID=1;
+2019-04-05 15:22:19,591 [1] INFO  SELECT * FROM discipline where Id_mensuration=1;
+2019-04-05 15:22:19,618 [1] INFO  SELECT * FROM run where ID_discipline=1;
+2019-04-05 15:22:19,645 [1] INFO  SELECT * FROM msg where ID_run=1;
+2019-04-05 15:22:19,672 [1] INFO  Observer was notified
+2019-04-05 15:22:19,680 [1] INFO  Observer was notified
+2019-04-05 15:22:36,756 [1] INFO  Inserting mensuration
+2019-04-05 15:22:38,493 [7] INFO  ID msg: 2711
+2019-04-05 15:22:48,753 [1] INFO  Inserting mensuration
+2019-04-05 15:22:48,926 [1] INFO  Inserting mensuration
+2019-04-05 15:22:49,039 [7] INFO  ID msg: 2712
+2019-04-05 15:22:49,086 [1] INFO  Inserting mensuration
+2019-04-05 15:26:25,434 [1] INFO  SELECT * FROM mensuration;
+2019-04-05 15:26:32,446 [1] INFO  SELECT * FROM mensuration where ID=1;
+2019-04-05 15:26:32,502 [1] INFO  SELECT * FROM discipline where Id_mensuration=1;
+2019-04-05 15:26:32,536 [1] INFO  SELECT * FROM run where ID_discipline=1;
+2019-04-05 15:26:32,562 [1] INFO  SELECT * FROM msg where ID_run=1;
+2019-04-05 15:26:32,579 [1] INFO  Observer was notified
+2019-04-05 15:26:32,583 [1] INFO  Observer was notified
+2019-04-05 15:26:38,103 [1] INFO  SELECT * FROM mensuration where ID=1;
+2019-04-05 15:26:38,127 [1] INFO  SELECT * FROM discipline where Id_mensuration=1;
+2019-04-05 15:26:38,149 [1] INFO  SELECT * FROM run where ID_discipline=1;
+2019-04-05 15:26:38,173 [1] INFO  SELECT * FROM msg where ID_run=1;
+2019-04-05 15:26:38,182 [1] INFO  Observer was notified
+2019-04-05 15:26:38,183 [1] INFO  Observer was notified
+2019-04-05 15:26:49,121 [7] INFO  ID msg: 2735
+2019-04-05 15:26:59,369 [7] INFO  ID msg: 2736
+2019-04-05 15:32:31,186 [1] INFO  SELECT * FROM mensuration;
+2019-04-05 15:32:43,842 [8] INFO  ID msg: 2769
+2019-04-05 15:33:15,140 [1] INFO  SELECT * FROM mensuration;
+2019-04-05 15:33:25,520 [8] INFO  ID msg: 2773
+2019-04-05 15:33:42,215 [1] INFO  SELECT * FROM mensuration;
+2019-04-05 15:33:56,774 [8] INFO  ID msg: 2776
+2019-04-05 15:33:57,644 [1] INFO  Inserting mensuration, System.Data.SqlServerCe.SqlCeParameterCollection
+2019-04-05 15:34:28,370 [1] INFO  SELECT * FROM mensuration;
+2019-04-05 15:34:38,518 [8] INFO  ID msg: 2780
+2019-04-05 15:34:41,756 [1] INFO  Inserting mensuration, @comment
+2019-04-05 15:34:48,717 [8] INFO  ID msg: 2781
+2019-04-05 15:34:59,009 [8] INFO  ID msg: 2782
+2019-04-05 15:41:03,895 [1] INFO  SELECT * FROM mensuration;
+2019-04-05 15:41:22,686 [1] INFO  Inserting mensuration, @comment
+2019-04-05 15:41:24,957 [8] INFO  ID msg: 2819
+2019-04-05 15:49:54,256 [1] INFO  SELECT * FROM mensuration;
+2019-04-05 15:50:04,185 [1] ERROR Error during inserting to database
+2019-04-05 15:50:04,189 [1] INFO  Inserting mensuration, @comment
+2019-04-05 15:50:06,815 [8] INFO  ID msg: 2869
+2019-04-05 15:50:16,871 [8] INFO  ID msg: 2870
+2019-04-05 15:50:23,654 [1] ERROR Error during inserting to database
+2019-04-05 15:50:23,658 [1] INFO  Inserting mensuration, @comment
+2019-04-05 15:50:27,322 [8] INFO  ID msg: 2871
+2019-04-05 15:51:55,113 [1] INFO  SELECT * FROM mensuration;
+2019-04-05 15:52:08,068 [1] ERROR Error during inserting to database:  System.Data.SqlServerCe.SqlCeException (0x80004005): An overflow occurred while converting to datetime.
+   at System.Data.SqlServerCe.SqlCeCommand.ProcessResults(Int32 hr)
+   at System.Data.SqlServerCe.SqlCeCommand.ExecuteCommandText(IntPtr& pCursor, Boolean& isBaseTableCursor)
+   at System.Data.SqlServerCe.SqlCeCommand.ExecuteCommand(CommandBehavior behavior, String method, ResultSetOptions options)
+   at System.Data.SqlServerCe.SqlCeCommand.ExecuteNonQuery()
+   at connection.DataBaseServices.insertMensuration(Mensuration mensuration) in C:\Users\sabol\source\repos\DP_WpfApp\DP_WpfApp\DataBaseServices.cs:line 76
+2019-04-05 15:52:08,074 [1] INFO  Inserting mensuration, @comment
+2019-04-05 15:52:11,744 [8] INFO  ID msg: 2881
+2019-04-05 15:52:22,037 [8] INFO  ID msg: 2882
+2019-04-05 15:52:32,472 [8] INFO  ID msg: 2883
+2019-04-05 15:59:06,783 [1] INFO  SELECT * FROM mensuration;
+2019-04-05 15:59:19,473 [8] INFO  ID msg: 2922
+2019-04-05 15:59:28,030 [1] ERROR Error during inserting to database:  System.Data.SqlServerCe.SqlCeException (0x80004005): An overflow occurred while converting to datetime.
+   at System.Data.SqlServerCe.SqlCeCommand.ProcessResults(Int32 hr)
+   at System.Data.SqlServerCe.SqlCeCommand.ExecuteCommandText(IntPtr& pCursor, Boolean& isBaseTableCursor)
+   at System.Data.SqlServerCe.SqlCeCommand.ExecuteCommand(CommandBehavior behavior, String method, ResultSetOptions options)
+   at System.Data.SqlServerCe.SqlCeCommand.ExecuteNonQuery()
+   at connection.DataBaseServices.insertMensuration(Mensuration mensuration) in C:\Users\sabol\source\repos\DP_WpfApp\DP_WpfApp\DataBaseServices.cs:line 77
+2019-04-05 15:59:28,037 [1] INFO  Inserting mensuration, @comment
+2019-04-05 15:59:29,700 [8] INFO  ID msg: 2923
+2019-04-05 15:59:40,262 [8] INFO  ID msg: 2924
+2019-04-05 15:59:50,653 [8] INFO  ID msg: 2925
+2019-04-05 16:03:09,277 [1] INFO  SELECT * FROM mensuration;
+2019-04-05 16:03:19,492 [8] INFO  ID msg: 2945
+2019-04-05 16:03:23,454 [1] INFO  Inserting mensuration, @comment
+2019-04-05 16:03:29,568 [8] INFO  ID msg: 2946
+2019-04-05 16:04:28,838 [1] INFO  SELECT * FROM mensuration;
+2019-04-05 16:07:02,697 [1] INFO  SELECT * FROM mensuration;
+2019-04-05 16:07:08,930 [8] INFO  ID msg: 2967
+2019-04-05 16:07:11,176 [1] ERROR Error during inserting to database:  System.InvalidCastException: @start_time : Invalid cast from 'Int32' to 'DateTime'.
+   at System.Data.SqlServerCe.SqlCeCommand.FillParameterDataBindings(Boolean verifyValue)
+   at System.Data.SqlServerCe.SqlCeCommand.ExecuteCommand(CommandBehavior behavior, String method, ResultSetOptions options)
+   at System.Data.SqlServerCe.SqlCeCommand.ExecuteNonQuery()
+   at connection.DataBaseServices.insertMensuration(Mensuration mensuration) in C:\Users\sabol\source\repos\DP_WpfApp\DP_WpfApp\DataBaseServices.cs:line 72
+2019-04-05 16:07:19,165 [8] INFO  ID msg: 2968
+2019-04-05 16:07:37,183 [1] INFO  SELECT * FROM mensuration;
+2019-04-05 16:07:58,637 [1] INFO  Inserting mensuration
+2019-04-05 16:08:00,887 [8] INFO  ID msg: 2972
+2019-04-05 16:27:09,667 [1] INFO  SELECT * FROM mensuration;
+2019-04-05 16:27:18,720 [8] INFO  ID msg: 3083
+2019-04-05 16:27:19,820 [1] ERROR Error during inserting to database:  System.Data.SqlServerCe.SqlCeException (0x80004005): There was an error parsing the query. [ Token line number = 1,Token line offset = 99,Token in error = SELECT ]
+   at System.Data.SqlServerCe.SqlCeCommand.ProcessResults(Int32 hr)
+   at System.Data.SqlServerCe.SqlCeCommand.CompileQueryPlan()
+   at System.Data.SqlServerCe.SqlCeCommand.ExecuteCommand(CommandBehavior behavior, String method, ResultSetOptions options)
+   at System.Data.SqlServerCe.SqlCeCommand.ExecuteScalar()
+   at connection.DataBaseServices.insertMensuration(Mensuration mensuration) in C:\Users\sabol\source\repos\DP_WpfApp\DP_WpfApp\DataBaseServices.cs:line 73
+2019-04-05 16:27:29,045 [8] INFO  ID msg: 3084
+2019-04-05 16:27:39,466 [8] INFO  ID msg: 3085
+2019-04-05 16:40:05,660 [1] INFO  SELECT * FROM mensuration;
+2019-04-05 16:40:17,473 [1] ERROR Error during inserting to database:  System.Data.SqlServerCe.SqlCeException (0x80004005): There was an error parsing the query. [ Token line number = 1,Token line offset = 99,Token in error = SELECT ]
+   at System.Data.SqlServerCe.SqlCeCommand.ProcessResults(Int32 hr)
+   at System.Data.SqlServerCe.SqlCeCommand.CompileQueryPlan()
+   at System.Data.SqlServerCe.SqlCeCommand.ExecuteCommand(CommandBehavior behavior, String method, ResultSetOptions options)
+   at System.Data.SqlServerCe.SqlCeCommand.ExecuteNonQuery()
+   at connection.DataBaseServices.insertMensuration(Mensuration mensuration) in C:\Users\sabol\source\repos\DP_WpfApp\DP_WpfApp\DataBaseServices.cs:line 73
+2019-04-05 16:42:54,325 [1] INFO  SELECT * FROM mensuration;
+2019-04-05 16:43:07,860 [8] INFO  ID msg: 3174
+2019-04-05 16:43:08,608 [1] ERROR Error during inserting to database:  System.Data.SqlServerCe.SqlCeException (0x80004005): There was an error parsing the query. [ Token line number = 1,Token line offset = 99,Token in error = SELECT ]
+   at System.Data.SqlServerCe.SqlCeCommand.ProcessResults(Int32 hr)
+   at System.Data.SqlServerCe.SqlCeCommand.CompileQueryPlan()
+   at System.Data.SqlServerCe.SqlCeCommand.ExecuteCommand(CommandBehavior behavior, String method, ResultSetOptions options)
+   at System.Data.SqlServerCe.SqlCeCommand.ExecuteNonQuery()
+   at connection.DataBaseServices.insertMensuration(Mensuration mensuration) in C:\Users\sabol\source\repos\DP_WpfApp\DP_WpfApp\DataBaseServices.cs:line 73
+2019-04-05 16:44:06,463 [1] INFO  SELECT * FROM mensuration;
+2019-04-05 16:44:20,473 [1] ERROR Error during inserting to database:  System.Data.SqlServerCe.SqlCeException (0x80004005): There was an error parsing the query. [ Token line number = 1,Token line offset = 99,Token in error = SELECT ]
+   at System.Data.SqlServerCe.SqlCeCommand.ProcessResults(Int32 hr)
+   at System.Data.SqlServerCe.SqlCeCommand.CompileQueryPlan()
+   at System.Data.SqlServerCe.SqlCeCommand.ExecuteCommand(CommandBehavior behavior, String method, ResultSetOptions options)
+   at System.Data.SqlServerCe.SqlCeCommand.ExecuteNonQuery()
+   at connection.DataBaseServices.insertMensuration(Mensuration mensuration) in C:\Users\sabol\source\repos\DP_WpfApp\DP_WpfApp\DataBaseServices.cs:line 73
+2019-04-05 16:45:14,556 [1] INFO  SELECT * FROM mensuration;
+2019-04-05 16:45:23,464 [8] INFO  ID msg: 3187
+2019-04-05 16:45:30,783 [1] INFO  Inserting mensuration
+2019-04-05 16:45:30,797 [1] INFO  GET ID:0
+2019-04-05 16:45:33,784 [8] INFO  ID msg: 3188
+2019-04-05 16:45:44,198 [8] INFO  ID msg: 3189
+2019-04-05 16:46:00,952 [1] INFO  SELECT * FROM mensuration;
+2019-04-05 16:46:15,815 [8] INFO  ID msg: 3192
+2019-04-05 16:46:19,153 [1] INFO  Inserting mensuration
+2019-04-05 16:46:19,172 [1] INFO  GET ID:11
+2019-04-05 16:46:25,911 [8] INFO  ID msg: 3193
+2019-04-05 18:15:51,437 [1] INFO  SELECT * FROM mensuration;
+2019-04-05 18:15:57,525 [8] INFO  Error in prasing JSON: 34,"BMS_Temp2":235,"BMS_Temp3":236,"BMS_Temp4":237,"BMS_Temp5":238,"BMS_Temp6":239,"BMS_Temp7":240}}]}/n Newtonsoft.Json.JsonSerializationException: Error converting value 34 to type 'DP_WpfApp.JsonMsg'. Path '', line 1, position 2. ---> System.ArgumentException: Could not cast or convert from System.Int64 to DP_WpfApp.JsonMsg.
+   at Newtonsoft.Json.Utilities.ConvertUtils.EnsureTypeAssignable(Object value, Type initialType, Type targetType)
+   at Newtonsoft.Json.Utilities.ConvertUtils.ConvertOrCast(Object initialValue, CultureInfo culture, Type targetType)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType)
+   --- End of inner exception stack trace ---
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value)
+   at DP_WpfApp.ProcessingLiveData.receivingRawJson(String rawJson) in C:\Users\sabol\source\repos\DP_WpfApp\DP_WpfApp\ProcessingLiveData.cs:line 24
+2019-04-05 18:16:07,844 [8] INFO  ID msg: 3709
+2019-04-05 18:16:13,349 [1] INFO  Inserting mensuration
+2019-04-05 18:16:13,364 [1] INFO  GET ID:12
+2019-04-05 18:16:18,051 [8] INFO  ID msg: 3710
+2019-04-05 18:16:28,500 [8] INFO  ID msg: 3711
+2019-04-05 18:18:36,651 [1] INFO  SELECT * FROM mensuration;
+2019-04-05 18:18:44,423 [8] INFO  ID msg: 3724
+2019-04-05 18:18:54,635 [8] INFO  ID msg: 3725
+2019-04-05 18:18:59,037 [1] INFO  Inserting mensuration
+2019-04-05 18:18:59,045 [1] INFO  GET ID:13
+2019-04-05 18:18:59,154 [1] ERROR Error during inserting discipline to database:  System.ArgumentNullException: Parameterized query expects a parameter value which was not supplied.
+Parameter name: @comment
+   at System.Data.SqlServerCe.SqlCeCommand.FillParameterDataBindings(Boolean verifyValue)
+   at System.Data.SqlServerCe.SqlCeCommand.ExecuteCommand(CommandBehavior behavior, String method, ResultSetOptions options)
+   at System.Data.SqlServerCe.SqlCeCommand.ExecuteNonQuery()
+   at connection.DataBaseServices.insertDiscipline(Discipline discipline, Int32 ID_mensuration) in C:\Users\sabol\source\repos\DP_WpfApp\DP_WpfApp\DataBaseServices.cs:line 101
+2019-04-05 18:21:24,339 [1] INFO  SELECT * FROM mensuration;
+2019-04-05 18:21:38,538 [1] INFO  Inserting mensuration
+2019-04-05 18:21:38,547 [1] INFO  GET ID:14
+2019-04-05 18:21:38,596 [1] INFO  Inserting discipline
+2019-04-05 18:21:38,599 [1] INFO  GET ID:2
+2019-04-05 18:21:41,486 [8] INFO  ID msg: 3741
+2019-04-05 18:21:51,805 [8] INFO  ID msg: 3742
+2019-04-05 20:03:57,008 [1] INFO  SELECT * FROM mensuration;
+2019-04-05 20:04:17,404 [8] INFO  ID msg: 2
+2019-04-05 20:04:27,854 [8] INFO  ID msg: 3
+2019-04-05 20:04:38,404 [8] INFO  ID msg: 4
+2019-04-05 20:04:39,443 [1] INFO  Inserting mensuration
+2019-04-05 20:04:39,450 [1] INFO  GET ID:15
+2019-04-05 20:04:39,489 [1] INFO  Inserting discipline
+2019-04-05 20:04:39,493 [1] INFO  GET ID:3
+2019-04-05 20:04:48,790 [8] INFO  ID msg: 5
+2019-04-05 20:08:45,637 [1] INFO  SELECT * FROM mensuration;
+2019-04-05 20:08:59,330 [8] INFO  ID msg: 29
+2019-04-05 20:09:05,006 [1] INFO  Inserting mensuration
+2019-04-05 20:09:05,016 [1] INFO  GET ID:16
+2019-04-05 20:09:05,071 [1] INFO  Inserting discipline
+2019-04-05 20:09:05,076 [1] INFO  GET ID:4
+2019-04-05 20:10:05,115 [1] INFO  SELECT * FROM mensuration;
+2019-04-05 20:10:12,247 [8] INFO  Error in prasing JSON: Volt4":237,"BMS_Volt5":238,"BMS_Volt6":239,"BMS_Volt7":240},"BMS_Temps":{"BMS_TempIdent":234,"BMS_Temp1":234,"BMS_Temp2":235,"BMS_Temp3":236,"BMS_Temp4":237,"BMS_Temp5":238,"BMS_Temp6":239,"BMS_Temp7":240}}]}/n Newtonsoft.Json.JsonReaderException: Unexpected character encountered while parsing value: V. Path '', line 0, position 0.
+   at Newtonsoft.Json.JsonTextReader.ParseValue()
+   at Newtonsoft.Json.JsonTextReader.Read()
+   at Newtonsoft.Json.JsonReader.ReadForType(JsonContract contract, Boolean hasConverter)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value)
+   at DP_WpfApp.ProcessingLiveData.receivingRawJson(String rawJson) in C:\Users\sabol\source\repos\DP_WpfApp\DP_WpfApp\ProcessingLiveData.cs:line 24
+2019-04-05 20:10:21,077 [1] INFO  NEW RUN WAS DETECTED
+2019-04-05 20:10:22,622 [8] INFO  ID msg: 37
+2019-04-05 20:10:24,558 [1] INFO  Inserting mensuration
+2019-04-05 20:10:24,565 [1] INFO  GET ID:17
+2019-04-05 20:10:24,609 [1] INFO  Inserting discipline
+2019-04-05 20:10:29,925 [1] INFO  GET ID:5
+2019-04-05 20:10:29,985 [1] INFO  Inserting run

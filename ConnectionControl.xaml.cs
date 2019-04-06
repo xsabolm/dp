@@ -28,17 +28,16 @@ namespace connection
     /// 
     public partial class ConnectionControl : System.Windows.Controls.UserControl
     {
-        private const bool IsHistoryData = false;
-        private const bool IsLiveData = true;
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
         public ConnectionControl()
         {
             InitializeComponent();
-            comboBoxMeranie.DataContext = AppController.get.ViewMeranie;
+            comboBoxMensuration.DataContext = AppController.get.ViewMeranie;
             textView.DataContext = AppController.get.ViewMeranie;
             comboBoxPorts.DataContext = AppController.get.ViewLiveConnection;
-
+            btnLiveConnectionClose.DataContext = AppController.get.ViewLiveConnection;
+            btnLiveConnectionOpen.DataContext = AppController.get.ViewLiveConnection;
 
         }
 
@@ -65,22 +64,13 @@ namespace connection
 
         private void btnConnectToDataBase_Click(object sender, RoutedEventArgs e)
         {
-            DialogResult dialogResult = System.Windows.Forms.MessageBox.Show("Nacitat historicke udaje merania: " + comboBoxMeranie.SelectedValue, "Nacitat meranie", MessageBoxButtons.YesNo);
-            if (dialogResult == DialogResult.Yes)
+            if (ComboboxIsSelected(comboBoxMensuration))
             {
-                //Load data from merania
-                if (ComboboxIsSelected(comboBoxMeranie))
-                {
-                    AppController.get.loadModel(AppController.get.ViewMeranie.CurrentSelectionFromCombobox.ID, IsHistoryData);
-                }
-            }
-            else if (dialogResult == DialogResult.No)
-            {
-                //not sure what to do here
+                MessageBoxes.loadMeranieFromDataBase(AppController.get.ViewMeranie.CurrentSelectionFromCombobox.ID,comboBoxMensuration.SelectedValue.ToString());
             }
         }
 
-        private void comboBoxMeranie_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void comboBoxMensuration_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
         }
@@ -90,13 +80,22 @@ namespace connection
             return comboBox.SelectedIndex > -1;
         }
 
-        private void btnLiveConnection_Click(object sender, RoutedEventArgs e)
+        private void btnLiveConnection_Open(object sender, RoutedEventArgs e)
         {
             if (ComboboxIsSelected(comboBoxPorts))
             {
-                AppController.get.setLiveConnection(AppController.get.ViewLiveConnection.CurrentSelectionPort.Label);
+                AppController.get.loadModel(AppController.get.ViewLiveConnection.CurrentSelectionPort.Label);
             }
+        }
 
+        private void btnLiveConnection_Close(object sender, RoutedEventArgs e)
+        {
+            AppController.get.closeLiveConnection();
+        }
+
+        private void refreshPortList(object sender, RoutedEventArgs e)
+        {
+            AppController.get.ViewLiveConnection.addToCombobox();
         }
     }
 }

@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace DP_WpfApp
 {
-    class Parser
+    public class MainView : ViewModel
     {
+
     }
 }

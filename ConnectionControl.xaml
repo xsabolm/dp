@@ -10,7 +10,10 @@
         <TabControl Name="connection" Background="#FFBBFDC8" >
             <TabItem Header="Live data">
                 <Canvas>
-                    <Button Canvas.Left="200" Canvas.Top="30" Width="100" x:Name="btnLiveConnection" Content="Start Live Data" Click="btnLiveConnection_Click"/>
+                    <Button Canvas.Left="200" Canvas.Top="30" Width="140" x:Name="btnLiveConnectionOpen" Content="Open Live Connection" Click="btnLiveConnection_Open" Visibility="{Binding Path=IsLiveConnectionOpened , Mode=OneWay}"/>
+                    <Button Canvas.Left="200" Canvas.Top="30" Width="140" x:Name="btnLiveConnectionClose" Content="Close Live Connection" Click="btnLiveConnection_Close" Visibility="{Binding Path=IsLiveConnectionClosed , Mode=OneWay}"/>
+                    <Button Canvas.Left="35" Canvas.Top="75" Width="125" x:Name="btnRefreshPortList" Content="Refresh Port list" Click="refreshPortList"></Button>
+                    <Label Content="Choose Serial Port:" Canvas.Left="20" Canvas.Top="10" Width="150"></Label>
                     <ComboBox Name="comboBoxPorts"
                               Canvas.Left="20" Canvas.Top="30" Width="150"
                               ItemsSource="{Binding Path=comboboxListPorts}"
@@ -22,12 +25,12 @@
                 <Canvas>
                     <Label Content="Vyber Meranie:" Canvas.Left="20" />
                     <Button Canvas.Left="200" Canvas.Top="30" Width="50" x:Name="btnConnectToDatabase" Content="OK" Click="btnConnectToDataBase_Click"/>
-                    <ComboBox Name="comboBoxMeranie"
+                    <ComboBox Name="comboBoxMensuration"
                               Canvas.Left="20" Canvas.Top="30" Width="150"
-                              ItemsSource="{Binding Path=comboboxListMeranie}"
+                              ItemsSource="{Binding Path=comboboxListMensuration}"
                               DisplayMemberPath="Label"
                               SelectedValue="{Binding CurrentSelectionFromCombobox}" 
-                              SelectionChanged="comboBoxMeranie_SelectionChanged"/>
+                              SelectionChanged="comboBoxMensuration_SelectionChanged"/>
                     <TextBox Name="textView" Text="{Binding Path=DetailsInformation, Mode=OneWay}" Canvas.Left="20" Canvas.Top="100" Width="300" Height="300"  IsReadOnly="True" TextWrapping="Wrap" AcceptsReturn="True" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto"/>
                 </Canvas>
             </TabItem>

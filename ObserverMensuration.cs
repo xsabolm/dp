@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace DP_WpfApp
 {
-    class ObserverMeranie : Observer
+    class ObserverMensuration : Observer
     {
         private Boolean observerIsSet;
-        private Meranie meranie;
-        ViewMeranie view;
+        private Mensuration meranie;
+        ViewMensuration view;
 
-        public ObserverMeranie(ViewMeranie view, Meranie m)
+        public ObserverMensuration(ViewMensuration view, Mensuration m)
         {
             View = view;
             Meranie = m;
@@ -20,8 +20,8 @@ namespace DP_WpfApp
         }
 
         public Boolean ObserverState { get => observerIsSet; set => observerIsSet = value; }
-        public ViewMeranie View { get => view; set => view = value; }
-        internal Meranie Meranie { get => meranie; set => meranie = value; }
+        public ViewMensuration View { get => view; set => view = value; }
+        internal Mensuration Meranie { get => meranie; set => meranie = value; }
 
         public override void Update()
         {

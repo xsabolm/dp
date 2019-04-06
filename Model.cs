@@ -10,25 +10,90 @@ namespace DP_WpfApp
 {
     public class Model
     {
-        Meranie meranie;
+        private const bool CondistionNewRunWasNotDetected = false;
+        private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
-        internal Meranie Meranie { get => meranie; set => meranie = value; }
+        private Mensuration mensuration;
+        private Discipline actualDisciplin;
+        private Run actualRun;
+        private List<Mensuration> allMensurations;
 
-        List<Meranie> allMerania;
+        internal Mensuration Mensuration { get => mensuration; set => mensuration = value; }
+        public Discipline ActualDisciplin { get => actualDisciplin; set => actualDisciplin = value; }
+        public List<Mensuration> AllMensurations { get => allMensurations; set => allMensurations = value; }
+        public Run ActualRun { get => actualRun; set => actualRun = value; }
 
-        public void loadMerniaDetails()
+        public void loadMernia()
         {
-            allMerania = LoadModelFromDataBase.loadMernia();
+            AllMensurations = LoadModelFromDataBase.loadMensuration();
         }
 
-        public void loadData(int idMeranie)
+        public void loadAllMeranieFromDatabase(int idMensuration)
         {
-            Meranie = LoadModelFromDataBase.getAllMeranieObjectFromDataBase(idMeranie);
+            Mensuration = LoadModelFromDataBase.getAllMensurationFromDataBase(idMensuration);
         }
 
-        public void loadData()
+        public void createModel()
         {
-            //live data
+            if (Mensuration == null)
+            {
+                Mensuration = new Mensuration();
+            }
         }
+
+        internal void closeDiscipline()
+        {
+            if (ActualDisciplin != null)
+            {   
+                ActualRun.FinishTime = DateTime.Now;
+                ActualDisciplin.Comment = DateTime.Now.ToLongTimeString();
+                ActualDisciplin.ListRuns.Add(ActualRun);
+                Mensuration.ListDiscipline.Add(ActualDisciplin);
+            }
+
+        }
+
+        internal Boolean createNewDiscipline()
+        {
+            if (Mensuration != null)
+            {
+                ActualDisciplin = new Discipline(getTempIdForDicsipline(), Mensuration.ID);
+                createNewRun(CondistionNewRunWasNotDetected);
+                return true;
+            }
+            else
+            {
+                MessageBoxes.didNotSetConnection();
+                return false;
+            }
+        }
+
+        internal void createNewRun(bool CondistionNewRunWasDetected)
+        {
+            if (CondistionNewRunWasDetected)
+            {
+                log.Info("NEW RUN WAS DETECTED");
+                ActualRun.FinishTime = DateTime.Now;
+                ActualDisciplin.ListRuns.Add(ActualRun);
+                ActualRun = new Run(ActualDisciplin.ID);
+            }
+            else
+            {
+                ActualRun = new Run(ActualDisciplin.ID);
+            }
+        }
+
+
+        internal void createNewMsg(JsonMsg msg)
+        {
+            if (ActualRun != null)
+            {
+                log.Info("ID msg: " + msg.Id);
+                ActualRun.ListMsg.Add(new Msg(msg));
+            }
+        }
+
+        private int getTempIdForRun() { return (ActualDisciplin.ListRuns.Count + 1); }
+        private int getTempIdForDicsipline() { return (Mensuration.ListDiscipline.Count + 1); }
     }
 }
