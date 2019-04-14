@@ -14,6 +14,13 @@ namespace DP_WpfApp
         String name;
         List<Run> listRuns;
 
+        public Discipline()
+        {
+            Comment = "No comment";
+            Name = "No name";
+            ListRuns = new List<Run>();
+        }
+
         public Discipline(int id, int id_mensuration)
         {
             ID = id;

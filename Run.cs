@@ -8,10 +8,18 @@ namespace DP_WpfApp
         int Id;
         int Id_discipiline;
         int runNumber;
+        Boolean wasSelected = false;
         DateTime startTime;
         DateTime finishTime;
         String comment;
         List<Msg> listMsg;
+
+        public Run()
+        {
+            StartTime = DateTime.Now;
+            Comment = "No Comment";
+            ListMsg = new List<Msg>();
+        }
 
         public Run(int idDiscipline)
         {
@@ -25,6 +33,7 @@ namespace DP_WpfApp
         {
             ID = id;
             ID_discipiline = id_discipilina;
+            Comment = "No Comment";
             StartTime = startTime;
             FinishTime = finishTime;
             ListMsg = listMsg;
@@ -38,5 +47,6 @@ namespace DP_WpfApp
         public DateTime FinishTime { get => finishTime; set => finishTime = value; }
         public string Comment { get => comment; set => comment = value; }
         public int RunNumber { get => runNumber; set => runNumber = value; }
+        public bool WasSelected { get => wasSelected; set => wasSelected = value; }
     }
 }

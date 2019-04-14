@@ -66,7 +66,7 @@ namespace connection
         {
             if (ComboboxIsSelected(comboBoxMensuration))
             {
-                MessageBoxes.loadMeranieFromDataBase(AppController.get.ViewMeranie.CurrentSelectionFromCombobox.ID,comboBoxMensuration.SelectedValue.ToString());
+                MessageBoxes.loadMeranieFromDataBase(AppController.get.ViewMeranie.CurrentSelectionFromCombobox.ID, comboBoxMensuration.SelectedValue.ToString());
             }
         }
 
@@ -84,7 +84,14 @@ namespace connection
         {
             if (ComboboxIsSelected(comboBoxPorts))
             {
-                AppController.get.loadModel(AppController.get.ViewLiveConnection.CurrentSelectionPort.Label);
+                //default baoudRate
+                int boudRate = 115200;
+                if (ComboboxIsSelected(comboboxBaudRate))
+                {
+                    boudRate = Convert.ToInt32(comboboxBaudRate.Text);
+                }
+
+                AppController.get.loadModel(AppController.get.ViewLiveConnection.CurrentSelectionPort.Label, boudRate);
             }
         }
 
@@ -96,6 +103,13 @@ namespace connection
         private void refreshPortList(object sender, RoutedEventArgs e)
         {
             AppController.get.ViewLiveConnection.addToCombobox();
+        }
+
+        private void btnRefreshMenusrations_Click(object sender, RoutedEventArgs e)
+        {
+            AppController.get.Model.loadMensurations();
+            AppController.get.ViewMeranie.refreshMensuration();
+
         }
     }
 }

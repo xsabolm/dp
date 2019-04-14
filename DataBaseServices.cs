@@ -151,19 +151,19 @@ namespace connection
             ID = Convert.ToInt32((cmd.ExecuteScalar()));
             dbConnection.Close();
 
-            if(msg.JsonMsg.Data[0].BBOX_power != null){ updateMsgPartBBOX_power(msg.JsonMsg.Data[0].BBOX_power, ID); }
-            if (msg.JsonMsg.Data[0].BBOX_status != null) { updateMsgPartBBOX_status(msg.JsonMsg.Data[0].BBOX_status, ID); }
-            if (msg.JsonMsg.Data[0].GPS_data != null) { updateMsgPartGPS_data(msg.JsonMsg.Data[0].GPS_data, ID); }
-            if (msg.JsonMsg.Data[0].ECU_State != null) { updateMsgPartECU_State(msg.JsonMsg.Data[0].ECU_State, ID); }
-            if (msg.JsonMsg.Data[0].BBOX_command != null) { updateMsgPartBBOX_command(msg.JsonMsg.Data[0].BBOX_command, ID); }
-            if (msg.JsonMsg.Data[0].FU_Values_1 != null) { updateMsgPartFU_Values_1(msg.JsonMsg.Data[0].FU_Values_1, ID); }
-            if (msg.JsonMsg.Data[0].Interconnect != null) { updateMsgPartInterconnect(msg.JsonMsg.Data[0].Interconnect, ID); }
-            if (msg.JsonMsg.Data[0].FU_Values_2 != null) { updateMsgPartFU_Values_2(msg.JsonMsg.Data[0].FU_Values_2, ID); }
-            if (msg.JsonMsg.Data[0].BMS_Command != null) { updateMsgPartBMS_Command(msg.JsonMsg.Data[0].BMS_Command, ID); }
-            if (msg.JsonMsg.Data[0].BMS_State != null) { updateMsgPartBMS_State(msg.JsonMsg.Data[0].BMS_State, ID); }
-            if (msg.JsonMsg.Data[0].wheel_RPM != null) { updateMsgPartWheel_RPM(msg.JsonMsg.Data[0].wheel_RPM, ID); }
-            if (msg.JsonMsg.Data[0].BMS_Voltages != null) { updateMsgPartBMS_Voltages(msg.JsonMsg.Data[0].BMS_Voltages, ID); }
-            if (msg.JsonMsg.Data[0].BMS_Temps != null) { updateMsgPartBMS_Temps(msg.JsonMsg.Data[0].BMS_Temps, ID); }
+            if(msg.IsBBOXPower){ updateMsgPartBBOX_power(msg.BBOXPower, ID); }
+            if (msg.IsBBOXStatus) { updateMsgPartBBOX_status(msg.BBOXStatus, ID); }
+            if (msg.IsGPSData) { updateMsgPartGPS_data(msg.GPSData, ID); }
+            if (msg.IsECUState) { updateMsgPartECU_State(msg.ECUState, ID); }
+            if (msg.IsBBOXCommand) { updateMsgPartBBOX_command(msg.BBOXCommand, ID); }
+            if (msg.IsFUValues1) { updateMsgPartFU_Values_1(msg.FUValues1, ID); }
+            if (msg.IsInterconnect) { updateMsgPartInterconnect(msg.Interconnect, ID); }
+            if (msg.IsFUValues2) { updateMsgPartFU_Values_2(msg.FUValues2, ID); }
+            if (msg.IsBMSCommand) { updateMsgPartBMS_Command(msg.BMSCommand, ID); }
+            if (msg.IsBMSState) { updateMsgPartBMS_State(msg.BMSState, ID); }
+            if (msg.IsWheelRPM) { updateMsgPartWheel_RPM(msg.WheelRPM, ID); }
+            if (msg.IsBMSVoltages) { updateMsgPartBMS_Voltages(msg.BMSVoltages, ID); }
+            if (msg.IsBMSTemps) { updateMsgPartBMS_Temps(msg.BMSTemps, ID); }
         }
 
         private static void updateMsgPartBBOX_power(BBOXPower BBOXPower, int ID_MSG)

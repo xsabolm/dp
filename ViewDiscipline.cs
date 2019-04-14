@@ -51,14 +51,21 @@ namespace DP_WpfApp
             resetRuns();
         }
 
-        internal void addToComboboxDiscipliny(Discipline disciplina)
+        internal void addToComboboxDiscipline(Discipline disciplina)
         {
-            comboboxListDisciplines.Add(new ComboboxValue { ID = disciplina.ID, Label = disciplina.ID + " /" + disciplina.Name + " /" + disciplina.Comment });
+            comboboxListDisciplines.Add(new ComboboxValue { ID = disciplina.ID, Label = disciplina.ID + " |" + disciplina.Name + " |" + disciplina.Comment });
         }
 
-        internal void addToComboboxOkruhy(Run run)
+        internal void addToComboboxRuns(Run run)
         {
-            comboboxListRuns.Add(new ComboboxValue { ID = run.ID, Label = run.ID + " /" + run.StartTime });
+            if (run.FinishTime.Year == 1000)
+            {
+                comboboxListRuns.Add(new ComboboxValue { ID = run.ID, Label = run.ID + " | Start time: "+run.StartTime.ToLongTimeString() + "| Not Finish" });
+            }
+            else
+            {
+                comboboxListRuns.Add(new ComboboxValue { ID = run.ID, Label = run.ID + " |" + (run.FinishTime - run.StartTime).TotalSeconds });
+            }
         }
 
         public Visibility IsHistoricData

@@ -26,9 +26,18 @@ namespace DP_WpfApp
     public partial class MainWindow : Window
     {
         public MainWindow()
-        {          
+        {
             InitializeComponent();
         }
 
+        private void ScrollBar_Scroll(object sender, System.Windows.Controls.Primitives.ScrollEventArgs e)
+        {
+            if (AppController.get.SelectedDiscipline != null)
+            {
+                scrollBar.Maximum = AppController.get.SelectedDiscipline.SelectedRun.ListMsg.Count-1;
+                AppController.get.SelectedDiscipline.setSelectedMsg(Convert.ToInt32(scrollBar.Value));
+            }
+
+        }
     }
 }

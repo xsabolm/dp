@@ -13,19 +13,21 @@ namespace DP_WpfApp
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         static SerialPort port;
 
-        public LiveConnection(String name)
+        public LiveConnection(String name, int boudRate)
         {
-            port = new SerialPort(name, 9600, Parity.None, 8, StopBits.One);
-            SerialPortProgram();
+            log.Info(" Port name:" + name);
+
+            port = new SerialPort(name, boudRate, Parity.None, 8, StopBits.One);
+            //port.ReceivedBytesThreshold = 1;
+            port.DtrEnable = true;
+            port.RtsEnable = true;
         }
 
+
         [STAThread]
-        private static void SerialPortProgram()
+        public static void startPort()
         {
-            // Attach a method to be called when there
-            // is data waiting in the port's buffer 
-            port.DataReceived += new SerialDataReceivedEventHandler(port_DataReceived);
-            // Begin communications 
+            if (AppController.get.IsLiveData) { port.DataReceived += new SerialDataReceivedEventHandler(port_DataReceived); }
             port.Open();
             // Enter an application loop to keep this thread alive 
             Console.ReadLine();
@@ -33,14 +35,10 @@ namespace DP_WpfApp
 
         private static void port_DataReceived(object sender, SerialDataReceivedEventArgs e)
         {
-            // Show all the incoming data in the port's buffer
-            AppController.get.ProcessingLiveData.processing(port.ReadLine());
+            try { AppController.get.ProcessingLiveData.processing(port.ReadLine()); }
+            catch (Exception exception) { log.Error("Error in processing data: " + exception.ToString()); }
         }
 
-        public void closePort()
-        {
-            port.Close();
-        }
-
+        public void closePort() { port.Close(); }
     }
 }

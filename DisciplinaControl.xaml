@@ -12,20 +12,20 @@
         <Button Name="btn_save" Content="Save To Database" Canvas.Right="10"  Canvas.Top="10" Height="25" Width="120" Visibility="{Binding Path=IsLiveData , Mode=OneWay}" Click="btn_saveDatabase_Click"></Button>
         <ComboBox 
             Name="combobox_discipliny" 
-            Canvas.Left="10" Canvas.Top="10" Height="25" Width="150" 
+            Canvas.Left="115" Canvas.Top="9" Height="25" Width="160" 
             ItemsSource="{Binding Path=comboboxListDisciplines}"
             DisplayMemberPath="Label"
             SelectedValue="{Binding CurrentSelectionDiscipline}" 
             SelectionChanged="OnSelectionChanged"
             Visibility="{Binding Path=IsHistoricData}">
         </ComboBox>
-        <Label Name="id_label" Visibility="{Binding Path=IsHistoricData}"
-               Canvas.Left="200" Canvas.Top="10" Height="25" Width="100"
-               Content="id_label">
+        <Label Visibility="{Binding Path=IsHistoricData}"
+               Canvas.Left="315" Canvas.Top="9" Height="25" 
+               Content="Choose Run: ">
         </Label>
-        <Label Name="name_label" Visibility="{Binding Path=IsHistoricData}"
-               Canvas.Left="200" Canvas.Top="35" Height="25" Width="150"
-               Content="name_label">
+        <Label Visibility="{Binding Path=IsHistoricData}"
+               Canvas.Left="10" Canvas.Top="10" Height="25" 
+               Content="Choose Discipline:">
         </Label>
         <Label Name="typ_label" Visibility="{Binding Path=IsHistoricData}"
                Canvas.Left="200" Canvas.Top="60" Height="25" Width="150"
@@ -33,7 +33,7 @@
         </Label>
         <ComboBox 
             Name="combobox_okruh" 
-            Canvas.Left="400" Canvas.Top="10" Height="25" Width="150" 
+            Canvas.Left="400" Canvas.Top="10" Height="25" Width="220" 
             ItemsSource="{Binding Path=comboboxListRuns}"
             DisplayMemberPath="Label"
             SelectedValue="{Binding CurrentSelectionRun}" 

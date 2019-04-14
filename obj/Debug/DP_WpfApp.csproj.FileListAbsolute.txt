@@ -57,3 +57,4 @@ C:\Users\sabol\source\repos\DP_WpfApp\DP_WpfApp\obj\Debug\DisciplinaControl.baml
 C:\Users\sabol\source\repos\DP_WpfApp\DP_WpfApp\bin\Debug\Newtonsoft.Json.dll
 C:\Users\sabol\source\repos\DP_WpfApp\DP_WpfApp\bin\Debug\Newtonsoft.Json.pdb
 C:\Users\sabol\source\repos\DP_WpfApp\DP_WpfApp\bin\Debug\Newtonsoft.Json.xml
+C:\Users\sabol\source\repos\DP_WpfApp\DP_WpfApp\bin\Debug\LiveCharts.Geared.dll

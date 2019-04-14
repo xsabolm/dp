@@ -9,23 +9,25 @@ namespace DP_WpfApp
     class ObserverRun : Observer
     {
         private Boolean observerIsSet;
-        private Run okruh;
-        ViewDiscipline view;
+        private Run run;
+        ViewDiscipline viewTable;
 
-        public ObserverRun(ViewDiscipline view, Run o)
+        public ObserverRun(ViewDiscipline viewTable, Run run)
         {
-            View = view;
-            Okruh = o;
+            ViewTabel = viewTable;
+            Run = run;
             ObserverState = true;
         }
 
         public Boolean ObserverState { get => observerIsSet; set => observerIsSet = value; }
-        public ViewDiscipline View { get => view; set => view = value; }
-        public Run Okruh { get => okruh; set => okruh = value; }
+        public ViewDiscipline ViewTabel { get => viewTable; set => viewTable = value; }
+        public Run Run { get => run; set => run = value; }
 
         public override void Update()
         {
-            if (ObserverState) { view.addToComboboxOkruhy(Okruh); }
+            if (ObserverState) {
+                viewTable.addToComboboxRuns(Run);
+            }
         }
 
     }

@@ -23,7 +23,7 @@ namespace DP_WpfApp
         public List<Mensuration> AllMensurations { get => allMensurations; set => allMensurations = value; }
         public Run ActualRun { get => actualRun; set => actualRun = value; }
 
-        public void loadMernia()
+        public void loadMensurations()
         {
             AllMensurations = LoadModelFromDataBase.loadMensuration();
         }
@@ -35,10 +35,7 @@ namespace DP_WpfApp
 
         public void createModel()
         {
-            if (Mensuration == null)
-            {
                 Mensuration = new Mensuration();
-            }
         }
 
         internal void closeDiscipline()

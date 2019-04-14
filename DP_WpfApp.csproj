@@ -52,6 +52,9 @@
     <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
       <HintPath>..\packages\LiveCharts.0.9.7\lib\net45\LiveCharts.dll</HintPath>
     </Reference>
+    <Reference Include="LiveCharts.Geared, Version=1.2.8.2, Culture=neutral, PublicKeyToken=7292f245d14ab8bf, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.Geared.1.2.9\lib\net45\LiveCharts.Geared.dll</HintPath>
+    </Reference>
     <Reference Include="LiveCharts.Wpf, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
       <HintPath>..\packages\LiveCharts.Wpf.0.9.7\lib\net45\LiveCharts.Wpf.dll</HintPath>
     </Reference>
@@ -132,7 +135,12 @@
       <DependentUpon>LapControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="LiveConnection.cs" />
-    <Compile Include="MainView.cs" />
+    <Compile Include="ObserverSelectedDiscipline.cs" />
+    <Compile Include="SelectedDiscipline.cs" />
+    <Compile Include="ViewGraph.cs" />
+    <Compile Include="ViewLap.cs" />
+    <Compile Include="ViewMain.cs" />
+    <Compile Include="ViewTables.cs" />
     <Compile Include="ViewLiveConnection.cs" />
     <Compile Include="LoadModelFromDataBase.cs" />
     <Compile Include="LogControl.xaml.cs">

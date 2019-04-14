@@ -7,6 +7,27 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-            
+        <ItemsControl ItemsSource="{Binding Lines}">
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <Canvas  Name="canvas" 
+                             MouseMove="Canvas_MouseMove" 
+                             MouseLeftButtonDown="Canvas_MouseLeftButtonDown"  
+                             MouseLeftButtonUp="Canvas_MouseLeftButtonUp"
+                             MouseRightButtonDown="Canvas_MouseRightButtonDown">
+                        <Canvas.Background>
+                            <SolidColorBrush Color="White" Opacity="0"/>
+                        </Canvas.Background>
+                    </Canvas>
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <Line X1="{Binding From.X}" Y1="{Binding From.Y}"
+                      X2="{Binding To.X}" Y2="{Binding To.Y}"
+                      Stroke="DarkGray" StrokeThickness="3"/>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
     </Grid>
 </UserControl>

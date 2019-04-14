@@ -9,23 +9,23 @@ namespace DP_WpfApp
     class ObserverMensuration : Observer
     {
         private Boolean observerIsSet;
-        private Mensuration meranie;
+        private Mensuration mensuration;
         ViewMensuration view;
 
         public ObserverMensuration(ViewMensuration view, Mensuration m)
         {
             View = view;
-            Meranie = m;
+            Mensuration = m;
             ObserverState = true;
         }
 
         public Boolean ObserverState { get => observerIsSet; set => observerIsSet = value; }
         public ViewMensuration View { get => view; set => view = value; }
-        internal Mensuration Meranie { get => meranie; set => meranie = value; }
+        internal Mensuration Mensuration { get => mensuration; set => mensuration = value; }
 
         public override void Update()
         {
-            if (ObserverState) { view.viewNewMeranie(Meranie); }
+            if (ObserverState) { view.viewNewMeranie(Mensuration); }
         }
 
     }

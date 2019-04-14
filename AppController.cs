@@ -14,7 +14,7 @@ namespace DP_WpfApp
     public sealed class AppController
     {
         private const bool IsLiveConnection = true;
-       
+
         private static readonly Lazy<AppController> instance = new Lazy<AppController>(() => new AppController());
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
@@ -28,16 +28,18 @@ namespace DP_WpfApp
 
         public Model Model { get => model; set => model = value; }
         public bool IsLiveData { get => isLiveData; set => isLiveData = value; }
-        public Discipline SelectedDiscipline { get => selectedDisciplina; set => selectedDisciplina = value; }
+        public SelectedDiscipline SelectedDiscipline { get => selectedDisciplina; set => selectedDisciplina = value; }
+
         public Run SelectedRun { get => selectedRun; set => selectedRun = value; }
-        public bool ModelWasSaved { get => modelWasSaved; set => modelWasSaved = value; }
+        public ViewMain ViewMain { get => viewMain; set => viewMain = value; }
+
+        ViewMain viewMain;
 
         Model model;
         ProcessingLiveData processingLiveData;
         LiveConnection liveConnection;
         Boolean isLiveData = IsLiveConnection;
-        Boolean modelWasSaved = false;
-        Discipline selectedDisciplina;
+        SelectedDiscipline selectedDisciplina;
         Run selectedRun;
 
         ViewMensuration viewMeranie;
@@ -51,6 +53,8 @@ namespace DP_WpfApp
             ViewMeranie = new ViewMensuration(LoadModelFromDataBase.loadMensuration());
             ViewDisciplina = new ViewDiscipline();
             ViewLiveConnection = new ViewLiveConnection();
+            SelectedDiscipline = null;
+            ViewMain = new ViewMain();
         }
 
         internal void saveToDataBase()
@@ -58,34 +62,69 @@ namespace DP_WpfApp
             if ((Model.Mensuration != null) && (IsLiveData))
             {
                 DataBaseServices.insertModel(Model.Mensuration);
-                ModelWasSaved = true;
             }
         }
 
         public void loadModel(int idMeranie)
         {
-            if (IsLiveData)
-            {
-                MessageBoxes.saveExistingModel(Model.Mensuration);
-            }
-
-            IsLiveData = !IsLiveConnection;
+            if (IsLiveData) { MessageBoxes.saveExistingModel(Model.Mensuration); }
+            IsLiveData = false;
             ViewDisciplina.setView(IsLiveData);
             model.loadAllMeranieFromDatabase(idMeranie);
-            setObservers();
+            setMenusrationObserver();
         }
 
-        public void loadModel(String label)
+        public void loadModel(String portName, int boudRate)
         {
-            IsLiveData = IsLiveConnection;
+            IsLiveData = true;
             ProcessingLiveData = new ProcessingLiveData();
-            LiveConnection = new LiveConnection(label);
+            LiveConnection = new LiveConnection(portName, boudRate);
             setLiveConnectionView();
             model.createModel();
-            //setObservers();
         }
 
-        private void setObservers()
+        public Boolean newDiscipline()
+        {
+            if (IsLiveData)
+            {
+                LiveConnection.startPort();
+                setMainView();
+                return true;
+            }
+            else
+            {
+                MessageBoxes.didNotSetConnection();
+                return false;
+            }
+        }
+
+        public void closeDiscipline()
+        {
+            SelectedDiscipline.close();
+            model.Mensuration.ListDiscipline.Add(SelectedDiscipline.Discipline);
+            LiveConnection.closePort();
+            SelectedDiscipline.IsLiveData = false;
+        }
+
+        private void setMainView()
+        {
+            ViewMain.clearView(); 
+            SelectedDiscipline = new SelectedDiscipline();
+            SelectedDiscipline.IsLiveData = IsLiveData;
+
+            SelectedDiscipline.Attach(new ObserverSelectedDiscipline(ViewMain, SelectedDiscipline));
+            SelectedDiscipline.Notify();
+        }
+
+        internal void setSelectedRun(int iD)
+        {
+            SelectedDiscipline.setSelectedRunFromDB(iD);
+            ViewMain.clearView();
+            SelectedDiscipline.Attach(new ObserverSelectedDiscipline(ViewMain, SelectedDiscipline));
+            SelectedDiscipline.Notify();
+        }
+
+        private void setMenusrationObserver()
         {
             model.Mensuration.Attach(new ObserverMensuration(viewMeranie, model.Mensuration));
             model.Mensuration.Notify();
@@ -100,34 +139,21 @@ namespace DP_WpfApp
         public void setObserverForRun(int disciplinaID)
         {
             ViewDisciplina.resetRuns();
-            List<Run> ListOkruhov = null;
+            List<Run> listRun = null;
 
             Model.Mensuration.ListDiscipline.ForEach(disciplina =>
             {
                 if (disciplina.ID == disciplinaID)
                 {
-                    SelectedDiscipline = disciplina;
-                    ListOkruhov = disciplina.ListRuns;
+                    SelectedDiscipline = new SelectedDiscipline(disciplina);
+                    listRun = disciplina.ListRuns;
                 }
             });
-            ListOkruhov.ForEach(okruh =>
+            listRun.ForEach(run =>
             {
-                okruh.Attach(new ObserverRun(ViewDisciplina, okruh));
-                okruh.Notify();
+                run.Attach(new ObserverRun(ViewDisciplina, run));
+                run.Notify();
             });
-        }
-
-
-        internal void setSelectedRun(int ID)
-        {
-            SelectedDiscipline.ListRuns.ForEach(run =>
-            {
-                if (run.ID == ID)
-                {
-                    SelectedRun = run;
-                }
-            });
-            //setMainView();
         }
 
         internal void setLiveConnectionView()
@@ -138,9 +164,10 @@ namespace DP_WpfApp
 
         internal void closeLiveConnection()
         {
+            IsLiveData = false;
             LiveConnection.closePort();
             LiveConnection = null;
-            ViewLiveConnection.setView(!IsLiveConnection);
+            ViewLiveConnection.setView(IsLiveData);
         }
     }
 }

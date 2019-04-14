@@ -6,7 +6,204 @@
              xmlns:local="clr-namespace:DP_WpfApp"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-        <DataGrid Name ="dataGrid" ItemsSource="{Binding}"/>    
-    </Grid>
+
+    <TabControl Name="telemetryData">
+        <TabItem Header="General Data">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+            </Grid>
+        </TabItem>
+        <TabItem Header="BBOX Power">
+            <DataGrid Name ="BBOXPowerDataGrid" AutoGenerateColumns="False" ItemsSource="{Binding BBOXPowerList}">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="ReceiptTime" Binding="{Binding ReceiptTime}" />
+                    <DataGridTextColumn Header="Power" Binding="{Binding BBOXPower.power}" />
+                    <DataGridTextColumn Header="Current" Binding="{Binding BBOXPower.current}" />
+                    <DataGridTextColumn Header="Voltage" Binding="{Binding BBOXPower.voltage}" />
+                </DataGrid.Columns>
+            </DataGrid>
+        </TabItem>
+        <TabItem Header="BBOX status">
+            <DataGrid Name ="BBOXStatusDataGrid" AutoGenerateColumns="False" ItemsSource="{Binding BBOXStatusList}">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="ReceiptTime" Binding="{Binding ReceiptTime}" />
+                    <DataGridTextColumn Header="SHD_IN" Binding="{Binding BBOXStatus.SHD_IN}" />
+                    <DataGridTextColumn Header="SHD_OUT" Binding="{Binding BBOXStatus.SHD_OUT}" />
+                    <DataGridTextColumn Header="TSMS" Binding="{Binding BBOXStatus.TSMS}" />
+                    <DataGridTextColumn Header="AIR_N" Binding="{Binding BBOXStatus.AIR_N}" />
+                    <DataGridTextColumn Header="AIR_P" Binding="{Binding BBOXStatus.AIR_P}" />
+                    <DataGridTextColumn Header="PRECH_60V" Binding="{Binding BBOXStatus.PRECH_60V}" />
+                    <DataGridTextColumn Header="IMD_OK" Binding="{Binding BBOXStatus.IMD_OK}" />
+                    <DataGridTextColumn Header="BMS_OK" Binding="{Binding BBOXStatus.BMS_OK}" />
+                    <DataGridTextColumn Header="SIGNAL_ERROR" Binding="{Binding BBOXStatus.SIGNAL_ERROR}" />
+                    <DataGridTextColumn Header="SHD_RESET" Binding="{Binding BBOXStatus.SHD_RESET}" />
+                    <DataGridTextColumn Header="SHD_EN" Binding="{Binding BBOXStatus.SHD_EN}" />
+                    <DataGridTextColumn Header="POLARITY" Binding="{Binding BBOXStatus.POLARITY}" />
+                    <DataGridTextColumn Header="FANS" Binding="{Binding BBOXStatus.FANS}" />
+                    <DataGridTextColumn Header="STM_temp" Binding="{Binding BBOXStatus.STM_temp}" />
+                </DataGrid.Columns>
+            </DataGrid>
+        </TabItem>
+        <TabItem Header="GPS data">
+            <DataGrid Name ="GPSDataDataGrid" AutoGenerateColumns="False" ItemsSource="{Binding GPSDataList}">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Receipt Time" Binding="{Binding ReceiptTime}" />
+                    <DataGridTextColumn Header="Latitude" Binding="{Binding GPSData.latitude}" />
+                    <DataGridTextColumn Header="Latitude char" Binding="{Binding GPSData.latitude_char}" />
+                    <DataGridTextColumn Header="Longitude" Binding="{Binding GPSData.longitude}" />
+                    <DataGridTextColumn Header="Longitude char" Binding="{Binding GPSData.longitude_char}" />
+                    <DataGridTextColumn Header="Speed" Binding="{Binding GPSData.speed}" />
+                    <DataGridTextColumn Header="Course" Binding="{Binding GPSData.course}" />
+                    <DataGridTextColumn Header="Altitude" Binding="{Binding GPSData.altitude}" />
+                </DataGrid.Columns>
+            </DataGrid>
+        </TabItem>
+        <TabItem Header="ECU State">
+            <DataGrid Name ="ECUStateDataGrid" AutoGenerateColumns="False" ItemsSource="{Binding ECUStateList}">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Receipt Time" Binding="{Binding ReceiptTime}" />
+                    <DataGridTextColumn Header="ECU Status" Binding="{Binding ECUState.ECU_Status}" />
+                    <DataGridTextColumn Header="FL AMK Status" Binding="{Binding ECUState.FL_AMK_Status}" />
+                    <DataGridTextColumn Header="FR AMK Status" Binding="{Binding ECUState.FR_AMK_Status}" />
+                    <DataGridTextColumn Header="RL AMK Status" Binding="{Binding ECUState.RL_AMK_Status}" />
+                    <DataGridTextColumn Header="RR AMK Status" Binding="{Binding ECUState.RR_AMK_Status}" />
+                    <DataGridTextColumn Header="TempMotor H" Binding="{Binding ECUState.TempMotor_H}" />
+                    <DataGridTextColumn Header="TempInverter H" Binding="{Binding ECUState.TempInverter_H}" />
+                    <DataGridTextColumn Header="TempIGBT H" Binding="{Binding ECUState.TempIGBT_H}" />
+                </DataGrid.Columns>
+            </DataGrid>
+        </TabItem>
+        <TabItem Header="BBOX command">
+            <DataGrid Name ="BBOXCommandDataGrid" AutoGenerateColumns="False" ItemsSource="{Binding BBOXCommandList}">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Receipt Time" Binding="{Binding ReceiptTime}" />
+                    <DataGridTextColumn Header="FANS" Binding="{Binding BBOXCommand.FANS}" />
+                    <DataGridTextColumn Header="SHD_EN" Binding="{Binding BBOXCommand.SHD_EN}" />
+                </DataGrid.Columns>
+            </DataGrid>
+        </TabItem>
+        <TabItem Header="FU Values 1">
+            <DataGrid Name ="FUValues1DataGrid" AutoGenerateColumns="False" ItemsSource="{Binding FUValues1List}">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Receipt Time" Binding="{Binding ReceiptTime}" />
+                    <DataGridTextColumn Header="apps1" Binding="{Binding FUValues1.apps1}" />
+                    <DataGridTextColumn Header="apps2" Binding="{Binding FUValues1.apps2}" />
+                    <DataGridTextColumn Header="brake1" Binding="{Binding FUValues1.brake1}" />
+                    <DataGridTextColumn Header="brake2" Binding="{Binding FUValues1.brake2}" />
+                    <DataGridTextColumn Header="error" Binding="{Binding FUValues1.error}" />
+                </DataGrid.Columns>
+            </DataGrid>
+        </TabItem>
+        <TabItem Header="Interconnect">
+            <DataGrid Name ="InterconnectDataGrid" AutoGenerateColumns="False" ItemsSource="{Binding InterconnectList}">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Receipt Time" Binding="{Binding ReceiptTime}" />
+                    <DataGridTextColumn Header="Car State" Binding="{Binding Interconnect.car_state}" />
+                    <DataGridTextColumn Header="Left W Pump" Binding="{Binding Interconnect.left_w_pump}" />
+                    <DataGridTextColumn Header="Right W Pump" Binding="{Binding Interconnect.right_w_pump}" />
+                    <DataGridTextColumn Header="Brake Red" Binding="{Binding Interconnect.brake_red}" />
+                    <DataGridTextColumn Header="Brake White" Binding="{Binding Interconnect.brake_white}" />
+                    <DataGridTextColumn Header="Tsas" Binding="{Binding Interconnect.tsas}" />
+                    <DataGridTextColumn Header="Killswitch R" Binding="{Binding Interconnect.killswitch_R}" />
+                    <DataGridTextColumn Header="Killswitch L" Binding="{Binding Interconnect.killswitch_L}" />
+                    <DataGridTextColumn Header="Reserve" Binding="{Binding Interconnect.reserve}" />
+                    <DataGridTextColumn Header="Susp RR" Binding="{Binding Interconnect.susp_RR}" />
+                    <DataGridTextColumn Header="Susp RL" Binding="{Binding Interconnect.susp_RL}" />
+                </DataGrid.Columns>
+            </DataGrid>
+        </TabItem>
+        <TabItem Header="FU Values 2">
+            <DataGrid Name ="FUValues2DataGrid" AutoGenerateColumns="False" ItemsSource="{Binding FUValues2List}">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Receipt Time" Binding="{Binding ReceiptTime}" />
+                    <DataGridTextColumn Header="Steer" Binding="{Binding FUValues2.steer}" />
+                    <DataGridTextColumn Header="Susp FL" Binding="{Binding FUValues2.susp_FL}" />
+                    <DataGridTextColumn Header="Susp FR" Binding="{Binding FUValues2.susp_FR}" />
+                    <DataGridTextColumn Header="Brake Pos" Binding="{Binding FUValues2.brake_pos}" />
+                    <DataGridTextColumn Header="RTD" Binding="{Binding FUValues2.RTD}" />
+                    <DataGridTextColumn Header="BOTS" Binding="{Binding FUValues2.BOTS}" />
+                    <DataGridTextColumn Header="SHDB" Binding="{Binding FUValues2.SHDB}" />
+                    <DataGridTextColumn Header="INERTIA SW" Binding="{Binding FUValues2.INERTIA_SW}" />
+                    <DataGridTextColumn Header="Reserve" Binding="{Binding FUValues2.reserve}" />
+                </DataGrid.Columns>
+            </DataGrid>
+        </TabItem>
+        <TabItem Header="BMS Command">
+            <DataGrid Name ="BMSCommandDataGrid" AutoGenerateColumns="False" ItemsSource="{Binding BMSCommandList}">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Receipt Time" Binding="{Binding ReceiptTime}" />
+                    <DataGridTextColumn Header="BMS Balanc" Binding="{Binding BMSCommand.BMS_Balanc}" />
+                    <DataGridTextColumn Header="BMS FullMode" Binding="{Binding BMSCommand.BMS_FullMode}" />
+                    <DataGridTextColumn Header="BMS OK" Binding="{Binding BMSCommand.BMS_OK}" />
+                    <DataGridTextColumn Header="BMS ONOFF" Binding="{Binding BMSCommand.BMS_ONOFF}" />
+                    <DataGridTextColumn Header="BMS CAN" Binding="{Binding BMSCommand.BMS_CAN}" />
+                </DataGrid.Columns>
+            </DataGrid>
+        </TabItem>
+        <TabItem Header="BMS State">
+            <DataGrid Name ="BMSStateDataGrid" AutoGenerateColumns="False" ItemsSource="{Binding BMSStateList}">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Receipt Time" Binding="{Binding ReceiptTime}" />
+                    <DataGridTextColumn Header="BMS Mode" Binding="{Binding BMSState.BMS_Mode}" />
+                    <DataGridTextColumn Header="BMS Faults" Binding="{Binding BMSState.BMS_Faults}" />
+                    <DataGridTextColumn Header="CellVolt L" Binding="{Binding BMSState.CellVolt_L}" />
+                    <DataGridTextColumn Header="CellVolt H" Binding="{Binding BMSState.CellVolt_H}" />
+                    <DataGridTextColumn Header="CellTemp L" Binding="{Binding BMSState.CellTemp_L}" />
+                    <DataGridTextColumn Header="CellTemp H" Binding="{Binding BMSState.CellTemp_H}" />
+                    <DataGridTextColumn Header="BMS Ident" Binding="{Binding BMSState.BMS_Ident}" />
+                </DataGrid.Columns>
+            </DataGrid>
+        </TabItem>
+        <TabItem Header="wheel RPM">
+            <DataGrid Name ="WheelRPMDataGrid" AutoGenerateColumns="False" ItemsSource="{Binding WheelRPMList}">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Receipt Time" Binding="{Binding ReceiptTime}" />
+                    <DataGridTextColumn Header="Front Right" Binding="{Binding WheelRPM.front_right}" />
+                    <DataGridTextColumn Header="Front Left" Binding="{Binding WheelRPM.front_left}" />
+                    <DataGridTextColumn Header="Rear Right" Binding="{Binding WheelRPM.rear_right}" />
+                    <DataGridTextColumn Header="Rear Left" Binding="{Binding WheelRPM.rear_left}" />
+                </DataGrid.Columns>
+            </DataGrid>
+        </TabItem>
+        <TabItem Header="BMS_Voltages">
+            <DataGrid Name ="BMSVoltagesDataGrid" AutoGenerateColumns="False" ItemsSource="{Binding BMSVoltagesList}">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Receipt Time" Binding="{Binding ReceiptTime}" />
+                    <DataGridTextColumn Header="BMS VoltIdent" Binding="{Binding BMSVoltages.BMS_VoltIdent}" />
+                    <DataGridTextColumn Header="BMS Volt1" Binding="{Binding BMSVoltages.BMS_Volt1}" />
+                    <DataGridTextColumn Header="BMS Volt2" Binding="{Binding BMSVoltages.BMS_Volt2}" />
+                    <DataGridTextColumn Header="BMS Volt3" Binding="{Binding BMSVoltages.BMS_Volt3}" />
+                    <DataGridTextColumn Header="BMS Volt4" Binding="{Binding BMSVoltages.BMS_Volt4}" />
+                    <DataGridTextColumn Header="BMS Volt5" Binding="{Binding BMSVoltages.BMS_Volt5}" />
+                    <DataGridTextColumn Header="BMS Volt6" Binding="{Binding BMSVoltages.BMS_Volt6}" />
+                    <DataGridTextColumn Header="BMS Volt7" Binding="{Binding BMSVoltages.BMS_Volt7}" />
+                </DataGrid.Columns>
+            </DataGrid>
+        </TabItem>
+        <TabItem Header="BMS_Temps">
+            <DataGrid Name ="BMSTempsDataGrid" AutoGenerateColumns="False" ItemsSource="{Binding BMSTempsList}">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Receipt Time" Binding="{Binding ReceiptTime}" />
+                    <DataGridTextColumn Header="BMS TempIdent" Binding="{Binding BMSTemps.BMS_TempIdent}" />
+                    <DataGridTextColumn Header="BMS Temp1" Binding="{Binding BMSTemps.BMS_Temp1}" />
+                    <DataGridTextColumn Header="BMS Temp2" Binding="{Binding BMSTemps.BMS_Temp2}" />
+                    <DataGridTextColumn Header="BMS Temp3" Binding="{Binding BMSTemps.BMS_Temp3}" />
+                    <DataGridTextColumn Header="BMS Temp4" Binding="{Binding BMSTemps.BMS_Temp4}" />
+                    <DataGridTextColumn Header="BMS Temp5" Binding="{Binding BMSTemps.BMS_Temp5}" />
+                    <DataGridTextColumn Header="BMS Temp6" Binding="{Binding BMSTemps.BMS_Temp6}" />
+                    <DataGridTextColumn Header="BMS Temp7" Binding="{Binding BMSTemps.BMS_Temp7}" />
+                </DataGrid.Columns>
+            </DataGrid>
+        </TabItem>
+    </TabControl>
 </UserControl>

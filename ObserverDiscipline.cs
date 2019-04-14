@@ -21,7 +21,7 @@ namespace DP_WpfApp
 
         public override void Update()
         {
-            if (ObserverIsSet) { view.addToComboboxDiscipliny(Disciplina);}
+            if (ObserverIsSet) { view.addToComboboxDiscipline(Disciplina);}
         }
 
     }

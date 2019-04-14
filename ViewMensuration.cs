@@ -17,6 +17,12 @@ namespace DP_WpfApp
             allMensuration.ForEach((item => comboboxListMensuration.Add(new ComboboxValue { ID = item.ID, Label = item.StartTime.ToLongTimeString() })));
         }
 
+        public void refreshMensuration()
+        {
+            comboboxListMensuration.Clear();
+            AppController.get.Model.AllMensurations.ForEach((item => comboboxListMensuration.Add(new ComboboxValue { ID = item.ID, Label = item.StartTime.ToLongTimeString() })));
+        }
+
         private String detailsInformation = "";
 
         public ObservableCollection<ComboboxValue> comboboxListMensuration { get; } = new ObservableCollection<ComboboxValue>();

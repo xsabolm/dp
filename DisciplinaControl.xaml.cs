@@ -53,7 +53,8 @@ namespace DP_WpfApp
 
         private void btn_endDisciplin_Click(object sender, RoutedEventArgs e)
         {
-            AppController.get.Model.closeDiscipline();
+            //AppController.get.Model.closeDiscipline();
+            AppController.get.closeDiscipline();
             btn_startDisciplin.IsEnabled = true;
             btn_endDisciplin.IsEnabled = false;
             btn_save.IsEnabled = true;
@@ -61,7 +62,8 @@ namespace DP_WpfApp
 
         private void btn_startDisciplin_Click(object sender, RoutedEventArgs e)
         {
-            if (AppController.get.Model.createNewDiscipline())
+            // if (AppController.get.Model.createNewDiscipline())
+            if (AppController.get.newDiscipline())
             {
                 btn_startDisciplin.IsEnabled = false;
                 btn_endDisciplin.IsEnabled = true;

@@ -1,0 +1,1156 @@
+2019-04-08 07:15:19,479 [1] INFO  SELECT * FROM mensuration;
+2019-04-08 07:15:32,961 [1] INFO  SELECT * FROM mensuration where ID=27;
+2019-04-08 07:15:33,060 [1] INFO  SELECT * FROM discipline where Id_mensuration=27;
+2019-04-08 07:15:33,126 [1] INFO  SELECT * FROM run where ID_discipline=15;
+2019-04-08 07:15:33,166 [1] INFO  SELECT * FROM msg where ID_run=11;
+2019-04-08 07:15:33,271 [1] INFO  Observer was notified
+2019-04-08 07:15:33,277 [1] INFO  Observer was notified
+2019-04-08 07:15:41,109 [1] INFO  SELECT * FROM mensuration where ID=56;
+2019-04-08 07:15:41,178 [1] INFO  SELECT * FROM discipline where Id_mensuration=56;
+2019-04-08 07:15:41,248 [1] INFO  SELECT * FROM run where ID_discipline=71;
+2019-04-08 07:15:41,296 [1] INFO  SELECT * FROM msg where ID_run=58;
+2019-04-08 07:15:41,355 [1] INFO  SELECT * FROM run where ID_discipline=72;
+2019-04-08 07:15:41,401 [1] INFO  SELECT * FROM msg where ID_run=59;
+2019-04-08 07:15:41,430 [1] INFO  Observer was notified
+2019-04-08 07:15:41,432 [1] INFO  Observer was notified
+2019-04-08 07:15:41,435 [1] INFO  Observer was notified
+2019-04-08 07:15:46,963 [1] INFO  Observer was notified
+2019-04-08 07:18:30,324 [1] INFO  SELECT * FROM mensuration;
+2019-04-08 07:18:39,571 [1] INFO  SELECT * FROM mensuration where ID=27;
+2019-04-08 07:18:39,624 [1] INFO  SELECT * FROM discipline where Id_mensuration=27;
+2019-04-08 07:18:39,673 [1] INFO  SELECT * FROM run where ID_discipline=15;
+2019-04-08 07:18:39,716 [1] INFO  SELECT * FROM msg where ID_run=11;
+2019-04-08 07:18:39,793 [1] INFO  Observer was notified
+2019-04-08 07:18:39,799 [1] INFO  Observer was notified
+2019-04-08 07:18:42,554 [1] INFO  Observer was notified
+2019-04-08 07:18:51,410 [1] INFO  SELECT * FROM mensuration where ID=43;
+2019-04-08 07:18:51,501 [1] INFO  SELECT * FROM discipline where Id_mensuration=43;
+2019-04-08 07:18:51,509 [1] INFO  Observer was notified
+2019-04-08 07:18:58,844 [1] INFO  SELECT * FROM mensuration where ID=56;
+2019-04-08 07:18:58,878 [1] INFO  SELECT * FROM discipline where Id_mensuration=56;
+2019-04-08 07:18:58,913 [1] INFO  SELECT * FROM run where ID_discipline=71;
+2019-04-08 07:18:58,964 [1] INFO  SELECT * FROM msg where ID_run=58;
+2019-04-08 07:18:59,010 [1] INFO  SELECT * FROM run where ID_discipline=72;
+2019-04-08 07:18:59,058 [1] INFO  SELECT * FROM msg where ID_run=59;
+2019-04-08 07:18:59,071 [1] INFO  Observer was notified
+2019-04-08 07:18:59,074 [1] INFO  Observer was notified
+2019-04-08 07:18:59,076 [1] INFO  Observer was notified
+2019-04-08 07:19:01,395 [1] INFO  Observer was notified
+2019-04-08 07:19:04,860 [1] INFO  Observer was notified
+2019-04-08 07:19:07,979 [1] INFO  Observer was notified
+2019-04-08 07:20:15,091 [1] INFO  SELECT * FROM mensuration;
+2019-04-08 07:20:33,222 [1] INFO  SELECT * FROM mensuration where ID=56;
+2019-04-08 07:20:33,310 [1] INFO  SELECT * FROM discipline where Id_mensuration=56;
+2019-04-08 07:20:33,372 [1] INFO  SELECT * FROM run where ID_discipline=71;
+2019-04-08 07:20:33,435 [1] INFO  SELECT * FROM msg where ID_run=58;
+2019-04-08 07:20:33,526 [1] INFO  SELECT * FROM run where ID_discipline=72;
+2019-04-08 07:20:33,580 [1] INFO  SELECT * FROM msg where ID_run=59;
+2019-04-08 07:20:33,607 [1] INFO  Observer was notified
+2019-04-08 07:20:33,622 [1] INFO  Observer was notified
+2019-04-08 07:20:33,632 [1] INFO  Observer was notified
+2019-04-08 07:20:35,672 [1] INFO  Observer was notified
+2019-04-08 07:21:15,924 [1] INFO  SELECT * FROM mensuration;
+2019-04-08 07:21:26,080 [1] INFO  SELECT * FROM mensuration where ID=56;
+2019-04-08 07:21:26,130 [1] INFO  SELECT * FROM discipline where Id_mensuration=56;
+2019-04-08 07:21:26,215 [1] INFO  SELECT * FROM run where ID_discipline=71;
+2019-04-08 07:21:26,260 [1] INFO  SELECT * FROM msg where ID_run=58;
+2019-04-08 07:21:26,348 [1] INFO  SELECT * FROM run where ID_discipline=72;
+2019-04-08 07:21:26,389 [1] INFO  SELECT * FROM msg where ID_run=59;
+2019-04-08 07:21:26,418 [1] INFO  Observer was notified
+2019-04-08 07:21:26,439 [1] INFO  Observer was notified
+2019-04-08 07:21:26,445 [1] INFO  Observer was notified
+2019-04-08 07:21:28,816 [1] INFO  Observer was notified
+2019-04-08 07:21:35,282 [1] INFO  Observer was notified
+2019-04-08 07:21:39,132 [1] INFO  Observer was notified
+2019-04-08 07:21:41,771 [1] INFO  Observer was notified
+2019-04-08 07:21:54,155 [1] INFO  Observer was notified
+2019-04-08 07:22:11,171 [1] INFO  SELECT * FROM mensuration where ID=49;
+2019-04-08 07:22:11,245 [1] INFO  SELECT * FROM discipline where Id_mensuration=49;
+2019-04-08 07:22:11,283 [1] INFO  SELECT * FROM run where ID_discipline=51;
+2019-04-08 07:22:11,338 [1] INFO  SELECT * FROM msg where ID_run=43;
+2019-04-08 07:22:11,400 [1] INFO  SELECT * FROM run where ID_discipline=52;
+2019-04-08 07:22:11,437 [1] INFO  SELECT * FROM msg where ID_run=44;
+2019-04-08 07:22:11,498 [1] INFO  SELECT * FROM run where ID_discipline=53;
+2019-04-08 07:22:11,548 [1] INFO  SELECT * FROM msg where ID_run=45;
+2019-04-08 07:22:11,563 [1] INFO  Observer was notified
+2019-04-08 07:22:11,565 [1] INFO  Observer was notified
+2019-04-08 07:22:11,577 [1] INFO  Observer was notified
+2019-04-08 07:22:11,600 [1] INFO  Observer was notified
+2019-04-08 07:22:14,433 [1] INFO  Observer was notified
+2019-04-08 07:22:16,985 [1] INFO  Observer was notified
+2019-04-08 07:22:19,833 [1] INFO  Observer was notified
+2019-04-08 07:24:08,555 [1] INFO  SELECT * FROM mensuration;
+2019-04-08 07:24:17,512 [1] INFO  SELECT * FROM mensuration where ID=55;
+2019-04-08 07:24:17,556 [1] INFO  SELECT * FROM discipline where Id_mensuration=55;
+2019-04-08 07:24:17,577 [1] INFO  Observer was notified
+2019-04-08 07:24:26,375 [1] INFO  SELECT * FROM mensuration where ID=56;
+2019-04-08 07:24:26,422 [1] INFO  SELECT * FROM discipline where Id_mensuration=56;
+2019-04-08 07:24:26,483 [1] INFO  SELECT * FROM run where ID_discipline=71;
+2019-04-08 07:24:26,521 [1] INFO  SELECT * FROM msg where ID_run=58;
+2019-04-08 07:24:26,585 [1] INFO  SELECT * FROM run where ID_discipline=72;
+2019-04-08 07:24:26,620 [1] INFO  SELECT * FROM msg where ID_run=59;
+2019-04-08 07:24:26,630 [1] INFO  Observer was notified
+2019-04-08 07:24:26,635 [1] INFO  Observer was notified
+2019-04-08 07:24:26,638 [1] INFO  Observer was notified
+2019-04-08 07:24:29,274 [1] INFO  Observer was notified
+2019-04-08 07:24:33,807 [1] INFO  Observer was notified
+2019-04-08 07:28:07,279 [1] INFO  SELECT * FROM mensuration;
+2019-04-08 07:28:16,816 [1] INFO  SELECT * FROM mensuration where ID=56;
+2019-04-08 07:28:16,860 [1] INFO  SELECT * FROM discipline where Id_mensuration=56;
+2019-04-08 07:28:16,910 [1] INFO  SELECT * FROM run where ID_discipline=71;
+2019-04-08 07:28:16,955 [1] INFO  SELECT * FROM msg where ID_run=58;
+2019-04-08 07:28:17,028 [1] INFO  SELECT * FROM run where ID_discipline=72;
+2019-04-08 07:28:17,065 [1] INFO  SELECT * FROM msg where ID_run=59;
+2019-04-08 07:28:17,092 [1] INFO  Observer was notified
+2019-04-08 07:28:17,098 [1] INFO  Observer was notified
+2019-04-08 07:28:17,100 [1] INFO  Observer was notified
+2019-04-08 07:28:18,705 [1] INFO  Observer was notified
+2019-04-08 07:28:22,764 [1] INFO  Observer was notified
+2019-04-08 07:29:07,308 [1] INFO  SELECT * FROM mensuration;
+2019-04-08 07:29:18,564 [1] INFO  SELECT * FROM mensuration where ID=56;
+2019-04-08 07:29:18,611 [1] INFO  SELECT * FROM discipline where Id_mensuration=56;
+2019-04-08 07:29:18,657 [1] INFO  SELECT * FROM run where ID_discipline=71;
+2019-04-08 07:29:18,695 [1] INFO  SELECT * FROM msg where ID_run=58;
+2019-04-08 07:29:18,783 [1] INFO  SELECT * FROM run where ID_discipline=72;
+2019-04-08 07:29:18,820 [1] INFO  SELECT * FROM msg where ID_run=59;
+2019-04-08 07:29:18,849 [1] INFO  Observer was notified
+2019-04-08 07:29:18,856 [1] INFO  Observer was notified
+2019-04-08 07:29:18,867 [1] INFO  Observer was notified
+2019-04-08 07:29:22,279 [1] INFO  Observer was notified
+2019-04-08 07:30:52,643 [1] INFO  SELECT * FROM mensuration;
+2019-04-08 07:31:02,788 [1] INFO  SELECT * FROM mensuration where ID=56;
+2019-04-08 07:31:02,845 [1] INFO  SELECT * FROM discipline where Id_mensuration=56;
+2019-04-08 07:31:02,903 [1] INFO  SELECT * FROM run where ID_discipline=71;
+2019-04-08 07:31:02,953 [1] INFO  SELECT * FROM msg where ID_run=58;
+2019-04-08 07:31:03,026 [1] INFO  SELECT * FROM run where ID_discipline=72;
+2019-04-08 07:31:03,065 [1] INFO  SELECT * FROM msg where ID_run=59;
+2019-04-08 07:31:03,100 [1] INFO  Observer was notified
+2019-04-08 07:31:03,112 [1] INFO  Observer was notified
+2019-04-08 07:31:03,116 [1] INFO  Observer was notified
+2019-04-08 07:35:28,497 [1] INFO  SELECT * FROM mensuration;
+2019-04-08 07:35:40,213 [1] INFO  SELECT * FROM mensuration where ID=56;
+2019-04-08 07:35:40,250 [1] INFO  SELECT * FROM discipline where Id_mensuration=56;
+2019-04-08 07:35:40,290 [1] INFO  SELECT * FROM run where ID_discipline=71;
+2019-04-08 07:35:40,346 [1] INFO  SELECT * FROM msg where ID_run=58;
+2019-04-08 07:35:40,421 [1] INFO  SELECT * FROM run where ID_discipline=72;
+2019-04-08 07:35:40,461 [1] INFO  SELECT * FROM msg where ID_run=59;
+2019-04-08 07:35:40,482 [1] INFO  Observer was notified
+2019-04-08 07:35:40,487 [1] INFO  Observer was notified
+2019-04-08 07:35:40,491 [1] INFO  Observer was notified
+2019-04-08 07:35:43,284 [1] INFO  Observer was notified
+2019-04-08 07:36:15,712 [1] INFO  SELECT * FROM mensuration;
+2019-04-08 07:36:24,800 [1] INFO  SELECT * FROM mensuration where ID=56;
+2019-04-08 07:36:24,855 [1] INFO  SELECT * FROM discipline where Id_mensuration=56;
+2019-04-08 07:36:24,901 [1] INFO  SELECT * FROM run where ID_discipline=71;
+2019-04-08 07:36:24,940 [1] INFO  SELECT * FROM msg where ID_run=58;
+2019-04-08 07:36:25,027 [1] INFO  SELECT * FROM run where ID_discipline=72;
+2019-04-08 07:36:25,062 [1] INFO  SELECT * FROM msg where ID_run=59;
+2019-04-08 07:36:25,085 [1] INFO  Observer was notified
+2019-04-08 07:36:25,093 [1] INFO  Observer was notified
+2019-04-08 07:36:25,096 [1] INFO  Observer was notified
+2019-04-08 07:37:39,958 [1] INFO  SELECT * FROM mensuration;
+2019-04-08 07:37:49,020 [1] INFO  SELECT * FROM mensuration where ID=56;
+2019-04-08 07:37:49,059 [1] INFO  SELECT * FROM discipline where Id_mensuration=56;
+2019-04-08 07:37:49,094 [1] INFO  SELECT * FROM run where ID_discipline=71;
+2019-04-08 07:37:49,141 [1] INFO  SELECT * FROM msg where ID_run=58;
+2019-04-08 07:37:49,212 [1] INFO  SELECT * FROM run where ID_discipline=72;
+2019-04-08 07:37:49,247 [1] INFO  SELECT * FROM msg where ID_run=59;
+2019-04-08 07:37:49,273 [1] INFO  Observer was notified
+2019-04-08 07:37:49,280 [1] INFO  Observer was notified
+2019-04-08 07:37:49,282 [1] INFO  Observer was notified
+2019-04-08 07:37:51,802 [1] INFO  Observer was notified
+2019-04-08 07:39:13,937 [1] INFO  SELECT * FROM mensuration;
+2019-04-08 07:39:22,982 [1] INFO  SELECT * FROM mensuration where ID=56;
+2019-04-08 07:39:23,060 [1] INFO  SELECT * FROM discipline where Id_mensuration=56;
+2019-04-08 07:39:23,106 [1] INFO  SELECT * FROM run where ID_discipline=71;
+2019-04-08 07:39:23,146 [1] INFO  SELECT * FROM msg where ID_run=58;
+2019-04-08 07:39:23,226 [1] INFO  SELECT * FROM run where ID_discipline=72;
+2019-04-08 07:39:23,265 [1] INFO  SELECT * FROM msg where ID_run=59;
+2019-04-08 07:39:23,291 [1] INFO  Observer was notified
+2019-04-08 07:39:23,303 [1] INFO  Observer was notified
+2019-04-08 07:39:23,361 [1] INFO  Observer was notified
+2019-04-08 07:39:25,496 [1] INFO  Observer was notified
+2019-04-08 07:43:20,122 [1] INFO  SELECT * FROM mensuration;
+2019-04-08 07:43:31,620 [1] INFO  SELECT * FROM mensuration where ID=56;
+2019-04-08 07:43:31,664 [1] INFO  SELECT * FROM discipline where Id_mensuration=56;
+2019-04-08 07:43:31,718 [1] INFO  SELECT * FROM run where ID_discipline=71;
+2019-04-08 07:43:31,757 [1] INFO  SELECT * FROM msg where ID_run=58;
+2019-04-08 07:43:31,835 [1] INFO  SELECT * FROM run where ID_discipline=72;
+2019-04-08 07:43:31,874 [1] INFO  SELECT * FROM msg where ID_run=59;
+2019-04-08 07:43:31,901 [1] INFO  Observer was notified
+2019-04-08 07:43:31,929 [1] INFO  Observer was notified
+2019-04-08 07:43:31,942 [1] INFO  Observer was notified
+2019-04-08 07:43:40,775 [1] INFO  Observer was notified
+2019-04-08 07:44:32,235 [1] INFO  SELECT * FROM mensuration;
+2019-04-08 07:44:41,685 [1] INFO  SELECT * FROM mensuration where ID=56;
+2019-04-08 07:44:41,749 [1] INFO  SELECT * FROM discipline where Id_mensuration=56;
+2019-04-08 07:44:41,789 [1] INFO  SELECT * FROM run where ID_discipline=71;
+2019-04-08 07:44:41,829 [1] INFO  SELECT * FROM msg where ID_run=58;
+2019-04-08 07:44:41,909 [1] INFO  SELECT * FROM run where ID_discipline=72;
+2019-04-08 07:44:41,983 [1] INFO  SELECT * FROM msg where ID_run=59;
+2019-04-08 07:44:42,011 [1] INFO  Observer was notified
+2019-04-08 07:44:42,017 [1] INFO  Observer was notified
+2019-04-08 07:44:42,027 [1] INFO  Observer was notified
+2019-04-08 07:44:47,365 [1] INFO  Observer was notified
+2019-04-08 07:45:19,093 [1] INFO  SELECT * FROM mensuration;
+2019-04-08 07:45:27,174 [1] INFO  SELECT * FROM mensuration where ID=56;
+2019-04-08 07:45:27,225 [1] INFO  SELECT * FROM discipline where Id_mensuration=56;
+2019-04-08 07:45:27,326 [1] INFO  SELECT * FROM run where ID_discipline=71;
+2019-04-08 07:45:27,370 [1] INFO  SELECT * FROM msg where ID_run=58;
+2019-04-08 07:45:27,450 [1] INFO  SELECT * FROM run where ID_discipline=72;
+2019-04-08 07:45:27,490 [1] INFO  SELECT * FROM msg where ID_run=59;
+2019-04-08 07:45:27,520 [1] INFO  Observer was notified
+2019-04-08 07:45:27,525 [1] INFO  Observer was notified
+2019-04-08 07:45:27,528 [1] INFO  Observer was notified
+2019-04-08 07:45:29,555 [1] INFO  Observer was notified
+2019-04-08 07:46:01,629 [1] INFO  SELECT * FROM mensuration;
+2019-04-08 07:46:10,562 [1] INFO  SELECT * FROM mensuration where ID=56;
+2019-04-08 07:46:10,604 [1] INFO  SELECT * FROM discipline where Id_mensuration=56;
+2019-04-08 07:46:10,639 [1] INFO  SELECT * FROM run where ID_discipline=71;
+2019-04-08 07:46:10,680 [1] INFO  SELECT * FROM msg where ID_run=58;
+2019-04-08 07:46:10,779 [1] INFO  SELECT * FROM run where ID_discipline=72;
+2019-04-08 07:46:10,817 [1] INFO  SELECT * FROM msg where ID_run=59;
+2019-04-08 07:46:10,839 [1] INFO  Observer was notified
+2019-04-08 07:46:10,845 [1] INFO  Observer was notified
+2019-04-08 07:46:10,847 [1] INFO  Observer was notified
+2019-04-08 07:46:16,051 [1] INFO  Observer was notified
+2019-04-08 07:53:31,665 [1] INFO  SELECT * FROM mensuration;
+2019-04-08 07:54:56,634 [1] INFO  SELECT * FROM mensuration;
+2019-04-08 07:55:06,510 [1] INFO  SELECT * FROM mensuration where ID=56;
+2019-04-08 07:55:06,561 [1] INFO  SELECT * FROM discipline where Id_mensuration=56;
+2019-04-08 07:55:06,603 [1] INFO  SELECT * FROM run where ID_discipline=71;
+2019-04-08 07:55:06,642 [1] INFO  SELECT * FROM msg where ID_run=58;
+2019-04-08 07:55:06,715 [1] INFO  SELECT * FROM run where ID_discipline=72;
+2019-04-08 07:55:06,752 [1] INFO  SELECT * FROM msg where ID_run=59;
+2019-04-08 07:55:06,778 [1] INFO  Observer was notified
+2019-04-08 07:55:06,785 [1] INFO  Observer was notified
+2019-04-08 07:55:06,788 [1] INFO  Observer was notified
+2019-04-08 07:55:10,821 [1] INFO  Observer was notified
+2019-04-08 09:09:19,115 [1] INFO  SELECT * FROM mensuration;
+2019-04-08 09:09:28,757 [1] INFO  SELECT * FROM mensuration where ID=56;
+2019-04-08 09:09:28,905 [1] INFO  SELECT * FROM discipline where Id_mensuration=56;
+2019-04-08 09:09:28,949 [1] INFO  SELECT * FROM run where ID_discipline=71;
+2019-04-08 09:09:28,991 [1] INFO  SELECT * FROM msg where ID_run=58;
+2019-04-08 09:09:29,071 [1] INFO  SELECT * FROM run where ID_discipline=72;
+2019-04-08 09:09:29,146 [1] INFO  SELECT * FROM msg where ID_run=59;
+2019-04-08 09:09:29,179 [1] INFO  Observer was notified
+2019-04-08 09:09:29,189 [1] INFO  Observer was notified
+2019-04-08 09:09:29,191 [1] INFO  Observer was notified
+2019-04-08 09:10:35,327 [1] INFO  SELECT * FROM mensuration;
+2019-04-08 09:10:44,715 [1] INFO  SELECT * FROM mensuration where ID=56;
+2019-04-08 09:10:44,789 [1] INFO  SELECT * FROM discipline where Id_mensuration=56;
+2019-04-08 09:10:44,842 [1] INFO  SELECT * FROM run where ID_discipline=71;
+2019-04-08 09:10:44,894 [1] INFO  SELECT * FROM msg where ID_run=58;
+2019-04-08 09:10:44,978 [1] INFO  SELECT * FROM run where ID_discipline=72;
+2019-04-08 09:10:45,050 [1] INFO  SELECT * FROM msg where ID_run=59;
+2019-04-08 09:10:45,080 [1] INFO  Observer was notified
+2019-04-08 09:10:45,087 [1] INFO  Observer was notified
+2019-04-08 09:10:45,090 [1] INFO  Observer was notified
+2019-04-08 09:10:47,223 [1] INFO  Observer was notified
+2019-04-08 09:13:39,228 [1] INFO  SELECT * FROM mensuration;
+2019-04-08 09:13:57,361 [1] INFO  SELECT * FROM mensuration where ID=56;
+2019-04-08 09:13:57,405 [1] INFO  SELECT * FROM discipline where Id_mensuration=56;
+2019-04-08 09:13:57,439 [1] INFO  SELECT * FROM run where ID_discipline=71;
+2019-04-08 09:13:57,489 [1] INFO  SELECT * FROM msg where ID_run=58;
+2019-04-08 09:13:57,558 [1] INFO  SELECT * FROM run where ID_discipline=72;
+2019-04-08 09:13:57,593 [1] INFO  SELECT * FROM msg where ID_run=59;
+2019-04-08 09:13:57,618 [1] INFO  Observer was notified
+2019-04-08 09:13:57,623 [1] INFO  Observer was notified
+2019-04-08 09:13:57,626 [1] INFO  Observer was notified
+2019-04-08 09:14:01,633 [1] INFO  Observer was notified
+2019-04-08 09:14:50,339 [1] INFO  SELECT * FROM mensuration;
+2019-04-08 09:14:58,654 [1] INFO  SELECT * FROM mensuration where ID=56;
+2019-04-08 09:14:58,691 [1] INFO  SELECT * FROM discipline where Id_mensuration=56;
+2019-04-08 09:14:58,723 [1] INFO  SELECT * FROM run where ID_discipline=71;
+2019-04-08 09:14:58,772 [1] INFO  SELECT * FROM msg where ID_run=58;
+2019-04-08 09:14:58,841 [1] INFO  SELECT * FROM run where ID_discipline=72;
+2019-04-08 09:14:58,871 [1] INFO  SELECT * FROM msg where ID_run=59;
+2019-04-08 09:14:58,886 [1] INFO  Observer was notified
+2019-04-08 09:14:58,890 [1] INFO  Observer was notified
+2019-04-08 09:14:58,892 [1] INFO  Observer was notified
+2019-04-08 09:15:01,857 [1] INFO  Observer was notified
+2019-04-08 09:15:03,097 [1] INFO  Observer was notified
+2019-04-08 09:15:05,886 [1] INFO  Observer was notified
+2019-04-08 09:15:07,166 [1] INFO  Observer was notified
+2019-04-08 09:15:09,559 [1] INFO  Observer was notified
+2019-04-08 09:15:10,621 [1] INFO  Observer was notified
+2019-04-08 09:15:11,693 [1] INFO  Observer was notified
+2019-04-08 09:24:13,709 [1] INFO  SELECT * FROM mensuration;
+2019-04-08 09:24:43,260 [8] INFO  ID msg: 2
+2019-04-08 09:24:53,707 [8] INFO  ID msg: 3
+2019-04-08 09:25:04,251 [8] INFO  ID msg: 4
+2019-04-08 09:25:14,631 [8] INFO  ID msg: 5
+2019-04-08 09:25:24,953 [9] INFO  ID msg: 6
+2019-04-08 09:25:35,388 [9] INFO  ID msg: 7
+2019-04-08 09:25:45,934 [9] INFO  ID msg: 8
+2019-04-08 09:25:56,336 [9] INFO  ID msg: 9
+2019-04-08 09:26:06,658 [10] INFO  ID msg: 10
+2019-04-08 09:26:17,094 [9] INFO  ID msg: 11
+2019-04-08 09:26:27,640 [9] INFO  ID msg: 12
+2019-04-08 09:26:38,043 [9] INFO  ID msg: 13
+2019-04-08 09:26:48,364 [9] INFO  ID msg: 14
+2019-04-08 09:26:51,054 [1] INFO  Inserting mensuration
+2019-04-08 09:26:51,067 [1] INFO  GET ID:57
+2019-04-08 09:26:51,148 [1] INFO  Inserting discipline
+2019-04-08 09:26:51,152 [1] INFO  GET ID:73
+2019-04-08 09:26:51,224 [1] INFO  Inserting run
+2019-04-08 09:26:51,229 [1] INFO  GET ID:60
+2019-04-08 09:26:51,308 [1] INFO  Inserting basic msg
+2019-04-08 09:26:51,429 [1] INFO  Inserting ECU_State
+2019-04-08 09:26:51,514 [1] INFO  Inserting BBOX_command
+2019-04-08 09:26:51,589 [1] INFO  Inserting FU_Values_1
+2019-04-08 09:26:51,662 [1] INFO  Inserting basic msg
+2019-04-08 09:26:51,731 [1] INFO  Inserting Interconnect
+2019-04-08 09:26:51,806 [1] INFO  Inserting FU_Values_2
+2019-04-08 09:26:51,881 [1] INFO  Inserting BMS_Command
+2019-04-08 09:26:51,937 [1] INFO  Inserting basic msg
+2019-04-08 09:26:52,053 [1] INFO  Inserting BMS_State
+2019-04-08 09:26:52,147 [1] INFO  Inserting wheel_RPM
+2019-04-08 09:26:52,230 [1] INFO  Inserting BMS_Voltages
+2019-04-08 09:26:52,317 [1] INFO  Inserting BMS_Temps
+2019-04-08 09:26:52,421 [1] INFO  Inserting basic msg
+2019-04-08 09:26:52,512 [1] INFO  Inserting BBOXPower
+2019-04-08 09:26:52,599 [1] INFO  Inserting BBOX_status
+2019-04-08 09:26:52,678 [1] INFO  Inserting GPS_data
+2019-04-08 09:26:52,756 [1] INFO  Inserting basic msg
+2019-04-08 09:26:52,838 [1] INFO  Inserting ECU_State
+2019-04-08 09:26:52,918 [1] INFO  Inserting BBOX_command
+2019-04-08 09:26:52,974 [1] INFO  Inserting FU_Values_1
+2019-04-08 09:26:53,023 [1] INFO  Inserting basic msg
+2019-04-08 09:26:53,106 [1] INFO  Inserting Interconnect
+2019-04-08 09:26:53,163 [1] INFO  Inserting FU_Values_2
+2019-04-08 09:26:53,213 [1] INFO  Inserting BMS_Command
+2019-04-08 09:26:53,310 [1] INFO  Inserting basic msg
+2019-04-08 09:26:53,372 [1] INFO  Inserting BMS_State
+2019-04-08 09:26:53,425 [1] INFO  Inserting wheel_RPM
+2019-04-08 09:26:53,497 [1] INFO  Inserting BMS_Voltages
+2019-04-08 09:26:53,573 [1] INFO  Inserting BMS_Temps
+2019-04-08 09:26:53,635 [1] INFO  Inserting basic msg
+2019-04-08 09:26:53,701 [1] INFO  Inserting BBOXPower
+2019-04-08 09:26:53,788 [1] INFO  Inserting BBOX_status
+2019-04-08 09:26:53,866 [1] INFO  Inserting GPS_data
+2019-04-08 09:26:53,958 [1] INFO  Inserting basic msg
+2019-04-08 09:26:54,050 [1] INFO  Inserting ECU_State
+2019-04-08 09:26:54,133 [1] INFO  Inserting BBOX_command
+2019-04-08 09:26:54,211 [1] INFO  Inserting FU_Values_1
+2019-04-08 09:26:54,306 [1] INFO  Inserting basic msg
+2019-04-08 09:26:54,372 [1] INFO  Inserting Interconnect
+2019-04-08 09:26:54,453 [1] INFO  Inserting FU_Values_2
+2019-04-08 09:26:54,507 [1] INFO  Inserting BMS_Command
+2019-04-08 09:26:54,578 [1] INFO  Inserting basic msg
+2019-04-08 09:26:54,672 [1] INFO  Inserting BMS_State
+2019-04-08 09:26:54,740 [1] INFO  Inserting wheel_RPM
+2019-04-08 09:26:54,807 [1] INFO  Inserting BMS_Voltages
+2019-04-08 09:26:54,907 [1] INFO  Inserting BMS_Temps
+2019-04-08 09:26:54,979 [1] INFO  Inserting basic msg
+2019-04-08 09:26:55,050 [1] INFO  Inserting BBOXPower
+2019-04-08 09:26:55,130 [1] INFO  Inserting BBOX_status
+2019-04-08 09:26:55,197 [1] INFO  Inserting GPS_data
+2019-04-08 09:26:55,274 [1] INFO  Inserting basic msg
+2019-04-08 09:26:55,396 [1] INFO  Inserting ECU_State
+2019-04-08 09:26:55,476 [1] INFO  Inserting BBOX_command
+2019-04-08 09:26:55,574 [1] INFO  Inserting FU_Values_1
+2019-04-08 09:27:06,622 [1] INFO  SELECT * FROM mensuration;
+2019-04-08 09:27:17,149 [1] INFO  SELECT * FROM mensuration where ID=57;
+2019-04-08 09:27:17,234 [1] INFO  SELECT * FROM discipline where Id_mensuration=57;
+2019-04-08 09:27:17,282 [1] INFO  SELECT * FROM run where ID_discipline=73;
+2019-04-08 09:27:17,322 [1] INFO  SELECT * FROM msg where ID_run=60;
+2019-04-08 09:27:17,399 [1] INFO  Observer was notified
+2019-04-08 09:27:17,405 [1] INFO  Observer was notified
+2019-04-08 09:27:21,103 [1] INFO  Observer was notified
+2019-04-08 09:27:22,291 [1] INFO  Observer was notified
+2019-04-08 09:28:30,934 [1] INFO  SELECT * FROM mensuration;
+2019-04-08 09:28:40,905 [1] INFO  SELECT * FROM mensuration where ID=28;
+2019-04-08 09:28:40,948 [1] INFO  SELECT * FROM discipline where Id_mensuration=28;
+2019-04-08 09:28:41,019 [1] INFO  SELECT * FROM run where ID_discipline=16;
+2019-04-08 09:28:41,125 [1] INFO  SELECT * FROM msg where ID_run=12;
+2019-04-08 09:28:41,195 [1] INFO  Observer was notified
+2019-04-08 09:28:41,201 [1] INFO  Observer was notified
+2019-04-08 09:28:44,248 [1] INFO  Observer was notified
+2019-04-08 09:28:45,449 [1] INFO  Observer was notified
+2019-04-08 09:29:02,043 [1] INFO  SELECT * FROM mensuration;
+2019-04-08 09:29:11,724 [1] INFO  SELECT * FROM mensuration where ID=56;
+2019-04-08 09:29:11,825 [1] INFO  SELECT * FROM discipline where Id_mensuration=56;
+2019-04-08 09:29:11,866 [1] INFO  SELECT * FROM run where ID_discipline=71;
+2019-04-08 09:29:11,910 [1] INFO  SELECT * FROM msg where ID_run=58;
+2019-04-08 09:29:11,974 [1] INFO  SELECT * FROM run where ID_discipline=72;
+2019-04-08 09:29:12,020 [1] INFO  SELECT * FROM msg where ID_run=59;
+2019-04-08 09:29:12,056 [1] INFO  Observer was notified
+2019-04-08 09:29:12,063 [1] INFO  Observer was notified
+2019-04-08 09:29:12,070 [1] INFO  Observer was notified
+2019-04-08 09:29:16,190 [1] INFO  Observer was notified
+2019-04-08 09:29:17,135 [1] INFO  Observer was notified
+2019-04-08 09:29:18,710 [1] INFO  Observer was notified
+2019-04-08 09:29:19,949 [1] INFO  Observer was notified
+2019-04-08 09:29:32,545 [1] INFO  SELECT * FROM mensuration where ID=55;
+2019-04-08 09:29:32,585 [1] INFO  SELECT * FROM discipline where Id_mensuration=55;
+2019-04-08 09:29:32,600 [1] INFO  Observer was notified
+2019-04-08 09:29:39,844 [1] INFO  SELECT * FROM mensuration where ID=54;
+2019-04-08 09:29:39,941 [1] INFO  SELECT * FROM discipline where Id_mensuration=54;
+2019-04-08 09:29:39,980 [1] INFO  SELECT * FROM run where ID_discipline=70;
+2019-04-08 09:29:40,052 [1] INFO  SELECT * FROM msg where ID_run=57;
+2019-04-08 09:29:40,084 [1] INFO  Observer was notified
+2019-04-08 09:29:40,087 [1] INFO  Observer was notified
+2019-04-08 09:29:41,762 [1] INFO  Observer was notified
+2019-04-08 09:29:42,939 [1] INFO  Observer was notified
+2019-04-08 10:47:59,795 [1] INFO  SELECT * FROM mensuration;
+2019-04-08 10:48:10,184 [1] INFO  SELECT * FROM mensuration where ID=57;
+2019-04-08 10:48:10,220 [1] INFO  SELECT * FROM discipline where Id_mensuration=57;
+2019-04-08 10:48:10,254 [1] INFO  SELECT * FROM run where ID_discipline=73;
+2019-04-08 10:48:10,307 [1] INFO  SELECT * FROM msg where ID_run=60;
+2019-04-08 10:48:10,382 [1] INFO  Observer was notified
+2019-04-08 10:48:10,389 [1] INFO  Observer was notified
+2019-04-08 10:48:13,939 [1] INFO  Observer was notified
+2019-04-08 10:48:15,375 [1] INFO  Observer was notified
+2019-04-08 10:48:32,277 [1] INFO  SELECT * FROM mensuration where ID=50;
+2019-04-08 10:48:32,316 [1] INFO  SELECT * FROM discipline where Id_mensuration=50;
+2019-04-08 10:48:32,347 [1] INFO  SELECT * FROM run where ID_discipline=54;
+2019-04-08 10:48:32,378 [1] INFO  SELECT * FROM msg where ID_run=46;
+2019-04-08 10:48:32,416 [1] INFO  SELECT * FROM run where ID_discipline=55;
+2019-04-08 10:48:32,450 [1] INFO  SELECT * FROM msg where ID_run=47;
+2019-04-08 10:48:32,493 [1] INFO  SELECT * FROM run where ID_discipline=56;
+2019-04-08 10:48:32,531 [1] INFO  SELECT * FROM msg where ID_run=48;
+2019-04-08 10:48:32,560 [1] INFO  SELECT * FROM run where ID_discipline=57;
+2019-04-08 10:48:32,586 [1] INFO  SELECT * FROM msg where ID_run=49;
+2019-04-08 10:48:32,594 [1] INFO  Observer was notified
+2019-04-08 10:48:32,596 [1] INFO  Observer was notified
+2019-04-08 10:48:32,598 [1] INFO  Observer was notified
+2019-04-08 10:48:32,600 [1] INFO  Observer was notified
+2019-04-08 10:48:32,601 [1] INFO  Observer was notified
+2019-04-08 10:48:34,639 [1] INFO  Observer was notified
+2019-04-08 10:48:35,734 [1] INFO  Observer was notified
+2019-04-08 10:48:39,313 [1] INFO  Observer was notified
+2019-04-08 10:48:40,686 [1] INFO  Observer was notified
+2019-04-08 10:48:42,976 [1] INFO  Observer was notified
+2019-04-08 10:48:44,455 [1] INFO  Observer was notified
+2019-04-08 11:36:49,940 [1] INFO  SELECT * FROM mensuration;
+2019-04-08 11:36:57,555 [1] INFO  SELECT * FROM mensuration where ID=27;
+2019-04-08 11:36:57,599 [1] INFO  SELECT * FROM discipline where Id_mensuration=27;
+2019-04-08 11:36:57,638 [1] INFO  SELECT * FROM run where ID_discipline=15;
+2019-04-08 11:36:57,679 [1] INFO  SELECT * FROM msg where ID_run=11;
+2019-04-08 11:36:57,759 [1] INFO  Observer was notified
+2019-04-08 11:36:57,767 [1] INFO  Observer was notified
+2019-04-08 11:37:03,454 [1] INFO  SELECT * FROM mensuration where ID=57;
+2019-04-08 11:37:03,485 [1] INFO  SELECT * FROM discipline where Id_mensuration=57;
+2019-04-08 11:37:03,529 [1] INFO  SELECT * FROM run where ID_discipline=73;
+2019-04-08 11:37:03,568 [1] INFO  SELECT * FROM msg where ID_run=60;
+2019-04-08 11:37:03,587 [1] INFO  Observer was notified
+2019-04-08 11:37:03,590 [1] INFO  Observer was notified
+2019-04-08 11:37:05,911 [1] INFO  Observer was notified
+2019-04-08 11:37:06,971 [1] INFO  Observer was notified
+2019-04-08 11:37:11,870 [1] INFO  SELECT * FROM mensuration where ID=56;
+2019-04-08 11:37:11,901 [1] INFO  SELECT * FROM discipline where Id_mensuration=56;
+2019-04-08 11:37:11,931 [1] INFO  SELECT * FROM run where ID_discipline=71;
+2019-04-08 11:37:11,963 [1] INFO  SELECT * FROM msg where ID_run=58;
+2019-04-08 11:37:12,004 [1] INFO  SELECT * FROM run where ID_discipline=72;
+2019-04-08 11:37:12,045 [1] INFO  SELECT * FROM msg where ID_run=59;
+2019-04-08 11:37:12,056 [1] INFO  Observer was notified
+2019-04-08 11:37:12,059 [1] INFO  Observer was notified
+2019-04-08 11:37:12,062 [1] INFO  Observer was notified
+2019-04-08 11:37:15,170 [1] INFO  Observer was notified
+2019-04-08 11:37:16,307 [1] INFO  Observer was notified
+2019-04-08 11:37:19,052 [1] INFO  Observer was notified
+2019-04-08 11:37:20,051 [1] INFO  Observer was notified
+2019-04-08 11:37:25,105 [1] INFO  SELECT * FROM mensuration where ID=55;
+2019-04-08 11:37:25,142 [1] INFO  SELECT * FROM discipline where Id_mensuration=55;
+2019-04-08 11:37:25,148 [1] INFO  Observer was notified
+2019-04-08 12:54:51,028 [1] INFO  SELECT * FROM mensuration;
+2019-04-08 12:55:02,595 [1] INFO  SELECT * FROM mensuration where ID=57;
+2019-04-08 12:55:02,660 [1] INFO  SELECT * FROM discipline where Id_mensuration=57;
+2019-04-08 12:55:02,698 [1] INFO  SELECT * FROM run where ID_discipline=73;
+2019-04-08 12:55:02,741 [1] INFO  SELECT * FROM msg where ID_run=60;
+2019-04-08 12:55:02,816 [1] INFO  Observer was notified
+2019-04-08 12:55:02,823 [1] INFO  Observer was notified
+2019-04-08 12:55:05,631 [1] INFO  Observer was notified
+2019-04-08 12:55:11,694 [1] INFO  Observer was notified
+2019-04-08 12:55:13,197 [7] INFO  ID msg: 1213
+2019-04-08 12:55:23,188 [7] INFO  ID msg: 1214
+2019-04-08 12:55:23,196 [7] INFO  Observer was notified
+2019-04-08 12:55:33,633 [7] INFO  ID msg: 1215
+2019-04-08 12:55:33,636 [7] INFO  Observer was notified
+2019-04-08 12:55:44,177 [7] INFO  ID msg: 1216
+2019-04-08 12:55:44,180 [7] INFO  Observer was notified
+2019-04-08 12:55:54,579 [7] INFO  ID msg: 1217
+2019-04-08 12:55:54,582 [7] INFO  Observer was notified
+2019-04-08 12:56:04,900 [8] INFO  ID msg: 1218
+2019-04-08 12:56:04,902 [8] INFO  Observer was notified
+2019-04-08 12:56:15,335 [8] INFO  ID msg: 1219
+2019-04-08 12:56:15,337 [8] INFO  Observer was notified
+2019-04-08 12:56:25,881 [8] INFO  ID msg: 1220
+2019-04-08 12:56:25,886 [8] INFO  Observer was notified
+2019-04-08 12:56:36,300 [8] INFO  ID msg: 1221
+2019-04-08 12:56:36,303 [8] INFO  Observer was notified
+2019-04-08 12:56:46,622 [8] INFO  ID msg: 1222
+2019-04-08 12:56:46,627 [8] INFO  Observer was notified
+2019-04-08 12:56:57,056 [8] INFO  ID msg: 1223
+2019-04-08 12:56:57,059 [8] INFO  Observer was notified
+2019-04-08 12:57:07,603 [8] INFO  ID msg: 1224
+2019-04-08 12:57:07,606 [8] INFO  Observer was notified
+2019-04-08 12:57:18,021 [8] INFO  ID msg: 1225
+2019-04-08 12:58:19,790 [1] INFO  SELECT * FROM mensuration;
+2019-04-08 12:59:05,372 [1] INFO  Observer was notified
+2019-04-08 12:59:13,071 [8] INFO  ID msg: 1236
+2019-04-08 12:59:23,206 [8] INFO  ID msg: 1237
+2019-04-08 12:59:25,027 [8] INFO  Observer was notified
+2019-04-08 12:59:33,517 [8] INFO  ID msg: 1238
+2019-04-08 12:59:35,581 [8] INFO  Observer was notified
+2019-04-08 13:10:59,382 [1] INFO  SELECT * FROM mensuration;
+2019-04-08 13:13:11,113 [1] INFO  SELECT * FROM mensuration;
+2019-04-08 13:13:19,799 [1] INFO  SELECT * FROM mensuration where ID=57;
+2019-04-08 13:13:19,843 [1] INFO  SELECT * FROM discipline where Id_mensuration=57;
+2019-04-08 13:13:19,883 [1] INFO  SELECT * FROM run where ID_discipline=73;
+2019-04-08 13:13:19,925 [1] INFO  SELECT * FROM msg where ID_run=60;
+2019-04-08 13:13:20,019 [1] INFO  Observer was notified
+2019-04-08 13:13:20,025 [1] INFO  Observer was notified
+2019-04-08 13:13:22,920 [1] INFO  Observer was notified
+2019-04-08 13:13:36,124 [1] INFO  Observer was notified
+2019-04-08 13:13:46,173 [1] INFO  SELECT * FROM mensuration where ID=56;
+2019-04-08 13:13:46,205 [1] INFO  SELECT * FROM discipline where Id_mensuration=56;
+2019-04-08 13:13:46,237 [1] INFO  SELECT * FROM run where ID_discipline=71;
+2019-04-08 13:13:46,268 [1] INFO  SELECT * FROM msg where ID_run=58;
+2019-04-08 13:13:46,309 [1] INFO  SELECT * FROM run where ID_discipline=72;
+2019-04-08 13:13:46,353 [1] INFO  SELECT * FROM msg where ID_run=59;
+2019-04-08 13:13:46,370 [1] INFO  Observer was notified
+2019-04-08 13:13:46,373 [1] INFO  Observer was notified
+2019-04-08 13:13:46,377 [1] INFO  Observer was notified
+2019-04-08 13:13:48,499 [1] INFO  Observer was notified
+2019-04-08 13:13:49,628 [1] INFO  Observer was notified
+2019-04-08 13:13:51,028 [1] INFO  Observer was notified
+2019-04-08 13:13:51,971 [1] INFO  Observer was notified
+2019-04-08 13:15:21,973 [1] INFO  SELECT * FROM mensuration;
+2019-04-08 13:15:28,837 [1] INFO  SELECT * FROM mensuration where ID=57;
+2019-04-08 13:15:28,886 [1] INFO  SELECT * FROM discipline where Id_mensuration=57;
+2019-04-08 13:15:28,926 [1] INFO  SELECT * FROM run where ID_discipline=73;
+2019-04-08 13:15:28,967 [1] INFO  SELECT * FROM msg where ID_run=60;
+2019-04-08 13:15:29,051 [1] INFO  Observer was notified
+2019-04-08 13:15:29,056 [1] INFO  Observer was notified
+2019-04-08 13:15:30,823 [1] INFO  Observer was notified
+2019-04-08 13:15:31,797 [1] INFO  Observer was notified
+2019-04-08 13:15:47,882 [1] INFO  Observer was notified
+2019-04-08 13:16:04,495 [7] INFO  ID msg: 1333
+2019-04-08 13:16:04,504 [7] INFO  Observer was notified
+2019-04-08 13:16:14,811 [7] INFO  ID msg: 1334
+2019-04-08 13:16:14,813 [7] INFO  Observer was notified
+2019-04-08 13:16:25,261 [7] INFO  ID msg: 1335
+2019-04-08 13:16:25,263 [7] INFO  Observer was notified
+2019-04-08 13:16:35,793 [7] INFO  ID msg: 1336
+2019-04-08 13:16:35,795 [7] INFO  Observer was notified
+2019-04-08 13:16:46,197 [10] INFO  ID msg: 1337
+2019-04-08 13:16:46,204 [10] INFO  Observer was notified
+2019-04-08 13:16:56,517 [10] INFO  ID msg: 1338
+2019-04-08 13:16:56,520 [10] INFO  Observer was notified
+2019-04-08 13:17:06,968 [10] INFO  ID msg: 1339
+2019-04-08 13:17:06,970 [10] INFO  Observer was notified
+2019-04-08 13:17:17,515 [10] INFO  ID msg: 1340
+2019-04-08 13:17:17,523 [10] INFO  Observer was notified
+2019-04-08 13:17:27,916 [10] INFO  ID msg: 1341
+2019-04-08 13:17:27,919 [10] INFO  Observer was notified
+2019-04-08 13:17:38,239 [12] INFO  ID msg: 1342
+2019-04-08 13:17:38,241 [12] INFO  Observer was notified
+2019-04-08 13:17:48,689 [12] INFO  ID msg: 1343
+2019-04-08 13:17:48,691 [12] INFO  Observer was notified
+2019-04-08 13:17:59,236 [12] INFO  ID msg: 1344
+2019-04-08 13:17:59,239 [12] INFO  Observer was notified
+2019-04-08 13:18:09,638 [12] INFO  ID msg: 1345
+2019-04-08 13:18:09,640 [12] INFO  Observer was notified
+2019-04-08 13:18:19,961 [12] INFO  ID msg: 1346
+2019-04-08 13:18:19,963 [12] INFO  Observer was notified
+2019-04-08 13:18:30,410 [12] INFO  ID msg: 1347
+2019-04-08 13:18:30,412 [12] INFO  Observer was notified
+2019-04-08 13:18:40,957 [12] INFO  ID msg: 1348
+2019-04-08 13:18:40,964 [12] INFO  Observer was notified
+2019-04-08 13:18:51,360 [14] INFO  ID msg: 1349
+2019-04-08 13:18:51,362 [14] INFO  Observer was notified
+2019-04-08 13:19:01,682 [12] INFO  ID msg: 1350
+2019-04-08 13:19:01,685 [12] INFO  Observer was notified
+2019-04-08 13:19:12,116 [12] INFO  ID msg: 1351
+2019-04-08 13:19:12,119 [12] INFO  Observer was notified
+2019-04-08 13:19:22,678 [12] INFO  ID msg: 1352
+2019-04-08 13:19:22,680 [12] INFO  Observer was notified
+2019-04-08 13:19:33,081 [12] INFO  ID msg: 1353
+2019-04-08 13:19:33,084 [12] INFO  Observer was notified
+2019-04-08 13:19:43,404 [12] INFO  ID msg: 1354
+2019-04-08 13:19:43,406 [12] INFO  Observer was notified
+2019-04-08 13:19:53,838 [12] INFO  ID msg: 1355
+2019-04-08 13:19:53,840 [12] INFO  Observer was notified
+2019-04-08 13:20:04,400 [12] INFO  ID msg: 1356
+2019-04-08 13:20:04,402 [12] INFO  Observer was notified
+2019-04-08 13:20:14,803 [12] INFO  ID msg: 1357
+2019-04-08 13:20:14,805 [12] INFO  Observer was notified
+2019-04-08 13:20:25,125 [12] INFO  ID msg: 1358
+2019-04-08 13:20:25,127 [12] INFO  Observer was notified
+2019-04-08 13:20:35,559 [14] INFO  ID msg: 1359
+2019-04-08 13:20:35,561 [14] INFO  Observer was notified
+2019-04-08 13:20:46,122 [14] INFO  ID msg: 1360
+2019-04-08 13:20:46,124 [14] INFO  Observer was notified
+2019-04-08 13:20:56,524 [14] INFO  ID msg: 1361
+2019-04-08 13:20:56,527 [14] INFO  Observer was notified
+2019-04-08 13:21:06,847 [14] INFO  ID msg: 1362
+2019-04-08 13:21:06,849 [14] INFO  Observer was notified
+2019-04-08 13:21:17,280 [14] INFO  ID msg: 1363
+2019-04-08 13:21:17,282 [14] INFO  Observer was notified
+2019-04-08 13:21:27,843 [14] INFO  ID msg: 1364
+2019-04-08 13:21:27,845 [14] INFO  Observer was notified
+2019-04-08 13:21:38,246 [14] INFO  ID msg: 1365
+2019-04-08 13:21:38,248 [14] INFO  Observer was notified
+2019-04-08 13:21:48,568 [14] INFO  ID msg: 1366
+2019-04-08 13:21:48,572 [14] INFO  Observer was notified
+2019-04-08 13:21:59,002 [14] INFO  ID msg: 1367
+2019-04-08 13:21:59,004 [14] INFO  Observer was notified
+2019-04-08 13:22:09,565 [14] INFO  ID msg: 1368
+2019-04-08 13:22:09,567 [14] INFO  Observer was notified
+2019-04-08 13:22:19,968 [14] INFO  ID msg: 1369
+2019-04-08 13:22:19,970 [14] INFO  Observer was notified
+2019-04-08 13:22:30,289 [14] INFO  ID msg: 1370
+2019-04-08 13:22:30,291 [14] INFO  Observer was notified
+2019-04-08 13:22:40,724 [14] INFO  ID msg: 1371
+2019-04-08 13:22:40,725 [14] INFO  Observer was notified
+2019-04-08 13:22:51,286 [17] INFO  ID msg: 1372
+2019-04-08 13:22:51,288 [17] INFO  Observer was notified
+2019-04-08 13:23:01,689 [17] INFO  ID msg: 1373
+2019-04-08 13:23:01,690 [17] INFO  Observer was notified
+2019-04-08 13:23:12,011 [17] INFO  ID msg: 1374
+2019-04-08 13:23:12,013 [17] INFO  Observer was notified
+2019-04-08 13:23:22,446 [17] INFO  ID msg: 1375
+2019-04-08 13:23:22,448 [17] INFO  Observer was notified
+2019-04-08 13:23:33,008 [17] INFO  ID msg: 1376
+2019-04-08 13:23:33,010 [17] INFO  Observer was notified
+2019-04-08 13:23:43,411 [27] INFO  ID msg: 1377
+2019-04-08 13:23:43,413 [27] INFO  Observer was notified
+2019-04-08 13:23:53,733 [27] INFO  ID msg: 1378
+2019-04-08 13:23:53,735 [27] INFO  Observer was notified
+2019-04-08 13:24:04,167 [27] INFO  ID msg: 1379
+2019-04-08 13:24:04,169 [27] INFO  Observer was notified
+2019-04-08 13:24:14,730 [27] INFO  ID msg: 1380
+2019-04-08 13:24:14,732 [27] INFO  Observer was notified
+2019-04-08 13:24:25,132 [27] INFO  ID msg: 1381
+2019-04-08 13:24:25,134 [27] INFO  Observer was notified
+2019-04-08 13:24:35,454 [27] INFO  ID msg: 1382
+2019-04-08 13:24:35,456 [27] INFO  Observer was notified
+2019-04-08 13:24:45,889 [27] INFO  ID msg: 1383
+2019-04-08 13:24:45,891 [27] INFO  Observer was notified
+2019-04-08 13:24:56,451 [27] INFO  ID msg: 1384
+2019-04-08 13:24:56,453 [27] INFO  Observer was notified
+2019-04-08 13:25:06,854 [27] INFO  ID msg: 1385
+2019-04-08 13:25:06,858 [27] INFO  Observer was notified
+2019-04-08 13:25:17,176 [27] INFO  ID msg: 1386
+2019-04-08 13:25:17,179 [27] INFO  Observer was notified
+2019-04-08 13:25:27,610 [27] INFO  ID msg: 1387
+2019-04-08 13:25:27,612 [27] INFO  Observer was notified
+2019-04-08 13:25:38,172 [27] INFO  ID msg: 1388
+2019-04-08 13:25:38,174 [27] INFO  Observer was notified
+2019-04-08 13:25:48,575 [27] INFO  ID msg: 1389
+2019-04-08 13:25:48,578 [27] INFO  Observer was notified
+2019-04-08 13:25:58,897 [27] INFO  ID msg: 1390
+2019-04-08 13:25:58,900 [27] INFO  Observer was notified
+2019-04-08 13:26:09,332 [27] INFO  ID msg: 1391
+2019-04-08 13:26:09,335 [27] INFO  Observer was notified
+2019-04-08 13:26:19,894 [27] INFO  ID msg: 1392
+2019-04-08 13:26:19,898 [27] INFO  Observer was notified
+2019-04-08 13:26:30,297 [27] INFO  ID msg: 1393
+2019-04-08 13:26:30,299 [27] INFO  Observer was notified
+2019-04-08 13:26:40,619 [27] INFO  ID msg: 1394
+2019-04-08 13:26:40,621 [27] INFO  Observer was notified
+2019-04-08 13:26:51,054 [27] INFO  ID msg: 1395
+2019-04-08 13:26:51,056 [27] INFO  Observer was notified
+2019-04-08 13:27:01,617 [27] INFO  ID msg: 1396
+2019-04-08 13:27:01,620 [27] INFO  Observer was notified
+2019-04-08 13:27:12,018 [27] INFO  ID msg: 1397
+2019-04-08 13:27:12,020 [27] INFO  Observer was notified
+2019-04-08 13:27:22,341 [27] INFO  ID msg: 1398
+2019-04-08 13:27:22,343 [27] INFO  Observer was notified
+2019-04-08 13:27:32,775 [36] INFO  ID msg: 1399
+2019-04-08 13:27:32,777 [36] INFO  Observer was notified
+2019-04-08 13:27:43,337 [36] INFO  ID msg: 1400
+2019-04-08 13:27:43,339 [36] INFO  Observer was notified
+2019-04-08 13:27:53,740 [36] INFO  ID msg: 1401
+2019-04-08 13:27:53,743 [36] INFO  Observer was notified
+2019-04-08 13:28:04,062 [36] INFO  ID msg: 1402
+2019-04-08 13:28:04,065 [36] INFO  Observer was notified
+2019-04-08 13:28:14,497 [36] INFO  ID msg: 1403
+2019-04-08 13:28:14,499 [36] INFO  Observer was notified
+2019-04-08 13:28:25,058 [36] INFO  ID msg: 1404
+2019-04-08 13:28:25,061 [36] INFO  Observer was notified
+2019-04-08 13:28:35,461 [36] INFO  ID msg: 1405
+2019-04-08 13:28:35,463 [36] INFO  Observer was notified
+2019-04-08 13:28:45,783 [36] INFO  ID msg: 1406
+2019-04-08 13:28:45,785 [36] INFO  Observer was notified
+2019-04-08 13:28:56,218 [36] INFO  ID msg: 1407
+2019-04-08 13:28:56,220 [36] INFO  Observer was notified
+2019-04-08 13:29:06,779 [36] INFO  ID msg: 1408
+2019-04-08 13:29:06,781 [36] INFO  Observer was notified
+2019-04-08 13:29:17,183 [36] INFO  ID msg: 1409
+2019-04-08 13:29:17,190 [36] INFO  Observer was notified
+2019-04-08 13:29:27,505 [36] INFO  ID msg: 1410
+2019-04-08 13:29:27,507 [36] INFO  Observer was notified
+2019-04-08 13:29:37,939 [36] INFO  ID msg: 1411
+2019-04-08 13:29:37,941 [36] INFO  Observer was notified
+2019-04-08 13:29:48,485 [36] INFO  ID msg: 1412
+2019-04-08 13:29:48,491 [36] INFO  Observer was notified
+2019-04-08 13:29:58,904 [36] INFO  ID msg: 1413
+2019-04-08 13:29:58,906 [36] INFO  Observer was notified
+2019-04-08 13:30:09,226 [36] INFO  ID msg: 1414
+2019-04-08 13:30:09,228 [36] INFO  Observer was notified
+2019-04-08 13:30:19,661 [36] INFO  ID msg: 1415
+2019-04-08 13:30:19,663 [36] INFO  Observer was notified
+2019-04-08 13:30:30,206 [13] INFO  ID msg: 1416
+2019-04-08 13:30:30,208 [13] INFO  Observer was notified
+2019-04-08 13:30:40,625 [13] INFO  ID msg: 1417
+2019-04-08 13:30:40,628 [13] INFO  Observer was notified
+2019-04-08 13:30:50,947 [13] INFO  ID msg: 1418
+2019-04-08 13:30:50,949 [13] INFO  Observer was notified
+2019-04-08 13:31:01,382 [13] INFO  ID msg: 1419
+2019-04-08 13:31:01,384 [13] INFO  Observer was notified
+2019-04-08 13:31:11,929 [13] INFO  ID msg: 1420
+2019-04-08 13:31:11,931 [13] INFO  Observer was notified
+2019-04-08 13:31:22,347 [13] INFO  ID msg: 1421
+2019-04-08 13:31:22,349 [13] INFO  Observer was notified
+2019-04-08 13:31:32,669 [44] INFO  ID msg: 1422
+2019-04-08 13:31:32,671 [44] INFO  Observer was notified
+2019-04-08 13:31:43,104 [44] INFO  ID msg: 1423
+2019-04-08 13:31:43,106 [44] INFO  Observer was notified
+2019-04-08 13:31:53,650 [44] INFO  ID msg: 1424
+2019-04-08 13:31:53,653 [44] INFO  Observer was notified
+2019-04-08 13:32:04,068 [44] INFO  ID msg: 1425
+2019-04-08 13:32:04,070 [44] INFO  Observer was notified
+2019-04-08 13:32:14,391 [44] INFO  ID msg: 1426
+2019-04-08 13:32:14,394 [44] INFO  Observer was notified
+2019-04-08 13:32:24,826 [44] INFO  ID msg: 1427
+2019-04-08 13:32:24,827 [44] INFO  Observer was notified
+2019-04-08 13:32:35,372 [44] INFO  ID msg: 1428
+2019-04-08 13:32:35,374 [44] INFO  Observer was notified
+2019-04-08 13:32:45,790 [44] INFO  ID msg: 1429
+2019-04-08 13:32:45,792 [44] INFO  Observer was notified
+2019-04-08 13:32:56,113 [44] INFO  ID msg: 1430
+2019-04-08 13:32:56,124 [44] INFO  Observer was notified
+2019-04-08 13:33:06,548 [44] INFO  ID msg: 1431
+2019-04-08 13:33:06,551 [44] INFO  Observer was notified
+2019-04-08 13:33:17,093 [44] INFO  ID msg: 1432
+2019-04-08 13:33:17,095 [44] INFO  Observer was notified
+2019-04-08 13:33:27,512 [44] INFO  ID msg: 1433
+2019-04-08 13:33:27,514 [44] INFO  Observer was notified
+2019-04-08 13:33:37,834 [44] INFO  ID msg: 1434
+2019-04-08 13:33:37,838 [44] INFO  Observer was notified
+2019-04-08 13:33:48,269 [44] INFO  ID msg: 1435
+2019-04-08 13:33:48,271 [44] INFO  Observer was notified
+2019-04-08 13:33:58,815 [42] INFO  ID msg: 1436
+2019-04-08 13:33:58,818 [42] INFO  Observer was notified
+2019-04-08 13:34:09,234 [42] INFO  ID msg: 1437
+2019-04-08 13:34:09,236 [42] INFO  Observer was notified
+2019-04-08 13:34:19,556 [42] INFO  ID msg: 1438
+2019-04-08 13:34:19,557 [42] INFO  Observer was notified
+2019-04-08 13:34:29,990 [42] INFO  ID msg: 1439
+2019-04-08 13:34:29,992 [42] INFO  Observer was notified
+2019-04-08 13:34:40,537 [42] INFO  ID msg: 1440
+2019-04-08 13:34:40,539 [42] INFO  Observer was notified
+2019-04-08 13:34:50,956 [37] INFO  ID msg: 1441
+2019-04-08 13:34:50,958 [37] INFO  Observer was notified
+2019-04-08 13:35:01,278 [37] INFO  ID msg: 1442
+2019-04-08 13:35:01,280 [37] INFO  Observer was notified
+2019-04-08 13:35:11,712 [37] INFO  ID msg: 1443
+2019-04-08 13:35:11,714 [37] INFO  Observer was notified
+2019-04-08 13:35:22,258 [37] INFO  ID msg: 1444
+2019-04-08 13:35:22,260 [37] INFO  Observer was notified
+2019-04-08 13:35:32,677 [37] INFO  ID msg: 1445
+2019-04-08 13:35:32,680 [37] INFO  Observer was notified
+2019-04-08 13:35:42,999 [37] INFO  ID msg: 1446
+2019-04-08 13:35:43,001 [37] INFO  Observer was notified
+2019-04-08 13:35:53,433 [37] INFO  ID msg: 1447
+2019-04-08 13:35:53,436 [37] INFO  Observer was notified
+2019-04-08 13:36:03,980 [37] INFO  ID msg: 1448
+2019-04-08 13:36:03,983 [37] INFO  Observer was notified
+2019-04-08 13:36:14,398 [37] INFO  ID msg: 1449
+2019-04-08 13:36:14,400 [37] INFO  Observer was notified
+2019-04-08 13:36:24,706 [37] INFO  ID msg: 1450
+2019-04-08 13:36:24,708 [37] INFO  Observer was notified
+2019-04-08 13:36:35,155 [37] INFO  ID msg: 1451
+2019-04-08 13:36:35,157 [37] INFO  Observer was notified
+2019-04-08 13:36:45,701 [37] INFO  ID msg: 1452
+2019-04-08 13:36:45,703 [37] INFO  Observer was notified
+2019-04-08 13:36:56,120 [37] INFO  ID msg: 1453
+2019-04-08 13:36:56,123 [37] INFO  Observer was notified
+2019-04-08 13:37:06,427 [37] INFO  ID msg: 1454
+2019-04-08 13:37:06,430 [37] INFO  Observer was notified
+2019-04-08 13:37:16,877 [37] INFO  ID msg: 1455
+2019-04-08 13:37:16,880 [37] INFO  Observer was notified
+2019-04-08 13:37:27,423 [37] INFO  ID msg: 1456
+2019-04-08 13:37:27,425 [37] INFO  Observer was notified
+2019-04-08 13:37:37,841 [24] INFO  ID msg: 1457
+2019-04-08 13:37:37,843 [24] INFO  Observer was notified
+2019-04-08 13:37:48,189 [24] INFO  ID msg: 1458
+2019-04-08 13:37:48,201 [24] INFO  Observer was notified
+2019-04-08 13:37:54,242 [1] INFO  Inserting mensuration
+2019-04-08 13:37:54,251 [1] INFO  GET ID:58
+2019-04-08 13:37:54,306 [1] INFO  Inserting discipline
+2019-04-08 13:37:54,310 [1] INFO  GET ID:74
+2019-04-08 13:37:54,444 [1] ERROR Error during inserting run to database:  System.ArgumentNullException: Parameterized query expects a parameter value which was not supplied.
+Parameter name: @comment
+   at System.Data.SqlServerCe.SqlCeCommand.FillParameterDataBindings(Boolean verifyValue)
+   at System.Data.SqlServerCe.SqlCeCommand.ExecuteCommand(CommandBehavior behavior, String method, ResultSetOptions options)
+   at System.Data.SqlServerCe.SqlCeCommand.ExecuteNonQuery()
+   at connection.DataBaseServices.insertRuns(Run run, Int32 ID_disciplina) in C:\Users\sabol\source\repos\DP_WpfApp\DP_WpfApp\DataBaseServices.cs:line 128
+2019-04-08 13:41:04,583 [1] INFO  SELECT * FROM mensuration;
+2019-04-08 13:41:10,819 [1] INFO  Observer was notified
+2019-04-08 13:41:13,564 [1] INFO  Inserting mensuration
+2019-04-08 13:41:13,573 [1] INFO  GET ID:59
+2019-04-08 13:41:13,630 [1] INFO  Inserting discipline
+2019-04-08 13:41:13,634 [1] INFO  GET ID:75
+2019-04-08 13:41:13,694 [1] INFO  Inserting run
+2019-04-08 13:41:13,698 [1] INFO  GET ID:61
+2019-04-08 13:41:17,983 [1] INFO  Observer was notified
+2019-04-08 13:41:25,418 [1] INFO  Inserting mensuration
+2019-04-08 13:41:25,422 [1] INFO  GET ID:60
+2019-04-08 13:41:25,478 [1] INFO  Inserting discipline
+2019-04-08 13:41:25,481 [1] INFO  GET ID:76
+2019-04-08 13:41:25,550 [1] INFO  Inserting run
+2019-04-08 13:41:25,554 [1] INFO  GET ID:62
+2019-04-08 13:41:26,125 [1] INFO  Inserting mensuration
+2019-04-08 13:41:26,128 [1] INFO  GET ID:61
+2019-04-08 13:41:26,293 [1] INFO  Inserting mensuration
+2019-04-08 13:41:26,299 [1] INFO  GET ID:62
+2019-04-08 13:41:26,467 [1] INFO  Inserting mensuration
+2019-04-08 13:41:26,469 [1] INFO  GET ID:63
+2019-04-08 13:41:26,646 [1] INFO  Inserting mensuration
+2019-04-08 13:41:26,649 [1] INFO  GET ID:64
+2019-04-08 13:41:37,420 [1] INFO  SELECT * FROM mensuration;
+2019-04-08 13:41:43,314 [1] INFO  Observer was notified
+2019-04-08 13:41:58,513 [8] INFO  ID msg: 1482
+2019-04-08 13:41:58,552 [8] INFO  Observer was notified
+2019-04-08 13:42:08,953 [8] INFO  ID msg: 1483
+2019-04-08 13:42:08,963 [8] INFO  Observer was notified
+2019-04-08 13:42:19,527 [8] INFO  ID msg: 1484
+2019-04-08 13:42:19,531 [8] INFO  Observer was notified
+2019-04-08 13:42:29,888 [9] INFO  ID msg: 1485
+2019-04-08 13:42:29,891 [9] INFO  Observer was notified
+2019-04-08 13:42:40,210 [8] INFO  ID msg: 1486
+2019-04-08 13:42:40,213 [8] INFO  Observer was notified
+2019-04-08 13:42:50,645 [8] INFO  ID msg: 1487
+2019-04-08 13:42:50,649 [8] INFO  Observer was notified
+2019-04-08 13:43:01,191 [8] INFO  ID msg: 1488
+2019-04-08 13:43:01,193 [8] INFO  Observer was notified
+2019-04-08 13:43:11,609 [8] INFO  ID msg: 1489
+2019-04-08 13:43:11,616 [8] INFO  Observer was notified
+2019-04-08 13:43:21,932 [9] INFO  ID msg: 1490
+2019-04-08 13:43:21,934 [9] INFO  Observer was notified
+2019-04-08 13:43:32,366 [9] INFO  ID msg: 1491
+2019-04-08 13:43:32,368 [9] INFO  Observer was notified
+2019-04-08 13:43:42,912 [9] INFO  ID msg: 1492
+2019-04-08 13:43:42,915 [9] INFO  Observer was notified
+2019-04-08 13:43:53,331 [9] INFO  ID msg: 1493
+2019-04-08 13:43:53,334 [9] INFO  Observer was notified
+2019-04-08 13:44:03,654 [9] INFO  ID msg: 1494
+2019-04-08 13:44:03,657 [9] INFO  Observer was notified
+2019-04-08 13:44:14,087 [9] INFO  ID msg: 1495
+2019-04-08 13:44:14,090 [9] INFO  Observer was notified
+2019-04-08 13:44:22,786 [1] INFO  Inserting mensuration
+2019-04-08 13:44:22,794 [1] INFO  GET ID:65
+2019-04-08 13:44:22,853 [1] INFO  Inserting discipline
+2019-04-08 13:44:22,858 [1] INFO  GET ID:77
+2019-04-08 13:44:22,930 [1] INFO  Inserting run
+2019-04-08 13:44:22,934 [1] INFO  GET ID:63
+2019-04-08 13:44:22,993 [1] INFO  Inserting basic msg
+2019-04-08 13:44:23,053 [1] INFO  Inserting ECU_State
+2019-04-08 13:44:23,123 [1] INFO  Inserting BBOX_command
+2019-04-08 13:44:23,184 [1] INFO  Inserting FU_Values_1
+2019-04-08 13:44:23,231 [1] INFO  Inserting basic msg
+2019-04-08 13:44:23,285 [1] INFO  Inserting Interconnect
+2019-04-08 13:44:23,342 [1] INFO  Inserting FU_Values_2
+2019-04-08 13:44:23,393 [1] INFO  Inserting BMS_Command
+2019-04-08 13:44:23,449 [1] INFO  Inserting basic msg
+2019-04-08 13:44:23,515 [1] INFO  Inserting BMS_State
+2019-04-08 13:44:23,564 [1] INFO  Inserting wheel_RPM
+2019-04-08 13:44:23,615 [1] INFO  Inserting BMS_Voltages
+2019-04-08 13:44:23,667 [1] INFO  Inserting BMS_Temps
+2019-04-08 13:44:23,726 [1] INFO  Inserting basic msg
+2019-04-08 13:44:23,781 [1] INFO  Inserting BBOXPower
+2019-04-08 13:44:23,836 [1] INFO  Inserting BBOX_status
+2019-04-08 13:44:23,898 [1] INFO  Inserting GPS_data
+2019-04-08 13:44:23,957 [1] INFO  Inserting basic msg
+2019-04-08 13:44:24,010 [1] INFO  Inserting ECU_State
+2019-04-08 13:44:24,061 [1] INFO  Inserting BBOX_command
+2019-04-08 13:44:24,145 [1] INFO  Inserting FU_Values_1
+2019-04-08 13:44:24,265 [1] INFO  Inserting basic msg
+2019-04-08 13:44:24,329 [1] INFO  Inserting Interconnect
+2019-04-08 13:44:24,402 [1] INFO  Inserting FU_Values_2
+2019-04-08 13:44:24,462 [1] INFO  Inserting BMS_Command
+2019-04-08 13:44:24,509 [1] INFO  Inserting basic msg
+2019-04-08 13:44:24,558 [1] INFO  Inserting BMS_State
+2019-04-08 13:44:24,616 [1] INFO  Inserting wheel_RPM
+2019-04-08 13:44:24,673 [1] INFO  Inserting BMS_Voltages
+2019-04-08 13:44:24,722 [1] INFO  Inserting BMS_Temps
+2019-04-08 13:44:24,787 [1] INFO  Inserting basic msg
+2019-04-08 13:44:25,000 [1] INFO  Inserting BBOXPower
+2019-04-08 13:44:25,058 [1] INFO  Inserting BBOX_status
+2019-04-08 13:44:25,131 [1] INFO  Inserting GPS_data
+2019-04-08 13:44:25,184 [1] INFO  Inserting basic msg
+2019-04-08 13:44:25,263 [1] INFO  Inserting ECU_State
+2019-04-08 13:44:25,323 [1] INFO  Inserting BBOX_command
+2019-04-08 13:44:25,379 [1] INFO  Inserting FU_Values_1
+2019-04-08 13:44:25,439 [1] INFO  Inserting basic msg
+2019-04-08 13:44:25,574 [1] INFO  Inserting Interconnect
+2019-04-08 13:44:25,701 [1] INFO  Inserting FU_Values_2
+2019-04-08 13:44:25,771 [1] INFO  Inserting BMS_Command
+2019-04-08 13:44:25,834 [1] INFO  Inserting basic msg
+2019-04-08 13:44:25,893 [1] INFO  Inserting BMS_State
+2019-04-08 13:44:26,011 [1] INFO  Inserting wheel_RPM
+2019-04-08 13:44:26,076 [1] INFO  Inserting BMS_Voltages
+2019-04-08 13:44:26,138 [1] INFO  Inserting BMS_Temps
+2019-04-08 13:44:26,212 [1] INFO  Inserting basic msg
+2019-04-08 13:44:26,269 [1] INFO  Inserting BBOXPower
+2019-04-08 13:44:26,322 [1] INFO  Inserting BBOX_status
+2019-04-08 13:44:26,384 [1] INFO  Inserting GPS_data
+2019-04-08 13:44:26,448 [1] INFO  Inserting basic msg
+2019-04-08 13:44:26,502 [1] INFO  Inserting ECU_State
+2019-04-08 13:44:26,554 [1] INFO  Inserting BBOX_command
+2019-04-08 13:44:26,611 [1] INFO  Inserting FU_Values_1
+2019-04-08 13:44:26,670 [1] INFO  Inserting basic msg
+2019-04-08 13:44:26,719 [1] INFO  Inserting Interconnect
+2019-04-08 13:44:26,775 [1] INFO  Inserting FU_Values_2
+2019-04-08 13:44:26,840 [1] INFO  Inserting BMS_Command
+2019-04-08 13:49:17,467 [1] INFO  SELECT * FROM mensuration;
+2019-04-08 13:49:27,421 [1] INFO  Observer was notified
+2019-04-08 13:49:37,449 [8] INFO  ID msg: 1526
+2019-04-08 13:49:37,466 [8] INFO  Observer was notified
+2019-04-08 13:49:47,895 [8] INFO  ID msg: 1527
+2019-04-08 13:49:47,897 [8] INFO  Observer was notified
+2019-04-08 13:49:58,441 [8] INFO  ID msg: 1528
+2019-04-08 13:49:58,445 [8] INFO  Observer was notified
+2019-04-08 13:50:08,837 [8] INFO  ID msg: 1529
+2019-04-08 13:50:08,844 [8] INFO  Observer was notified
+2019-04-08 13:50:15,759 [1] INFO  Inserting mensuration
+2019-04-08 13:50:15,769 [1] INFO  GET ID:66
+2019-04-08 13:50:15,831 [1] INFO  Inserting discipline
+2019-04-08 13:50:15,835 [1] INFO  GET ID:78
+2019-04-08 13:50:15,897 [1] INFO  Inserting run
+2019-04-08 13:50:15,901 [1] INFO  GET ID:64
+2019-04-08 13:50:15,964 [1] INFO  Inserting basic msg
+2019-04-08 13:50:16,024 [1] INFO  Inserting ECU_State
+2019-04-08 13:50:16,088 [1] INFO  Inserting BBOX_command
+2019-04-08 13:50:16,151 [1] INFO  Inserting FU_Values_1
+2019-04-08 13:50:16,214 [1] INFO  Inserting basic msg
+2019-04-08 13:50:16,291 [1] INFO  Inserting Interconnect
+2019-04-08 13:50:16,349 [1] INFO  Inserting FU_Values_2
+2019-04-08 13:50:16,400 [1] INFO  Inserting BMS_Command
+2019-04-08 13:50:16,455 [1] INFO  Inserting basic msg
+2019-04-08 13:50:16,529 [1] INFO  Inserting BMS_State
+2019-04-08 13:50:16,583 [1] INFO  Inserting wheel_RPM
+2019-04-08 13:50:16,638 [1] INFO  Inserting BMS_Voltages
+2019-04-08 13:50:16,715 [1] INFO  Inserting BMS_Temps
+2019-04-08 13:50:16,777 [1] INFO  Inserting basic msg
+2019-04-08 13:50:16,840 [1] INFO  Inserting BBOXPower
+2019-04-08 13:50:16,906 [1] INFO  Inserting BBOX_status
+2019-04-08 13:50:16,958 [1] INFO  Inserting GPS_data
+2019-04-08 13:51:53,193 [1] INFO  SELECT * FROM mensuration;
+2019-04-08 13:52:03,500 [1] INFO  Observer was notified
+2019-04-08 13:52:14,015 [8] INFO  ID msg: 1541
+2019-04-08 13:52:14,029 [8] INFO  Observer was notified
+2019-04-08 13:52:24,338 [8] INFO  ID msg: 1542
+2019-04-08 13:52:24,341 [8] INFO  Observer was notified
+2019-04-08 13:52:38,510 [1] INFO  Observer was notified
+2019-04-08 13:52:45,309 [8] INFO  ID msg: 1544
+2019-04-08 13:52:45,313 [8] INFO  Observer was notified
+2019-04-08 13:53:00,608 [1] INFO  Inserting mensuration
+2019-04-08 13:53:00,618 [1] INFO  GET ID:67
+2019-04-08 13:53:00,688 [1] INFO  Inserting discipline
+2019-04-08 13:53:00,691 [1] INFO  GET ID:79
+2019-04-08 13:53:00,753 [1] INFO  Inserting run
+2019-04-08 13:53:00,760 [1] INFO  GET ID:65
+2019-04-08 13:53:00,848 [1] INFO  Inserting basic msg
+2019-04-08 13:53:00,927 [1] INFO  Inserting BBOXPower
+2019-04-08 13:53:00,998 [1] INFO  Inserting BBOX_status
+2019-04-08 13:53:01,073 [1] INFO  Inserting GPS_data
+2019-04-08 13:53:01,134 [1] INFO  Inserting basic msg
+2019-04-08 13:53:01,181 [1] INFO  Inserting ECU_State
+2019-04-08 13:53:01,240 [1] INFO  Inserting BBOX_command
+2019-04-08 13:53:01,305 [1] INFO  Inserting FU_Values_1
+2019-04-08 13:53:01,361 [1] INFO  Inserting discipline
+2019-04-08 13:53:01,365 [1] INFO  GET ID:80
+2019-04-08 13:53:01,412 [1] INFO  Inserting run
+2019-04-08 13:53:01,417 [1] INFO  GET ID:66
+2019-04-08 13:53:01,480 [1] INFO  Inserting basic msg
+2019-04-08 13:53:01,545 [1] INFO  Inserting BMS_State
+2019-04-08 13:53:01,612 [1] INFO  Inserting wheel_RPM
+2019-04-08 13:53:01,684 [1] INFO  Inserting BMS_Voltages
+2019-04-08 13:53:01,751 [1] INFO  Inserting BMS_Temps
+2019-04-08 14:11:05,775 [1] INFO  SELECT * FROM mensuration;
+2019-04-08 14:11:21,045 [1] INFO  Observer was notified
+2019-04-08 14:11:31,856 [8] INFO  ID msg: 1652
+2019-04-08 14:11:31,872 [8] INFO  Observer was notified
+2019-04-08 14:11:35,961 [1] INFO  Observer was notified
+2019-04-08 14:11:42,249 [8] INFO  ID msg: 1653
+2019-04-08 14:11:42,252 [8] INFO  Observer was notified
+2019-04-08 14:11:54,698 [1] INFO  Observer was notified
+2019-04-08 14:12:02,975 [9] INFO  ID msg: 1655
+2019-04-08 14:12:02,978 [9] INFO  Observer was notified
+2019-04-08 14:12:07,390 [1] INFO  Inserting mensuration
+2019-04-08 14:12:07,401 [1] INFO  GET ID:68
+2019-04-08 14:12:07,478 [1] INFO  Inserting discipline
+2019-04-08 14:12:07,482 [1] INFO  GET ID:81
+2019-04-08 14:12:07,559 [1] INFO  Inserting run
+2019-04-08 14:12:07,563 [1] INFO  GET ID:67
+2019-04-08 14:12:07,632 [1] INFO  Inserting basic msg
+2019-04-08 14:12:07,711 [1] INFO  Inserting BMS_State
+2019-04-08 14:12:07,773 [1] INFO  Inserting wheel_RPM
+2019-04-08 14:12:07,831 [1] INFO  Inserting BMS_Voltages
+2019-04-08 14:12:07,894 [1] INFO  Inserting BMS_Temps
+2019-04-08 14:12:07,958 [1] INFO  Inserting discipline
+2019-04-08 14:12:07,961 [1] INFO  GET ID:82
+2019-04-08 14:12:08,014 [1] INFO  Inserting run
+2019-04-08 14:12:08,017 [1] INFO  GET ID:68
+2019-04-08 14:12:08,069 [1] INFO  Inserting basic msg
+2019-04-08 14:12:08,134 [1] INFO  Inserting BBOXPower
+2019-04-08 14:12:08,192 [1] INFO  Inserting BBOX_status
+2019-04-08 14:12:08,246 [1] INFO  Inserting GPS_data
+2019-04-08 14:12:08,305 [1] INFO  Inserting discipline
+2019-04-08 14:12:08,308 [1] INFO  GET ID:83
+2019-04-08 14:12:08,365 [1] INFO  Inserting run
+2019-04-08 14:12:08,369 [1] INFO  GET ID:69
+2019-04-08 14:12:08,415 [1] INFO  Inserting basic msg
+2019-04-08 14:12:08,476 [1] INFO  Inserting Interconnect
+2019-04-08 14:12:08,536 [1] INFO  Inserting FU_Values_2
+2019-04-08 14:12:08,600 [1] INFO  Inserting BMS_Command
+2019-04-08 14:23:38,912 [1] INFO  SELECT * FROM mensuration;
+2019-04-08 14:23:46,325 [1] INFO  Observer was notified
+2019-04-08 14:24:02,872 [8] INFO  ID msg: 1724
+2019-04-08 14:24:36,833 [8] INFO  Observer was notified
+2019-04-08 14:24:36,902 [9] INFO  ID msg: 1725
+2019-04-08 14:25:04,985 [1] INFO  SELECT * FROM mensuration;
+2019-04-08 14:25:32,378 [1] INFO  Observer was notified
+2019-04-08 14:25:46,998 [8] INFO  ID msg: 1734
+2019-04-08 14:25:47,013 [8] INFO  Observer was notified
+2019-04-08 14:25:57,441 [8] INFO  ID msg: 1735
+2019-04-08 14:25:57,444 [8] INFO  Observer was notified
+2019-04-08 14:26:08,001 [8] INFO  ID msg: 1736
+2019-04-08 14:26:08,006 [8] INFO  Observer was notified
+2019-04-08 14:26:18,384 [8] INFO  ID msg: 1737
+2019-04-08 14:31:33,113 [1] INFO  SELECT * FROM mensuration;
+2019-04-08 14:31:45,647 [1] INFO  Observer was notified
+2019-04-08 14:32:02,500 [8] INFO  ID msg: 1770
+2019-04-08 14:32:02,519 [8] INFO  Observer was notified
+2019-04-08 14:32:56,987 [1] INFO  SELECT * FROM mensuration;
+2019-04-08 14:33:05,510 [8] INFO  Error in prasing JSON: ":{"BMS_VoltIdent":234,"BMS_Volt1":234,"BMS_Volt2":235,"BMS_Volt3":236,"BMS_Volt4":237,"BMS_Volt5":238,"BMS_Volt6":239,"BMS_Volt7":240},"BMS_Temps":{"BMS_TempIdent":234,"BMS_Temp1":234,"BMS_Temp2":235,"BMS_Temp3":236,"BMS_Temp4":237,"BMS_Temp5":238,"BMS_Temp6":239,"BMS_Temp7":240}}]}/n Newtonsoft.Json.JsonSerializationException: Error converting value ":{" to type 'DP_WpfApp.JsonMsg'. Path '', line 1, position 4. ---> System.ArgumentException: Could not cast or convert from System.String to DP_WpfApp.JsonMsg.
+   at Newtonsoft.Json.Utilities.ConvertUtils.EnsureTypeAssignable(Object value, Type initialType, Type targetType)
+   at Newtonsoft.Json.Utilities.ConvertUtils.ConvertOrCast(Object initialValue, CultureInfo culture, Type targetType)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType)
+   --- End of inner exception stack trace ---
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value)
+   at DP_WpfApp.ProcessingLiveData.receivingRawJson(String rawJson) in C:\Users\sabol\source\repos\DP_WpfApp\DP_WpfApp\ProcessingLiveData.cs:line 24
+2019-04-08 14:33:25,967 [8] INFO  ID msg: 1778
+2019-04-08 14:33:36,395 [8] INFO  ID msg: 1779
+2019-04-08 14:33:46,945 [8] INFO  ID msg: 1780
+2019-04-08 14:33:57,338 [8] INFO  ID msg: 1781
+2019-04-08 14:36:25,397 [1] INFO  SELECT * FROM mensuration;
+2019-04-08 14:36:42,834 [1] INFO  Observer was notified
+2019-04-08 14:36:54,576 [8] INFO  ID msg: 1798
+2019-04-08 14:36:54,598 [8] INFO  Observer was notified
+2019-04-08 14:37:05,008 [8] INFO  ID msg: 1799
+2019-04-08 14:37:05,011 [8] INFO  Observer was notified
+2019-04-08 14:37:15,553 [8] INFO  ID msg: 1800
+2019-04-08 14:37:15,556 [8] INFO  Observer was notified
+2019-04-08 14:37:25,950 [8] INFO  ID msg: 1801
+2019-04-08 14:37:25,954 [8] INFO  Observer was notified
+2019-04-08 14:37:36,272 [9] INFO  ID msg: 1802
+2019-04-08 14:37:36,277 [9] INFO  Observer was notified
+2019-04-08 14:37:46,706 [9] INFO  ID msg: 1803
+2019-04-08 14:37:46,710 [9] INFO  Observer was notified
+2019-04-08 14:37:57,253 [9] INFO  ID msg: 1804
+2019-04-08 14:38:01,084 [9] INFO  Observer was notified
+2019-04-08 14:38:07,672 [9] INFO  ID msg: 1805
+2019-04-08 14:38:11,169 [9] INFO  Observer was notified
+2019-04-08 14:38:17,993 [11] INFO  ID msg: 1806
+2019-04-08 14:38:20,332 [11] INFO  Observer was notified
+2019-04-08 15:42:14,406 [1] INFO  SELECT * FROM mensuration;
+2019-04-08 15:42:21,851 [1] INFO  SELECT * FROM mensuration where ID=68;
+2019-04-08 15:42:21,886 [1] INFO  SELECT * FROM discipline where Id_mensuration=68;
+2019-04-08 15:42:21,909 [1] INFO  SELECT * FROM run where ID_discipline=81;
+2019-04-08 15:42:21,936 [1] INFO  SELECT * FROM msg where ID_run=67;
+2019-04-08 15:42:21,980 [1] INFO  SELECT * FROM run where ID_discipline=82;
+2019-04-08 15:42:22,004 [1] INFO  SELECT * FROM msg where ID_run=68;
+2019-04-08 15:42:22,028 [1] INFO  SELECT * FROM run where ID_discipline=83;
+2019-04-08 15:42:22,051 [1] INFO  SELECT * FROM msg where ID_run=69;
+2019-04-08 15:42:22,069 [1] INFO  Observer was notified
+2019-04-08 15:42:22,073 [1] INFO  Observer was notified
+2019-04-08 15:42:22,076 [1] INFO  Observer was notified
+2019-04-08 15:42:22,078 [1] INFO  Observer was notified
+2019-04-08 15:42:26,074 [1] INFO  Observer was notified
+2019-04-08 15:42:27,249 [1] INFO  Observer was notified
+2019-04-08 15:42:30,840 [1] INFO  Observer was notified
+2019-04-08 15:42:32,142 [1] INFO  Observer was notified
+2019-04-08 15:42:33,446 [1] INFO  Observer was notified
+2019-04-08 15:42:34,632 [1] INFO  Observer was notified
+2019-04-08 15:45:33,203 [1] INFO  SELECT * FROM mensuration;
+2019-04-08 15:45:40,967 [1] INFO  SELECT * FROM mensuration where ID=68;
+2019-04-08 15:45:40,993 [1] INFO  SELECT * FROM discipline where Id_mensuration=68;
+2019-04-08 15:45:41,015 [1] INFO  SELECT * FROM run where ID_discipline=81;
+2019-04-08 15:45:41,045 [1] INFO  SELECT * FROM msg where ID_run=67;
+2019-04-08 15:45:41,094 [1] INFO  SELECT * FROM run where ID_discipline=82;
+2019-04-08 15:45:41,120 [1] INFO  SELECT * FROM msg where ID_run=68;
+2019-04-08 15:45:41,150 [1] INFO  SELECT * FROM run where ID_discipline=83;
+2019-04-08 15:45:41,167 [1] INFO  SELECT * FROM msg where ID_run=69;
+2019-04-08 15:45:41,181 [1] INFO  Observer was notified
+2019-04-08 15:45:41,186 [1] INFO  Observer was notified
+2019-04-08 15:45:41,188 [1] INFO  Observer was notified
+2019-04-08 15:45:41,189 [1] INFO  Observer was notified
+2019-04-08 15:45:43,553 [1] INFO  Observer was notified
+2019-04-08 15:45:44,853 [1] INFO  Observer was notified
+2019-04-08 15:45:46,671 [1] INFO  Observer was notified
+2019-04-08 15:45:47,781 [1] INFO  Observer was notified
+2019-04-08 15:45:49,404 [1] INFO  Observer was notified
+2019-04-08 15:45:50,476 [1] INFO  Observer was notified
+2019-04-08 15:45:52,187 [1] INFO  Observer was notified
+2019-04-08 15:45:53,252 [1] INFO  Observer was notified
+2019-04-08 15:46:00,856 [1] INFO  SELECT * FROM mensuration where ID=66;
+2019-04-08 15:46:00,887 [1] INFO  SELECT * FROM discipline where Id_mensuration=66;
+2019-04-08 15:46:00,922 [1] INFO  SELECT * FROM run where ID_discipline=78;
+2019-04-08 15:46:00,948 [1] INFO  SELECT * FROM msg where ID_run=64;
+2019-04-08 15:46:00,965 [1] INFO  Observer was notified
+2019-04-08 15:46:00,967 [1] INFO  Observer was notified
+2019-04-08 15:46:02,843 [1] INFO  Observer was notified
+2019-04-08 15:46:05,037 [1] INFO  Observer was notified
+2019-04-08 22:20:48,789 [1] INFO  SELECT * FROM mensuration;
+2019-04-08 22:21:05,426 [1] INFO  SELECT * FROM mensuration where ID=68;
+2019-04-08 22:21:05,461 [1] INFO  SELECT * FROM discipline where Id_mensuration=68;
+2019-04-08 22:21:05,486 [1] INFO  SELECT * FROM run where ID_discipline=81;
+2019-04-08 22:21:05,514 [1] INFO  SELECT * FROM msg where ID_run=67;
+2019-04-08 22:21:05,566 [1] INFO  SELECT * FROM run where ID_discipline=82;
+2019-04-08 22:21:05,588 [1] INFO  SELECT * FROM msg where ID_run=68;
+2019-04-08 22:21:05,614 [1] INFO  SELECT * FROM run where ID_discipline=83;
+2019-04-08 22:21:05,632 [1] INFO  SELECT * FROM msg where ID_run=69;
+2019-04-08 22:21:05,650 [1] INFO  Observer was notified
+2019-04-08 22:21:05,653 [1] INFO  Observer was notified
+2019-04-08 22:21:05,654 [1] INFO  Observer was notified
+2019-04-08 22:21:05,656 [1] INFO  Observer was notified
+2019-04-08 22:21:11,917 [1] INFO  Observer was notified
+2019-04-08 22:21:13,983 [1] INFO  Observer was notified
+2019-04-08 22:28:58,031 [1] INFO  SELECT * FROM mensuration;
+2019-04-08 22:29:20,109 [1] INFO  SELECT * FROM mensuration where ID=56;
+2019-04-08 22:29:20,151 [1] INFO  SELECT * FROM discipline where Id_mensuration=56;
+2019-04-08 22:29:20,177 [1] INFO  SELECT * FROM run where ID_discipline=71;
+2019-04-08 22:29:20,205 [1] INFO  SELECT * FROM msg where ID_run=58;
+2019-04-08 22:29:20,253 [1] INFO  SELECT * FROM run where ID_discipline=72;
+2019-04-08 22:29:20,277 [1] INFO  SELECT * FROM msg where ID_run=59;
+2019-04-08 22:29:20,296 [1] INFO  Observer was notified
+2019-04-08 22:29:20,300 [1] INFO  Observer was notified
+2019-04-08 22:29:20,302 [1] INFO  Observer was notified
+2019-04-08 22:29:27,968 [1] INFO  Observer was notified
+2019-04-08 22:29:30,019 [1] INFO  Observer was notified
+2019-04-08 22:29:32,671 [1] INFO  Observer was notified
+2019-04-08 22:29:34,996 [1] INFO  Observer was notified
+2019-04-08 22:29:46,607 [1] INFO  Observer was notified
+2019-04-08 22:29:56,345 [1] INFO  SELECT * FROM mensuration where ID=55;
+2019-04-08 22:29:56,369 [1] INFO  SELECT * FROM discipline where Id_mensuration=55;
+2019-04-08 22:29:56,374 [1] INFO  Observer was notified
+2019-04-08 22:30:13,611 [1] INFO  SELECT * FROM mensuration where ID=65;
+2019-04-08 22:30:13,648 [1] INFO  SELECT * FROM discipline where Id_mensuration=65;
+2019-04-08 22:30:13,669 [1] INFO  SELECT * FROM run where ID_discipline=77;
+2019-04-08 22:30:13,690 [1] INFO  SELECT * FROM msg where ID_run=63;
+2019-04-08 22:30:13,722 [1] INFO  Observer was notified
+2019-04-08 22:30:13,724 [1] INFO  Observer was notified
+2019-04-08 22:30:17,966 [1] INFO  Observer was notified
+2019-04-08 22:30:20,655 [1] INFO  Observer was notified

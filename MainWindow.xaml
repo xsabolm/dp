@@ -39,16 +39,15 @@
                                 <RowDefinition Height="*" />
                             </Grid.RowDefinitions>
                             <Grid Grid.Column="0" Grid.Row="0" >
-                                <TabControl Name="telemetryData">
-                                    <TabItem Header="General Data">
+
                                         <table:TableControl></table:TableControl>
-                                    </TabItem>
-                                    <TabItem Header="Other Data"></TabItem>
-                                </TabControl>
+
                             </Grid>
                             <Grid  Grid.Column="1" Grid.RowSpan="2"  Margin="00,0,0,0" Background="#1F1CFDC8">
                                 <lap:LapControl ></lap:LapControl>
-                                <ScrollBar Background="Coral" VerticalAlignment="Top" Orientation="Horizontal" Height="5"></ScrollBar>
+                                <ScrollBar Name="scrollBar" Background="LightSalmon" VerticalAlignment="Top"  Orientation="Horizontal" Height="5" Minimum="0"
+                                           Scroll="ScrollBar_Scroll"
+                                           ></ScrollBar>
                             </Grid>
                             <Grid Grid.Row="1" Grid.Column="0" Background="#FFBBFDC8" Margin="5,5,0,0">
                                 <graph:BasicGraph></graph:BasicGraph>

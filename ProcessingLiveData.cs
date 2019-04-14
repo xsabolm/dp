@@ -50,7 +50,11 @@ namespace DP_WpfApp
                     if (queueWait.Count == 0)
                     {
                         LastId = actualProcessingSprava.Id;
-                        AppController.get.Model.createNewMsg(actualProcessingSprava);
+                        //AppController.get.Model.createNewMsg(actualProcessingSprava);
+                        if (AppController.get.SelectedDiscipline != null)
+                        {
+                            AppController.get.SelectedDiscipline.addNewMsg(actualProcessingSprava);
+                        }
                         return;
                     }
                     else
@@ -74,7 +78,11 @@ namespace DP_WpfApp
                 //sortovat
                 queueWait.ForEach(sprava =>
                 {
-                    AppController.get.Model.createNewMsg(sprava);
+                    //AppController.get.Model.createNewMsg(sprava);
+                    if (AppController.get.SelectedDiscipline != null)
+                    {
+                        AppController.get.SelectedDiscipline.addNewMsg(sprava);
+                    }
                     LastId = sprava.Id;
                 });
                 queueWait.Clear();
