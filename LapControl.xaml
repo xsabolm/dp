@@ -4,30 +4,19 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:DP_WpfApp"
-             mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             mc:Ignorable="d" >
     <Grid>
-        <ItemsControl ItemsSource="{Binding Lines}">
+        <ItemsControl Name="LapControlItem" ItemsSource="{Binding ObjectCollection}">
             <ItemsControl.ItemsPanel>
                 <ItemsPanelTemplate>
-                    <Canvas  Name="canvas" 
-                             MouseMove="Canvas_MouseMove" 
-                             MouseLeftButtonDown="Canvas_MouseLeftButtonDown"  
-                             MouseLeftButtonUp="Canvas_MouseLeftButtonUp"
-                             MouseRightButtonDown="Canvas_MouseRightButtonDown">
-                        <Canvas.Background>
-                            <SolidColorBrush Color="White" Opacity="0"/>
-                        </Canvas.Background>
+                    <Canvas  Name="canvas_my" 
+                             MouseLeftButtonDown="Canvas_MouseLeftButtonDown" 
+                             SizeChanged="canvas_my_SizeChanged"
+                             Background="LightGoldenrodYellow"
+                             >
                     </Canvas>
                 </ItemsPanelTemplate>
             </ItemsControl.ItemsPanel>
-            <ItemsControl.ItemTemplate>
-                <DataTemplate>
-                    <Line X1="{Binding From.X}" Y1="{Binding From.Y}"
-                      X2="{Binding To.X}" Y2="{Binding To.Y}"
-                      Stroke="DarkGray" StrokeThickness="3"/>
-                </DataTemplate>
-            </ItemsControl.ItemTemplate>
         </ItemsControl>
     </Grid>
 </UserControl>

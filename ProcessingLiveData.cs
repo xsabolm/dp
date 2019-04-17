@@ -33,14 +33,22 @@ namespace DP_WpfApp
         public void processing(String rawJson)
         {
             Console.WriteLine(rawJson);
-
             JsonMsg actualProcessingSprava = receivingRawJson(rawJson);
+            if (actualProcessingSprava.Data == null)
+            {
+                if (actualProcessingSprava.Id == -1)
+                {
+                    AppController.get.SelectedDiscipline.reciviedErrorMsg();
+                }
+                return;
+            }
             if (actualProcessingSprava == null) return;
+            if (lastId == actualProcessingSprava.Id) return;
 
             if (LastId == -1)
             {
                 LastId = actualProcessingSprava.Id;
-                AppController.get.Model.createNewMsg(actualProcessingSprava);
+                AppController.get.SelectedDiscipline.addNewMsg(actualProcessingSprava);
                 return;
             }
             else
@@ -50,7 +58,6 @@ namespace DP_WpfApp
                     if (queueWait.Count == 0)
                     {
                         LastId = actualProcessingSprava.Id;
-                        //AppController.get.Model.createNewMsg(actualProcessingSprava);
                         if (AppController.get.SelectedDiscipline != null)
                         {
                             AppController.get.SelectedDiscipline.addNewMsg(actualProcessingSprava);
@@ -87,7 +94,6 @@ namespace DP_WpfApp
                 });
                 queueWait.Clear();
             }
-
         }
     }
 }

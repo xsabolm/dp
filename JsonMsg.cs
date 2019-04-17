@@ -11,7 +11,7 @@ namespace DP_WpfApp
     public class JsonMsg
     {
         public int Id { get; set; }
-        public List<Data> Data { get; set; }
+        public Data Data { get; set; }
     }
 
     public class BBOXPower

@@ -32,6 +32,12 @@ namespace DP_WpfApp
 
 
         public List<BBOXCommand> BBOXCommandList { get; } = new List<BBOXCommand>();
+
+        internal void reciviedErrorMsg()
+        {
+            throw new NotImplementedException();
+        }
+
         public List<FUValues1> FUValues1List { get; } = new List<FUValues1>();
         public List<Interconnect> InterconnectList { get; } = new List<Interconnect>();
         public List<FUValues2> FUValues2List { get; } = new List<FUValues2>();
@@ -85,8 +91,8 @@ namespace DP_WpfApp
             if (SelectedRun != null)
             {
                 ActualMsg = new Msg(jsonMsg);
-                Notify();
-                SelectedRun.ListMsg.Add(ActualMsg);                
+                SelectedRun.ListMsg.Add(ActualMsg);
+                Notify();                      
             }
         }
 

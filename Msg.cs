@@ -87,7 +87,7 @@ namespace DP_WpfApp
         {
             ReceiptTime = DateTime.Now;
             IdJson = jsonMsg.Id;
-            setJson(jsonMsg.Data[0]);
+            setJson(jsonMsg.Data);
         }
 
         private void setJson(Data data)

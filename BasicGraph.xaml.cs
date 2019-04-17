@@ -38,7 +38,7 @@ namespace graphVisualization
         private static string[] comboboxLabels = { "BBOX_power", "BBOX_status", "GPS_data", "ECU_State", "BBOX_command", "FU_Values_1", "Interconnect", "FU_Values_2", "BMS_Command", "BMS_State", "wheel_RPM", "BMS_Voltages", "BMS_Temps" };
         private static string[] comboboxBBOXPowerLabels = { "power", "current", "voltage" };
         private static string[] comboboxBBOXStatusLabels = { "SHD_IN", "SHD_OUT", "TSMS", "AIR_N", "AIR_P", "PRECH_60V", "IMD_OK", "BMS_OK", "SIGNAL_ERROR", "SHD_RESET", "SHD_EN", "POLARITY", "FANS", "STM_temp" };
-        private static string[] comboboxGPSDataLabels = { "latitude", "latitude_char", "longitude", "longitude_char", "speed", "course", "altitude" };
+        private static string[] comboboxGPSDataLabels = { "latitude",/* "latitude_char",*/ "longitude",/* "longitude_char",*/ "speed", "course", "altitude" };
         private static string[] comboboxECUStateLabels = { "ECU_Status", "FL_AMK_Status", "FR_AMK_Status", "RL_AMK_Status", "RR_AMK_Status", "TempMotor_H", "TempInverter_H", "TempIGBT_H" };
         private static string[] comboboxBBOXCommandLabels = { "FANS", "SHD_EN" };
         private static string[] comboboxFUValues1Labels = { "apps1", "apps2", "brake1", "brake2", "error" };

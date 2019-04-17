@@ -54,7 +54,7 @@ namespace DP_WpfApp
         {
             if (msg.IsBBOXPower) { ViewMain.BBOXPowerList.Add(msg); ViewMain.ViewGraph.addBBOXPower(msg);}
             if (msg.IsBBOXStatus) { ViewMain.BBOXStatusList.Add(msg); ViewMain.ViewGraph.addBBOXStatus(msg); }
-            if (msg.IsGPSData) { ViewMain.GPSDataList.Add(msg); ViewMain.ViewGraph.addGPSData(msg); }
+            if (msg.IsGPSData) { ViewMain.GPSDataList.Add(msg); ViewMain.ViewGraph.addGPSData(msg); ViewMain.ViewLap.addNewGpsMsg(msg.GPSData, (selectedDiscipline.SelectedRun.ListMsg.Count-1)); }
             if (msg.IsECUState) { ViewMain.ECUStateList.Add(msg); ViewMain.ViewGraph.addECUState(msg); }
             if (msg.IsBBOXCommand) { ViewMain.BBOXCommandList.Add(msg); ViewMain.ViewGraph.addBBOXCommand(msg); }
             if (msg.IsFUValues1) { ViewMain.FUValues1List.Add(msg); ViewMain.ViewGraph.addFuValues1(msg); }

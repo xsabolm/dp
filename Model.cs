@@ -35,13 +35,13 @@ namespace DP_WpfApp
 
         public void createModel()
         {
-                Mensuration = new Mensuration();
+            Mensuration = new Mensuration();
         }
 
         internal void closeDiscipline()
         {
             if (ActualDisciplin != null)
-            {   
+            {
                 ActualRun.FinishTime = DateTime.Now;
                 ActualDisciplin.Comment = DateTime.Now.ToLongTimeString();
                 ActualDisciplin.ListRuns.Add(ActualRun);

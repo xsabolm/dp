@@ -44,10 +44,18 @@
 
                             </Grid>
                             <Grid  Grid.Column="1" Grid.RowSpan="2"  Margin="00,0,0,0" Background="#1F1CFDC8">
-                                <lap:LapControl ></lap:LapControl>
-                                <ScrollBar Name="scrollBar" Background="LightSalmon" VerticalAlignment="Top"  Orientation="Horizontal" Height="5" Minimum="0"
-                                           Scroll="ScrollBar_Scroll"
-                                           ></ScrollBar>
+                                <DockPanel>
+                                    <ScrollBar Name="scrollBar" 
+                                               Background="LightSalmon" 
+                                               DockPanel.Dock="Top"  
+                                               Orientation="Horizontal" 
+                                               Height="5" Minimum="0"
+                                               Scroll="ScrollBar_Scroll"
+                                               >
+                                    </ScrollBar>
+                                    <Label DockPanel.Dock="Top" Content="Scrollbar represented timeline" HorizontalContentAlignment="Center"></Label>
+                                    <lap:LapControl></lap:LapControl>
+                                    </DockPanel>
                             </Grid>
                             <Grid Grid.Row="1" Grid.Column="0" Background="#FFBBFDC8" Margin="5,5,0,0">
                                 <graph:BasicGraph></graph:BasicGraph>

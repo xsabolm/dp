@@ -11,15 +11,17 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
-            <RowDefinition Height="100"></RowDefinition>
         </Grid.RowDefinitions>
+        <DockPanel>
+            <Label DockPanel.Dock="Left" Content="Choose main category: "></Label>
         <ComboBox Name="combobox_graf_items"
-                  HorizontalAlignment="Left"
+                  DockPanel.Dock="Left"
                   Width="100"
                   SelectionChanged="combobox_graf_items_SelectionChanged">
         </ComboBox>
+            <Label DockPanel.Dock="Left" Content="Choose more specific: "></Label>
         <ComboBox Name="combobox_graf_items2" 
-                  HorizontalAlignment="Center" 
+                  DockPanel.Dock="Left" 
                   Width="100"
                   SelectionChanged="combobox_graf_items2_SelectionChanged">
         </ComboBox>
@@ -27,8 +29,9 @@
                 Content="Clear Graph"
                 Width="100"
                 Click="btn_clearGraph_Click"
-                HorizontalAlignment="Right">
+                DockPanel.Dock="Left">
         </Button>
+        </DockPanel>
         <lvc:CartesianChart Grid.Row="1" 
                             Series="{Binding SeriesCollection}" 
                             Hoverable="False"

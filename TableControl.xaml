@@ -21,6 +21,53 @@
                     <RowDefinition Height="*" />
                     <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
+                <Grid Grid.Column="0" Grid.Row="0">
+                    <DockPanel>
+                        <Label DockPanel.Dock="Top" FontWeight="Bold" HorizontalContentAlignment="Center" Content="Box power"></Label>
+                        <DockPanel DockPanel.Dock="Top">
+                            <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="Voltage: "></Label>
+                            <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="000"></Label>
+                        </DockPanel>
+                        <DockPanel DockPanel.Dock="Top">
+                            <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="Current: "></Label>
+                            <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="000"></Label>
+                        </DockPanel>
+                        <DockPanel>
+                            <Label DockPanel.Dock="left" HorizontalContentAlignment="Left" Content="Power: "></Label>
+                            <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="000"></Label>
+                        </DockPanel>
+                    </DockPanel>
+                </Grid>
+                <Grid Grid.Column="1" Grid.Row="0">
+                    <ListView>
+                        
+                    </ListView>
+                </Grid>
+                <Grid Grid.Column="2" Grid.Row="0">
+                    <DockPanel>
+                        <Label DockPanel.Dock="Top" FontWeight="Bold" HorizontalContentAlignment="Center" Content="Interconected"></Label>
+                        <Label DockPanel.Dock="Top" HorizontalContentAlignment="Left" Content="car state: "></Label>
+                        <Label DockPanel.Dock="Top" HorizontalContentAlignment="Left" Content=""></Label>
+                        <Label DockPanel.Dock="Top" HorizontalContentAlignment="Left" Content=""></Label>
+                    </DockPanel>
+                </Grid>
+                <Grid Grid.Column="3" Grid.Row="0">
+                    <DockPanel>
+                        <Label DockPanel.Dock="Top" FontWeight="Bold" HorizontalContentAlignment="Center" Content="Wheel"></Label>
+                        <Label DockPanel.Dock="Top" HorizontalContentAlignment="Left" Content="Front right: "></Label>
+                        <Label DockPanel.Dock="Top" HorizontalContentAlignment="Left" Content="Front left: "></Label>
+                        <Label DockPanel.Dock="Top" HorizontalContentAlignment="Left" Content="Rear right: "></Label>
+                        <Label DockPanel.Dock="Top" HorizontalContentAlignment="Left" Content="Rear left: "></Label>
+                    </DockPanel>
+                </Grid>
+                <Grid Grid.Column="0" Grid.Row="1"></Grid>
+                <Grid Grid.Column="1" Grid.Row="1"></Grid>
+                <Grid Grid.Column="2" Grid.Row="1"></Grid>
+                <Grid Grid.Column="3" Grid.Row="1"></Grid>
+                <Grid Grid.Column="0" Grid.Row="2"></Grid>
+                <Grid Grid.Column="1" Grid.Row="2"></Grid>
+                <Grid Grid.Column="2" Grid.Row="2"></Grid>
+                <Grid Grid.Column="3" Grid.Row="2"></Grid>
             </Grid>
         </TabItem>
         <TabItem Header="BBOX Power">
