@@ -36,6 +36,8 @@ namespace DP_WpfApp
             }
         }
 
+
+
         internal static void didNotSetConnection()
         {
             DialogResult dialogResult = System.Windows.Forms.MessageBox.Show("Settings -> Live data", "FIRST YOU NEED SET CONENCTION", MessageBoxButtons.OK);

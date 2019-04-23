@@ -10,18 +10,18 @@
         <TabControl Name="connection" Background="#FFBBFDC8" >
             <TabItem Header="Live data">
                 <Canvas>
-                    <Button Canvas.Left="200" Canvas.Top="150" Width="140" x:Name="btnLiveConnectionOpen" Content="Open Live Connection" Click="btnLiveConnection_Open" Visibility="{Binding Path=IsLiveConnectionOpened , Mode=OneWay}"/>
-                    <Button Canvas.Left="200" Canvas.Top="150" Width="140" x:Name="btnLiveConnectionClose" Content="Close Live Connection" Click="btnLiveConnection_Close" Visibility="{Binding Path=IsLiveConnectionClosed , Mode=OneWay}"/>
-                    <Button Canvas.Left="200" Canvas.Top="120" Width="140" x:Name="btnRefreshPortList" Content="Refresh Port list" Click="refreshPortList"></Button>
-                    <Label Content="Choose Serial Port:" Canvas.Left="20" Canvas.Top="125" Width="150"></Label>
-                    <Label Content="Set Baud Rate:" Canvas.Left="20" Canvas.Top="60" Width="150"></Label>
+                    <Button Canvas.Left="300" Canvas.Top="10" Width="140" x:Name="btnLiveConnectionOpen" Content="Open Live Connection" Click="btnLiveConnection_Open" Visibility="{Binding Path=IsLiveConnectionOpened , Mode=OneWay}"/>
+                    <Button Canvas.Left="300" Canvas.Top="10" Width="140" x:Name="btnLiveConnectionClose" Content="Close Live Connection" Click="btnLiveConnection_Close" Visibility="{Binding Path=IsLiveConnectionClosed , Mode=OneWay}"/>
+                    <Button Canvas.Left="140" Canvas.Top="40" Width="150" x:Name="btnRefreshPortList" Content="Refresh Port list" Click="refreshPortList"></Button>
+                    <Label Content="Choose Serial Port:" Canvas.Left="20" Canvas.Top="10" Width="150"></Label>
+                    <Label Content="Set Baud Rate:" Canvas.Left="20" Canvas.Top="70" Width="150"></Label>
 
                     <ComboBox Name="comboBoxPorts"
-                              Canvas.Left="20" Canvas.Top="150" Width="150"
+                              Canvas.Left="140" Canvas.Top="10" Width="150"
                               ItemsSource="{Binding Path=comboboxListPorts}"
                               DisplayMemberPath="Label"
                               SelectedValue="{Binding CurrentSelectionPort}"/>
-                    <ComboBox Name="comboboxBaudRate" Canvas.Left="200" Canvas.Top="60" Width="140">
+                    <ComboBox Name="comboboxBaudRate" Canvas.Left="140" Canvas.Top="70" Width="150">
                         <ComboBoxItem >9600</ComboBoxItem>
                         <ComboBoxItem >14400</ComboBoxItem>
                         <ComboBoxItem >19200</ComboBoxItem>
@@ -35,19 +35,44 @@
             </TabItem>
             <TabItem Header="Historic Data">
                 <Canvas>
-                    <Label Content="Choose Mensuration:" Canvas.Left="20" />
-                    <Button Canvas.Left="200" Canvas.Top="30" Width="50" x:Name="btnConnectToDatabase" Content="OK" Click="btnConnectToDataBase_Click"/>
-                    <Button Canvas.Left="200" Canvas.Top="5" Width="125" x:Name="btnRefreshMensuration" Content="Refresh Mensuration" Click="btnRefreshMenusrations_Click"/>
+                    <Label Content="Choose Mensuration :" Canvas.Left="20" Canvas.Top="10" />
+                    <Label Content="Details about selected mensuration :" Canvas.Left="20" Canvas.Top="70" />
+                    <Button Canvas.Left="310" Canvas.Top="10" Width="50" x:Name="btnConnectToDatabase" Content="OK" Click="btnConnectToDataBase_Click"/>
+                    <Button Canvas.Left="150" Canvas.Top="40" Width="150" x:Name="btnRefreshMensuration" Content="Refresh Mensuration" Click="btnRefreshMenusrations_Click"/>
                     <ComboBox Name="comboBoxMensuration"
-                              Canvas.Left="20" Canvas.Top="30" Width="150"
+                              Canvas.Left="150" Canvas.Top="10" Width="150"
                               ItemsSource="{Binding Path=comboboxListMensuration}"
                               DisplayMemberPath="Label"
                               SelectedValue="{Binding CurrentSelectionFromCombobox}" 
                               SelectionChanged="comboBoxMensuration_SelectionChanged"/>
-                    <TextBox Name="textView" Text="{Binding Path=DetailsInformation, Mode=OneWay}" Canvas.Left="20" Canvas.Top="100" Width="300" Height="300"  IsReadOnly="True" TextWrapping="Wrap" AcceptsReturn="True" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto"/>
+                    <TextBox Name="textView" Text="{Binding Path=DetailsInformation, Mode=OneWay}" Canvas.Left="20" Canvas.Top="100" Width="340" Height="100"  IsReadOnly="True" TextWrapping="Wrap" AcceptsReturn="True" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto"/>
+                    <Label Content="Mensuration Locality :" Canvas.Left="20"  Canvas.Top="220"/>
+                    <TextBox Name="textMensurationLocality" Text="{Binding Path=MensurationLocality, Mode=OneWay}" Canvas.Left="20" Canvas.Top="250" Width="200" Height="20" TextWrapping="Wrap" AcceptsReturn="True" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto"/>
+                    <Label Content="Mensuration Comment :" Canvas.Left="20" Canvas.Top="270"/>
+                    <TextBox Name="textMensurationComment" Text="{Binding Path=MensurationComment, Mode=OneWay}" Canvas.Left="20" Canvas.Top="300" Width="200" Height="60" TextWrapping="Wrap" AcceptsReturn="True" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto"/>
+                    <Button Name="btnUpdateMensurationLocality" Canvas.Left="240" Content="Update Locality"  Canvas.Top="250" Width="110" Click="btnUpdateMensurationLocality_Click"></Button>
+                    <Button Name="btnUpdateMensurationComment" Canvas.Left="240" Content="Update Comment"  Canvas.Top="300" Width="110" Click="btnUpdateMensurationComment_Click"></Button>
+                    <Label Content="Choose Discipline :" Canvas.Left="500"  Canvas.Top="10"/>
+                    <ComboBox Name="comboBoxDiscipline"
+                              Canvas.Left="610" Canvas.Top="10" Width="160"
+                              ItemsSource="{Binding Path=comboboxListDiscipline}"
+                              DisplayMemberPath="Label"
+                              SelectedValue="{Binding CurrentSelectionFromDisciplineCombobox}" 
+                              SelectionChanged="comboBoxDiscipline_SelectionChanged"/>
+                    <Button Name="btnChooseDiscipline" Canvas.Left="720" Content="OK"  Canvas.Top="40" Width="50" Click="btnChooseDiscipline_Click"></Button>
+                    <Label Content="Details about selected discipline :" Canvas.Left="500" Canvas.Top="70" />
+                    <TextBox Name="textViewDiscipline" Text="{Binding Path=DetailsInformationDiscipline, Mode=OneWay}" Canvas.Left="500" Canvas.Top="100" Width="270" Height="100"  IsReadOnly="True" TextWrapping="Wrap" AcceptsReturn="True" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto"/>
+                    <Label Content="Discipline Comment :" Canvas.Left="500" Canvas.Top="270"/>
+                    <TextBox Name="textDisciplineComment" Text="{Binding Path=DisciplineComment, Mode=OneWay}" Canvas.Left="500" Canvas.Top="300" Width="150" Height="60" TextWrapping="Wrap" AcceptsReturn="True" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto"/>
+                    <Button Name="btnUpdateDisciplineComment" Canvas.Left="660" Content="Update Comment"  Canvas.Top="300" Width="110" Click="btnUpdateDisciplineComment_Click"></Button>
+                    <Label Content="Discipline Name :" Canvas.Left="500" Canvas.Top="220"/>
+                    <TextBox Name="textDisciplineName" Text="{Binding Path=DisciplineName, Mode=OneWay}" Canvas.Left="500" Canvas.Top="250" Width="150" Height="20" TextWrapping="Wrap" AcceptsReturn="True" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto"/>
+                    <Button Name="btnUpdateDisciplineName" Canvas.Left="660" Content="Update Name"  Canvas.Top="250" Width="110" Click="btnUpdateDisciplineName_Click"></Button>
+
+
                 </Canvas>
             </TabItem>
-            <TabItem Header="File Data">
+            <TabItem Header="File Data" Visibility="Hidden">
                 <Canvas>
                     <Button Canvas.Left="20" Canvas.Top="10" x:Name="btnOpenFile" Content="Open File" Click="btnOpenFile_Click"/>
                     <TextBox Canvas.Left="20" Canvas.Top="40" Width="200" x:Name="txtBoxOpenFile" ></TextBox>

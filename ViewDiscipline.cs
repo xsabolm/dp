@@ -40,6 +40,20 @@ namespace DP_WpfApp
             }
         }
 
+        public void setVisibleRunCombobox(Boolean beVisibel)
+        {
+            if (beVisibel)
+            {
+                comboboxListRuns.Add(new ComboboxValue { ID = 0, Label = "Actual Run" });
+                IsRunCombobox = Visibility.Visible;
+            }
+            else
+            {
+                IsRunCombobox = Visibility.Hidden;
+                resetRuns();
+            }
+        }
+
         internal void resetRuns()
         {
             comboboxListRuns.Clear();
@@ -60,11 +74,11 @@ namespace DP_WpfApp
         {
             if (run.FinishTime.Year == 1000)
             {
-                comboboxListRuns.Add(new ComboboxValue { ID = run.ID, Label = run.ID + " | Start time: "+run.StartTime.ToLongTimeString() + "| Not Finish" });
+                comboboxListRuns.Add(new ComboboxValue { ID = run.ID, Label = run.ID + " | Start time: " + run.StartTime.ToLongTimeString() + "| Not Finish" });
             }
             else
             {
-                comboboxListRuns.Add(new ComboboxValue { ID = run.ID, Label = run.ID + " |" + (run.FinishTime - run.StartTime).TotalSeconds });
+                comboboxListRuns.Add(new ComboboxValue { ID = run.ID, Label = run.ID + " |" + (run.FinishTime - run.StartTime).Seconds.ToString() });
             }
         }
 

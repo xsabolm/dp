@@ -111,14 +111,23 @@ namespace DP_WpfApp
             ViewMain.clearView(); 
             SelectedDiscipline = new SelectedDiscipline();
             SelectedDiscipline.IsLiveData = IsLiveData;
-
+            ViewDisciplina.setVisibleRunCombobox(true);
             SelectedDiscipline.Attach(new ObserverSelectedDiscipline(ViewMain, SelectedDiscipline));
             SelectedDiscipline.Notify();
         }
 
-        internal void setSelectedRun(int iD)
+        internal void setSelectedRunFromCount(int runNumber)
         {
-            SelectedDiscipline.setSelectedRunFromDB(iD);
+            ViewMain.clearView();
+            SelectedDiscipline.setSelectedRunFromCount(runNumber);
+            
+    //        SelectedDiscipline.Attach(new ObserverSelectedDiscipline(ViewMain, SelectedDiscipline));
+            //SelectedDiscipline.Notify();
+        }
+
+        internal void setSelectedRunFromDataBase(int ID)
+        {
+            SelectedDiscipline.setSelectedRunFromDB(ID);
             ViewMain.clearView();
             SelectedDiscipline.Attach(new ObserverSelectedDiscipline(ViewMain, SelectedDiscipline));
             SelectedDiscipline.Notify();

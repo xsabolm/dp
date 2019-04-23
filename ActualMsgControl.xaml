@@ -1,0 +1,450 @@
+﻿<UserControl x:Class="DP_WpfApp.ActualMsgControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DP_WpfApp"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <TabControl>
+            <TabItem Header="Actual Msg part 1">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Column="0" Grid.RowSpan="2" Background="LightCyan">
+                        <DockPanel>
+                            <Label DockPanel.Dock="Top" FontWeight="Bold" HorizontalContentAlignment="Center" Content="Box power"></Label>
+                            <DockPanel DockPanel.Dock="Top">
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="Voltage: "></Label>
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="{Binding Path=BboxPower.voltage}"></Label>
+                            </DockPanel>
+                            <DockPanel DockPanel.Dock="Top">
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="Current: "></Label>
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="{Binding Path=BboxPower.current}"></Label>
+                            </DockPanel>
+                            <DockPanel DockPanel.Dock="Top">
+                                <Label DockPanel.Dock="left" HorizontalContentAlignment="Left" Content="Power: "></Label>
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="{Binding Path=BboxPower.power}"></Label>
+                            </DockPanel>
+                        </DockPanel>
+                    </Grid>
+                    <Grid Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="3" Background="AliceBlue">
+                        <DockPanel>
+                            <Label DockPanel.Dock="Top" FontWeight="Bold" HorizontalContentAlignment="Center" Content="Box Status"></Label>
+                            <DockPanel DockPanel.Dock="Left">
+                                <DockPanel DockPanel.Dock="Top">
+                                    <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="SHD IN: "></Label>
+                                    <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="{Binding Path=BboxStatus.SHD_IN}"></Label>
+                                </DockPanel>
+                                <DockPanel DockPanel.Dock="Top">
+                                    <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="SHD OUT: "></Label>
+                                    <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="{Binding Path=BboxStatus.SHD_OUT}"></Label>
+                                </DockPanel>
+                                <DockPanel DockPanel.Dock="Top">
+                                    <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="TSMS: "></Label>
+                                    <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="{Binding Path=BboxStatus.TSMS}"></Label>
+                                </DockPanel>
+                                <DockPanel DockPanel.Dock="Top">
+                                    <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="AIR N: "></Label>
+                                    <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="{Binding Path=BboxStatus.AIR_N}"></Label>
+                                </DockPanel>
+                                <DockPanel DockPanel.Dock="Top">
+                                    <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="AIR P: "></Label>
+                                    <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="{Binding Path=BboxStatus.AIR_P}"></Label>
+                                </DockPanel>
+                                <DockPanel DockPanel.Dock="Top">
+                                    <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="PRECH 60V: "></Label>
+                                    <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="{Binding Path=BboxStatus.PRECH_60V}"></Label>
+                                </DockPanel>
+                                <DockPanel DockPanel.Dock="Top">
+                                    <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="IMD OK: "></Label>
+                                    <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="{Binding Path=BboxStatus.IMD_OK}"></Label>
+                                </DockPanel>
+
+                            </DockPanel>
+                            <DockPanel DockPanel.Dock="Right">
+                                <DockPanel DockPanel.Dock="Top">
+                                    <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="BMS OK: "></Label>
+                                    <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="{Binding Path=BboxStatus.BMS_OK}"></Label>
+                                </DockPanel>
+                                <DockPanel DockPanel.Dock="Top">
+                                    <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="SIGNAL ERROR: "></Label>
+                                    <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="{Binding Path=BboxStatus.SIGNAL_ERROR}"></Label>
+                                </DockPanel>
+                                <DockPanel DockPanel.Dock="Top">
+                                    <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="SHD RESET: "></Label>
+                                    <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="{Binding Path=BboxStatus.SHD_RESET}"></Label>
+                                </DockPanel>
+                                <DockPanel DockPanel.Dock="Top">
+                                    <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="SHD EN: "></Label>
+                                    <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="{Binding Path=BboxStatus.SHD_EN}"></Label>
+                                </DockPanel>
+                                <DockPanel DockPanel.Dock="Top">
+                                    <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="POLARITY: "></Label>
+                                    <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="{Binding Path=BboxStatus.POLARITY}"></Label>
+                                </DockPanel>
+                                <DockPanel DockPanel.Dock="Top">
+                                    <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="FANS: "></Label>
+                                    <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="{Binding Path=BboxStatus.FANS}"></Label>
+                                </DockPanel>
+                                <DockPanel DockPanel.Dock="Top">
+                                    <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="STM Temp: "></Label>
+                                    <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="{Binding Path=BboxStatus.STM_temp}"></Label>
+                                </DockPanel>
+                            </DockPanel>
+                        </DockPanel>
+                    </Grid>
+                    <Grid Grid.Column="3" Grid.RowSpan="3" Background="LightCyan">
+                        <DockPanel>
+                            <DockPanel>
+                                <Label DockPanel.Dock="Top" FontWeight="Bold" HorizontalContentAlignment="Center" Content="GPS Data"></Label>
+                                <DockPanel DockPanel.Dock="Top">
+                                    <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="Latitude: "></Label>
+                                    <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="{Binding Path=GpsData.latitude}"></Label>
+
+                                </DockPanel>
+                                <DockPanel DockPanel.Dock="Top">
+                                    <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="Lat.Char: "></Label>
+                                    <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="{Binding Path=GpsData.latitude_char}"></Label>
+                                </DockPanel>
+                                <DockPanel DockPanel.Dock="Top">
+                                    <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="Longitude: "></Label>
+                                    <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="{Binding Path=GpsData.longitude}"></Label>
+                                </DockPanel>
+                                <DockPanel DockPanel.Dock="Top">
+                                    <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="long. char: "></Label>
+                                    <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="{Binding Path=GpsData.longitude_char}"></Label>
+                                </DockPanel>
+                                <DockPanel DockPanel.Dock="Top">
+                                    <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="Speed: "></Label>
+                                    <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="{Binding Path=GpsData.speed}"></Label>
+                                </DockPanel>
+                                <DockPanel DockPanel.Dock="Top">
+                                    <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="Course: "></Label>
+                                    <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="{Binding Path=GpsData.course}"></Label>
+                                </DockPanel>
+                                <DockPanel DockPanel.Dock="Top">
+                                    <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="Altitude: "></Label>
+                                    <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="{Binding Path=GpsData.altitude}"></Label>
+                                </DockPanel>
+                            </DockPanel>
+                        </DockPanel>
+                    </Grid>
+                    <Grid Grid.Column="4" Grid.RowSpan="3" Background="AliceBlue">
+                        <DockPanel>
+                            <Label DockPanel.Dock="Top" FontWeight="Bold" HorizontalContentAlignment="Center" Content="ECU State"></Label>
+                            <DockPanel DockPanel.Dock="Top">
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="ECU Status: "></Label>
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="{Binding Path=EcuState.ECU_Status}"></Label>
+
+                            </DockPanel>
+                            <DockPanel DockPanel.Dock="Top">
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="FR AMK Status: "></Label>
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="{Binding Path=EcuState.FR_AMK_Status}"></Label>
+
+                            </DockPanel>
+                            <DockPanel DockPanel.Dock="Top">
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="RL AMK Status: "></Label>
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="{Binding Path=EcuState.RL_AMK_Status}"></Label>
+                            </DockPanel>
+                            <DockPanel DockPanel.Dock="Top">
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="RR AMK Status: "></Label>
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="{Binding Path=EcuState.RR_AMK_Status}"></Label>
+                            </DockPanel>
+                            <DockPanel DockPanel.Dock="Top">
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="TempMotor H: "></Label>
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="{Binding Path=EcuState.TempMotor_H}"></Label>
+                            </DockPanel>
+                            <DockPanel DockPanel.Dock="Top">
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="TempInverter H: "></Label>
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="{Binding Path=EcuState.TempInverter_H}"></Label>
+                            </DockPanel>
+                            <DockPanel DockPanel.Dock="Top">
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="TempIGBT H: "></Label>
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="{Binding Path=EcuState.TempIGBT_H}"></Label>
+                            </DockPanel>
+                        </DockPanel>
+                    </Grid>
+                    <Grid Grid.Column="0" Grid.Row="2" Background="AliceBlue">
+                        <DockPanel>
+                            <Label DockPanel.Dock="Top" FontWeight="Bold" HorizontalContentAlignment="Center" Content="Box Commnad"></Label>
+                            <DockPanel DockPanel.Dock="Top">
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="FANS: "></Label>
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="{Binding Path=BboxCommand.FANS}"></Label>
+                            </DockPanel>
+                            <DockPanel DockPanel.Dock="Top">
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="SHD EN: "></Label>
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="{Binding Path=BboxCommand.SHD_EN}"></Label>
+                            </DockPanel>
+                        </DockPanel>
+                    </Grid>
+                    <Grid Grid.Column="5" Grid.Row="0" Grid.RowSpan="3" Background="AliceBlue">
+                        <DockPanel>
+                            <Label DockPanel.Dock="Top" FontWeight="Bold" HorizontalContentAlignment="Center" Content="FU Values 1"></Label>
+                            <DockPanel DockPanel.Dock="Top">
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="Apps1: "></Label>
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="{Binding Path=FuValues1.apps1}"></Label>
+                            </DockPanel>
+                            <DockPanel DockPanel.Dock="Top">
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="Apps2: "></Label>
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="{Binding Path=FuValues1.apps2}"></Label>
+                            </DockPanel>
+                            <DockPanel DockPanel.Dock="Top">
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="Brake1: "></Label>
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="{Binding Path=FuValues1.brake1}"></Label>
+                            </DockPanel>
+                            <DockPanel DockPanel.Dock="Top">
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="Brake2: "></Label>
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="{Binding Path=FuValues1.brake2}"></Label>
+                            </DockPanel>
+                            <DockPanel DockPanel.Dock="Top">
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="Error: "></Label>
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="{Binding Path=FuValues1.error}"></Label>
+                            </DockPanel>
+                        </DockPanel>
+                    </Grid>
+                    <Grid Grid.Column="6" Grid.Row="0" Grid.RowSpan="3" Background="LightCyan">
+                        <DockPanel>
+                            <Label DockPanel.Dock="Top" FontWeight="Bold" HorizontalContentAlignment="Center" Content="Interconnect"></Label>
+                            <DockPanel DockPanel.Dock="Top">
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="Car State: "></Label>
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="{Binding Path=Interconnect.car_state}"></Label>
+                            </DockPanel>
+                            <DockPanel DockPanel.Dock="Top">
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="Left W Pump: "></Label>
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="{Binding Path=Interconnect.left_w_pump}"></Label>
+                            </DockPanel>
+                            <DockPanel DockPanel.Dock="Top">
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="Right W Pump: "></Label>
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="{Binding Path=Interconnect.right_w_pump}"></Label>
+                            </DockPanel>
+                            <DockPanel DockPanel.Dock="Top">
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="Brake Red: "></Label>
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="{Binding Path=Interconnect.brake_red}"></Label>
+                            </DockPanel>
+                            <DockPanel DockPanel.Dock="Top">
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="Brake White: "></Label>
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="{Binding Path=Interconnect.brake_white}"></Label>
+                            </DockPanel>
+                            <DockPanel DockPanel.Dock="Top">
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="Tsas: "></Label>
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="{Binding Path=Interconnect.tsas}"></Label>
+                            </DockPanel>
+                            <DockPanel DockPanel.Dock="Top">
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="Killswitch R: "></Label>
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="{Binding Path=Interconnect.killswitch_R}"></Label>
+                            </DockPanel>
+                            <DockPanel DockPanel.Dock="Top">
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="Killswitch L: "></Label>
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="{Binding Path=Interconnect.killswitch_L}"></Label>
+                            </DockPanel>
+                            <DockPanel DockPanel.Dock="Top">
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="Reserve: "></Label>
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="{Binding Path=Interconnect.reserve}"></Label>
+                            </DockPanel>
+                            <DockPanel DockPanel.Dock="Top">
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="Susp RR: "></Label>
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="{Binding Path=Interconnect.susp_RR}"></Label>
+                            </DockPanel>
+                            <DockPanel DockPanel.Dock="Top">
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="Susp RL: "></Label>
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="{Binding Path=Interconnect.susp_RL}"></Label>
+                            </DockPanel>
+                            <DockPanel DockPanel.Dock="Top">
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="Killswitch L: "></Label>
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="{Binding Path=Interconnect.killswitch_L}"></Label>
+                            </DockPanel>
+                        </DockPanel>
+                    </Grid>
+                    <Grid Grid.Column="7" Grid.Row="0" Grid.RowSpan="3" Background="AliceBlue">
+                        <DockPanel>
+                            <Label DockPanel.Dock="Top" FontWeight="Bold" HorizontalContentAlignment="Center" Content="FU Values 2"></Label>
+                            <DockPanel DockPanel.Dock="Top">
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="Steer: "></Label>
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="{Binding Path=FuValues2.steer}"></Label>
+                            </DockPanel>
+                            <DockPanel DockPanel.Dock="Top">
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="Susp FL: "></Label>
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="{Binding Path=FuValues2.susp_FL}"></Label>
+                            </DockPanel>
+                            <DockPanel DockPanel.Dock="Top">
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="Susp FR: "></Label>
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="{Binding Path=FuValues2.susp_FR}"></Label>
+                            </DockPanel>
+                            <DockPanel DockPanel.Dock="Top">
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="Brake Pos: "></Label>
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="{Binding Path=FuValues2.brake_pos}"></Label>
+                            </DockPanel>
+                            <DockPanel DockPanel.Dock="Top">
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="RTD: "></Label>
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="{Binding Path=FuValues2.RTD}"></Label>
+                            </DockPanel>
+                            <DockPanel DockPanel.Dock="Top">
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="BOTS: "></Label>
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="{Binding Path=FuValues2.BOTS}"></Label>
+                            </DockPanel>
+                            <DockPanel DockPanel.Dock="Top">
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="SHDB: "></Label>
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="{Binding Path=FuValues2.SHDB}"></Label>
+                            </DockPanel>
+                            <DockPanel DockPanel.Dock="Top">
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="INERTIA SW: "></Label>
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="{Binding Path=FuValues2.INERTIA_SW}"></Label>
+                            </DockPanel>
+                            <DockPanel DockPanel.Dock="Top">
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="Reserve: "></Label>
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="{Binding Path=FuValues2.reserve}"></Label>
+                            </DockPanel>
+                        </DockPanel>
+                    </Grid>
+                    <Grid Grid.Column="8" Grid.Row="0" Grid.RowSpan="3" Background="LightCyan">
+                        <DockPanel>
+                            <Label DockPanel.Dock="Top" FontWeight="Bold" HorizontalContentAlignment="Center" Content="Bms Command"></Label>
+                            <DockPanel DockPanel.Dock="Top">
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="BMS Balanc: "></Label>
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="{Binding Path=BmsCommand.BMS_Balanc}"></Label>
+                            </DockPanel>
+                            <DockPanel DockPanel.Dock="Top">
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="BMS FullModeL: "></Label>
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="{Binding Path=BmsCommand.BMS_FullMode}"></Label>
+                            </DockPanel>
+                            <DockPanel DockPanel.Dock="Top">
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="BMS OK: "></Label>
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="{Binding Path=BmsCommand.susp_FR}"></Label>
+                            </DockPanel>
+                            <DockPanel DockPanel.Dock="Top">
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="BMS ONOFF: "></Label>
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="{Binding Path=BmsCommand.BMS_ONOFF}"></Label>
+                            </DockPanel>
+                            <DockPanel DockPanel.Dock="Top">
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="BMS CAN: "></Label>
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="{Binding Path=BmsCommand.BMS_CAN}"></Label>
+                            </DockPanel>
+                        </DockPanel>
+                    </Grid>
+                    <Grid Grid.Column="9" Grid.Row="0" Grid.RowSpan="3" Background="AliceBlue">
+                        <DockPanel>
+                            <Label DockPanel.Dock="Top" FontWeight="Bold" HorizontalContentAlignment="Center" Content="Bms State"></Label>
+                            <DockPanel DockPanel.Dock="Top">
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="BMS Mode: "></Label>
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="{Binding Path=BmsState.BMS_Mode}"></Label>
+                            </DockPanel>
+                            <DockPanel DockPanel.Dock="Top">
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="BMS Faults: "></Label>
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="{Binding Path=BmsState.BMS_Faults}"></Label>
+                            </DockPanel>
+                            <DockPanel DockPanel.Dock="Top">
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="CellVolt L: "></Label>
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="{Binding Path=BmsState.CellVolt_L}"></Label>
+                            </DockPanel>
+                            <DockPanel DockPanel.Dock="Top">
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="CellVolt H: "></Label>
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="{Binding Path=BmsState.CellVolt_H}"></Label>
+                            </DockPanel>
+                            <DockPanel DockPanel.Dock="Top">
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="CellTemp L: "></Label>
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="{Binding Path=BmsState.CellTemp_L}"></Label>
+                            </DockPanel>
+                            <DockPanel DockPanel.Dock="Top">
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="BMS Ident: "></Label>
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="{Binding Path=BmsState.BMS_Ident}"></Label>
+                            </DockPanel>
+                        </DockPanel>
+                    </Grid>
+                    <Grid Grid.Column="10" Grid.Row="0" Grid.RowSpan="3" Background="LightCyan">
+                        <DockPanel>
+                            <Label DockPanel.Dock="Top" FontWeight="Bold" HorizontalContentAlignment="Center" Content="Wheel RPM"></Label>
+                            <DockPanel DockPanel.Dock="Top">
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="Front Right: "></Label>
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="{Binding Path=WheelRPM.front_right}"></Label>
+                            </DockPanel>
+                            <DockPanel DockPanel.Dock="Top">
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="Front Left: "></Label>
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="{Binding Path=WheelRPM.front_left}"></Label>
+                            </DockPanel>
+                            <DockPanel DockPanel.Dock="Top">
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="Rear Right: "></Label>
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="{Binding Path=WheelRPM.rear_right}"></Label>
+                            </DockPanel>
+                            <DockPanel DockPanel.Dock="Top">
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="Rear Left: "></Label>
+                                <Label DockPanel.Dock="Left" HorizontalContentAlignment="Left" Content="{Binding Path=WheelRPM.rear_left}"></Label>
+                            </DockPanel>
+                        </DockPanel>
+                    </Grid>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Actual Voltages">
+                <DataGrid  Name="voltagesDataGrid" AutoGenerateColumns="false">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn  Header="0" Binding="{Binding BmsVoltagesList.Id0}" />
+                        <DataGridTextColumn  Header="7" Binding="{Binding BmsVoltagesList.Id7}" />
+                        <DataGridTextColumn  Header="14" Binding="{Binding BmsVoltagesList.Id14}" />
+                        <DataGridTextColumn  Header="21" Binding="{Binding BmsVoltagesList.Id21}" />
+                        <DataGridTextColumn  Header="28" Binding="{Binding BmsVoltagesList.Id28}" />
+                        <DataGridTextColumn  Header="35" Binding="{Binding BmsVoltagesList.Id35}" />
+                        <DataGridTextColumn  Header="42" Binding="{Binding BmsVoltagesList.Id42}" />
+                        <DataGridTextColumn  Header="49" Binding="{Binding BmsVoltagesList.Id49}" />
+                        <DataGridTextColumn  Header="56" Binding="{Binding BmsVoltagesList.Id56}" />
+                        <DataGridTextColumn  Header="63" Binding="{Binding BmsVoltagesList.Id63}" />
+                        <DataGridTextColumn  Header="70" Binding="{Binding BmsVoltagesList.Id70}" />
+                        <DataGridTextColumn  Header="77" Binding="{Binding BmsVoltagesList.Id77}" />
+                        <DataGridTextColumn  Header="84" Binding="{Binding BmsVoltagesList.Id84}" />
+                        <DataGridTextColumn  Header="91" Binding="{Binding BmsVoltagesList.Id91}" />
+                        <DataGridTextColumn  Header="98" Binding="{Binding BmsVoltagesList.Id98}" />
+                        <DataGridTextColumn  Header="105" Binding="{Binding BmsVoltagesList.Id105}" />
+                        <DataGridTextColumn  Header="112" Binding="{Binding BmsVoltagesList.Id112}" />
+                        <DataGridTextColumn  Header="119" Binding="{Binding BmsVoltagesList.Id119}" />
+                        <DataGridTextColumn  Header="126" Binding="{Binding BmsVoltagesList.Id126}" />
+                        <DataGridTextColumn  Header="133" Binding="{Binding BmsVoltagesList.Id133}" />
+                        <DataGridTextColumn  Header="140" Binding="{Binding BmsVoltagesList.Id140}" />
+                    </DataGrid.Columns>
+                </DataGrid>
+            </TabItem>
+            <TabItem Header="Actual Temperatures">
+                <DataGrid  Name="temperaturesDataGrid" AutoGenerateColumns="false" >
+                    <DataGrid.Columns>
+                        <DataGridTextColumn  Header="0" Binding="{Binding BmsTemperaturesList.Id0}" />
+                        <DataGridTextColumn  Header="7" Binding="{Binding BmsTemperaturesList.Id7}" />
+                        <DataGridTextColumn  Header="14" Binding="{Binding BmsTemperaturesList.Id14}" />
+                        <DataGridTextColumn  Header="21" Binding="{Binding BmsTemperaturesList.Id21}" />
+                        <DataGridTextColumn  Header="28" Binding="{Binding BmsTemperaturesList.Id28}" />
+                        <DataGridTextColumn  Header="35" Binding="{Binding BmsTemperaturesList.Id35}" />
+                        <DataGridTextColumn  Header="42" Binding="{Binding BmsTemperaturesList.Id42}" />
+                        <DataGridTextColumn  Header="49" Binding="{Binding BmsTemperaturesList.Id49}" />
+                        <DataGridTextColumn  Header="56" Binding="{Binding BmsTemperaturesList.Id56}" />
+                        <DataGridTextColumn  Header="63" Binding="{Binding BmsTemperaturesList.Id63}" />
+                        <DataGridTextColumn  Header="70" Binding="{Binding BmsTemperaturesList.Id70}" />
+                        <DataGridTextColumn  Header="77" Binding="{Binding BmsTemperaturesList.Id77}" />
+                        <DataGridTextColumn  Header="84" Binding="{Binding BmsTemperaturesList.Id84}" />
+                        <DataGridTextColumn  Header="91" Binding="{Binding BmsTemperaturesList.Id91}" />
+                        <DataGridTextColumn  Header="98" Binding="{Binding BmsTemperaturesList.Id98}" />
+                        <DataGridTextColumn  Header="105" Binding="{Binding BmsTemperaturesList.Id105}" />
+                        <DataGridTextColumn  Header="112" Binding="{Binding BmsTemperaturesList.Id112}" />
+                        <DataGridTextColumn  Header="119" Binding="{Binding BmsTemperaturesList.Id119}" />
+                        <DataGridTextColumn  Header="126" Binding="{Binding BmsTemperaturesList.Id126}" />
+                        <DataGridTextColumn  Header="133" Binding="{Binding BmsTemperaturesList.Id133}" />
+                        <DataGridTextColumn  Header="140" Binding="{Binding BmsTemperaturesList.Id140}" />
+                    </DataGrid.Columns>
+                </DataGrid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</UserControl>

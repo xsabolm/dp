@@ -135,6 +135,58 @@ namespace connection
             run.ListMsg.ForEach(msg => insertMsg(msg, ID_run));
         }
 
+        internal static void updateDisciplineComment(int iD, string comment)
+        {
+            dbConnection = new SqlCeConnection(getConnestionString());
+            dbConnection.Open();
+            SqlCeCommand cmd = new SqlCeCommand(DatabaseQueries.updateDisciplineCommentByID(), dbConnection);
+
+            cmd.Parameters.AddWithValue("@" + DatabaseQueries.COMMENT, comment);
+            cmd.Parameters.AddWithValue("@" + DatabaseQueries.ID, iD);
+
+            try { cmd.ExecuteNonQuery(); log.Info("Update discipline comment"); } catch (Exception e) { log.Error("Error during updating discipline comment:  " + e.ToString()); }
+            dbConnection.Close();
+        }
+
+        internal static void updateDisciplineName(int iD, string name)
+        {
+            dbConnection = new SqlCeConnection(getConnestionString());
+            dbConnection.Open();
+            SqlCeCommand cmd = new SqlCeCommand(DatabaseQueries.updateDisciplineNameByID(), dbConnection);
+
+            cmd.Parameters.AddWithValue("@" + DatabaseQueries.NAME, name);
+            cmd.Parameters.AddWithValue("@" + DatabaseQueries.ID, iD);
+
+            try { cmd.ExecuteNonQuery(); log.Info("Update discipline name"); } catch (Exception e) { log.Error("Error during updating discipline name:  " + e.ToString()); }
+            dbConnection.Close();
+        }
+
+        internal static void updateMensurationComment(int iD, string comment)
+        {
+            dbConnection = new SqlCeConnection(getConnestionString());
+            dbConnection.Open();
+            SqlCeCommand cmd = new SqlCeCommand(DatabaseQueries.updateMensurationCommentByID(), dbConnection);
+
+            cmd.Parameters.AddWithValue("@" + DatabaseQueries.COMMENT, comment);
+            cmd.Parameters.AddWithValue("@" + DatabaseQueries.ID, iD);
+
+            try { cmd.ExecuteNonQuery(); log.Info("Update mensuration comment"); } catch (Exception e) { log.Error("Error during updating mensuration comment:  " + e.ToString()); }
+            dbConnection.Close();
+        }
+
+        internal static void updateMensurationLocality(int iD, String locality)
+        {
+            dbConnection = new SqlCeConnection(getConnestionString());
+            dbConnection.Open();
+            SqlCeCommand cmd = new SqlCeCommand(DatabaseQueries.updateMensurationLocalityByID(), dbConnection);
+
+            cmd.Parameters.AddWithValue("@" + DatabaseQueries.LOCALITY, locality);
+            cmd.Parameters.AddWithValue("@" + DatabaseQueries.ID, iD);
+
+            try { cmd.ExecuteNonQuery(); log.Info("Update mensuration locality"); } catch (Exception e) { log.Error("Error during updating mensuration locality:  " + e.ToString()); }
+            dbConnection.Close();
+        }
+
         private static void insertMsg(Msg msg, int ID_run)
         {
             dbConnection = new SqlCeConnection(getConnestionString());

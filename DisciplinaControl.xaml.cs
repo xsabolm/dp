@@ -47,7 +47,14 @@ namespace DP_WpfApp
         {
             if (ComboboxIsSelected(combobox_okruh))
             {
-                AppController.get.setSelectedRun(AppController.get.ViewDisciplina.CurrentSelectionRun.ID);
+                if (AppController.get.IsLiveData)
+                {
+                    AppController.get.setSelectedRunFromCount(AppController.get.ViewDisciplina.CurrentSelectionRun.ID);
+                }
+                else
+                {
+                    AppController.get.setSelectedRunFromDataBase(AppController.get.ViewDisciplina.CurrentSelectionRun.ID);
+                }
             }
         }
 

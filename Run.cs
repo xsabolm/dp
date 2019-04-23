@@ -13,12 +13,14 @@ namespace DP_WpfApp
         DateTime finishTime;
         String comment;
         List<Msg> listMsg;
+        List<Point> pointList;
 
         public Run()
         {
             StartTime = DateTime.Now;
             Comment = "No Comment";
             ListMsg = new List<Msg>();
+            pointList = new List<Point>();
         }
 
         public Run(int idDiscipline)
@@ -48,5 +50,6 @@ namespace DP_WpfApp
         public string Comment { get => comment; set => comment = value; }
         public int RunNumber { get => runNumber; set => runNumber = value; }
         public bool WasSelected { get => wasSelected; set => wasSelected = value; }
+        public List<Point> PointList { get => pointList; set => pointList = value; }
     }
 }

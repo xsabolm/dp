@@ -42,11 +42,34 @@ namespace connection
         public static String UPDATE_MSG_FU_Values_1 = "UPDATE msg SET apps1 = @apps1 ,apps2 = @apps2 ,brake1 = @brake1 ,brake2 = @brake2 ,error = @error  WHERE ID = @ID;";
         public static String UPDATE_MSG_Interconnect = "UPDATE msg SET car_state = @car_state ,left_w_pump = @left_w_pump ,right_w_pump = @right_w_pump ,brake_red = @brake_red ,brake_white = @brake_white ,tsas = @tsas ,killswitch_R = @killswitch_R ,killswitch_L = @killswitch_L ,Interconnect_reserve = @Interconnect_reserve ,susp_RR = @susp_RR ,susp_RL = @susp_RL WHERE ID = @ID;";
         public static String UPDATE_MSG_FU_Values_2 = "UPDATE msg SET steer = @steer ,susp_FL = @susp_FL ,susp_FR = @susp_FR ,brake_pos = @brake_pos ,RTD = @RTD ,BOTS = @BOTS ,SHDB = @SHDB ,INERTIA_SW = @INERTIA_SW ,FUValues2_reserve = @FUValues2_reserve WHERE ID = @ID;";
+
+        internal static string updateDisciplineCommentByID()
+        {
+            return "UPDATE discipline SET comment = @COMMENT WHERE ID = @ID;";
+        }
+
         public static String UPDATE_MSG_BMS_Command = "UPDATE msg SET BMS_Balanc = @BMS_Balanc ,BMS_FullMode = @BMS_FullMode ,BMSCommand_BMS_OK = @BMSCommand_BMS_OK ,BMS_ONOFF = @BMS_ONOFF ,BMS_CAN = @BMS_CAN WHERE ID = @ID;";
         public static String UPDATE_MSG_BMS_State = "UPDATE msg SET BMS_Mode = @BMS_Mode ,BMS_Faults = @BMS_Faults ,CellVolt_L = @CellVolt_L ,CellVolt_H = @CellVolt_H ,CellTemp_L = @CellTemp_L ,CellTemp_H = @CellTemp_H ,BMS_Ident = @BMS_Ident WHERE ID = @ID;";
+
+        internal static string updateDisciplineNameByID()
+        {
+            return "UPDATE discipline SET name = @NAME WHERE ID = @ID;";
+        }
+
         public static String UPDATE_MSG_Wheel_RPM = "UPDATE msg SET front_right = @front_right ,front_left = @front_left ,rear_right = @rear_right ,rear_left = @rear_left WHERE ID = @ID;";
         public static String UPDATE_MSG_BMS_Voltages = "UPDATE msg SET BMS_VoltIdent = @BMS_VoltIdent ,BMS_Volt1 = @BMS_Volt1 ,BMS_Volt2 = @BMS_Volt2 ,BMS_Volt3 = @BMS_Volt3 ,BMS_Volt4 = @BMS_Volt4 ,BMS_Volt5 = @BMS_Volt5 ,BMS_Volt6 = @BMS_Volt6 ,BMS_Volt7 = @BMS_Volt7 WHERE ID = @ID;";
+
+        internal static string updateMensurationCommentByID()
+        {
+            return "UPDATE mensuration SET comment = @COMMENT WHERE ID = @ID;";
+        }
+
         public static String UPDATE_MSG_BMS_Temps = "UPDATE msg SET BMS_TempIdent = @BMS_TempIdent ,BMS_Temp1 = @BMS_Temp1 ,BMS_Temp2 = @BMS_Temp2 ,BMS_Temp3 = @BMS_Temp3 ,BMS_Temp4 = @BMS_Temp4 ,BMS_Temp5 = @BMS_Temp5 ,BMS_Temp6 = @BMS_Temp6 ,BMS_Temp7 = @BMS_Temp7 WHERE ID = @ID;";
+
+        internal static string updateMensurationLocalityByID()
+        {
+            return "UPDATE mensuration SET locality = @LOCALITY WHERE ID = @ID;";
+        }
 
         public static String LAST_ID = "SELECT @@IDENTITY AS ID;";
 

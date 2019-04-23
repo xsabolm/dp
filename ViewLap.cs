@@ -12,25 +12,10 @@ using System.Collections.Generic;
 
 namespace DP_WpfApp
 {
-    public class Point
+    public class ViewLap : ViewModel
     {
-        double x;
-        double y;
-        double course;
-        int msgNumber;
-        public Point(double x, double y) { X = x; Y = y; }
-        public Point(double x, double y, int msgNumber) { X = x; Y = y; MsgNumber = msgNumber; }
-        public Point(double x, double y, int msgNumber, double course) { X = x; Y = y; MsgNumber = msgNumber; Course = course; }
-        public double X { get => x; set => x = value; }
-        public double Y { get => y; set => y = value; }
-        public int MsgNumber { get => msgNumber; set => msgNumber = value; }
-        public double Course { get => course; set => course = value; }
-    }
+        private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
-    public class ViewLap : INotifyPropertyChanged
-    {
-
-        private Point normalizationPoint;
         private Point canvasCenter = new Point(350, 350);
         private double resizeX = 0;
         private double resizeY = 0;
@@ -39,16 +24,14 @@ namespace DP_WpfApp
         private double highestX = 0;
         private double lowestY = 0;
         private double highestY = 0;
+        private double scalePoint = 1;
 
         private double diameterPoint = 20;
-        private double scalePoint = 1;
-        private double positionRadius = 5;
-        private double vectorRadius = 10;
-        private Point detectedStartRunPoint = null;
 
+        public ObservableCollection<String> comboboxListRuns { get; } = new ObservableCollection<String>();
         public ObservableCollection<UIElement> ObjectCollection { get; set; } = new ObservableCollection<UIElement>();
-        public Point NormalizationPoint { get => normalizationPoint; set => normalizationPoint = value; }
         public Point CanvasCenter { get => canvasCenter; set => canvasCenter = value; }
+
 
         public double CanvasHeight { get; set; }
         public double CanvasWidth { get; set; }
@@ -60,82 +43,46 @@ namespace DP_WpfApp
         public double HighestY { get => highestY; set => highestY = value; }
         public double ScalePoint { get => this.scalePoint; set => this.scalePoint = value; }
         public double DiameterPoint { get => diameterPoint; set => diameterPoint = value; }
-        public double PositionRadius { get => positionRadius; set => positionRadius = value; }
-        public double VectorRadius { get => vectorRadius; set => vectorRadius = value; }
-        public Point DetectedStartRunPoint { get => detectedStartRunPoint; set => detectedStartRunPoint = value; }
-
+        Point pointBefore = null;
         public List<Point> renderedPointList = new List<Point>();
 
-        internal void addNewGpsMsg(GPSData gPSData, int msgNumber)
+        public void addPointList(List<Point> pointList)
         {
-            if (ObjectCollection.Count == 0)
-            {
-                NormalizationPoint = new Point(gPSData.latitude, gPSData.longitude);
-                HighestX = CanvasCenter.X;
-                LowestX = canvasCenter.X;
-                HighestY = canvasCenter.Y;
-                LowestY = CanvasCenter.Y;
+            renderedPointList.Clear();
+            renderedPointList.AddRange(pointList);
+            drawFromList();
+        }
 
-                Point p = new Point(gPSData.latitude - NormalizationPoint.X, gPSData.longitude - NormalizationPoint.Y, msgNumber, gPSData.course);
-                checkNewLap(p);
-                drawPoint(p);
-                renderedPointList.Add(p);
+        public void addPoint(Point point)
+        {
+            renderedPointList.Add(point);
+            drawPoint(point);
+        }
+
+        public void drawPoint(Point point)
+        {
+            if (pointBefore == null)
+            {
+                drawPoint(point, false);
             }
             else
             {
-                Point p = new Point(gPSData.latitude - NormalizationPoint.X, gPSData.longitude - NormalizationPoint.Y, msgNumber, gPSData.course);
-                checkNewLap(p);
-                renderedPointList.Add(p);
-                drawLine(p, renderedPointList[renderedPointList.Count - 2]);
-                drawPoint(p);
-
+                drawLine(point, pointBefore);
+                drawPoint(point, false);
             }
+            pointBefore = point;
         }
-
-        private void checkNewLap(Point newPoint)
-        {
-            if (DetectedStartRunPoint == null)
-            {
-                if (renderedPointList.Count > 5) //podmienka ze monopost ide 
-                {
-                    foreach (Point oldPoint in renderedPointList) //mozno neprechadzat cele pole ale iba x sprav na zaciatky
-                    {
-                        if (isInPositionRadius(oldPoint, newPoint))
-                        {
-                            if (isInDirectionVectorRadius(oldPoint, newPoint))
-                            {
-                                Console.WriteLine("NEW RUN");
-                                DetectedStartRunPoint = newPoint;  // novy alebo stary
-                            }
-                        }
-                    }
-                }
-            }
-            else
-            {
-                if (DetectedStartRunPoint.MsgNumber + 10 < newPoint.MsgNumber) //nie je to hned dalsia sprava v radiuse - malo by to byt nastavidelne podla prejdenej vzdialenosti
-                {
-                    if (isInPositionRadius(DetectedStartRunPoint, newPoint))
-                    {
-                        if (isInDirectionVectorRadius(DetectedStartRunPoint, newPoint))
-                        {
-                            Console.WriteLine("NEW RUN");
-                            DetectedStartRunPoint = newPoint;  // novy alebo stary
-                        }
-                    }
-                }
-            }
-        }
-
-        private bool isInDirectionVectorRadius(Point oldPoint, Point newPoint) { return ((newPoint.Course > (oldPoint.Course - VectorRadius)) && (newPoint.Course < (oldPoint.Course + VectorRadius))); }
-
-        private bool isInPositionRadius(Point oldPoint, Point newPoint) { return ((newPoint.X > (oldPoint.X - PositionRadius)) && (newPoint.X < (oldPoint.X + PositionRadius)) && (newPoint.Y > (oldPoint.Y - PositionRadius)) && (newPoint.Y < (oldPoint.Y + PositionRadius))); }
-
 
         internal void sizeOfCanvasWasChanged(double actualWidth, double actualHeight)
         {
             CanvasHeight = actualHeight;
             CanvasWidth = actualWidth;
+            CanvasCenter.X = actualWidth / 2;
+            CanvasCenter.Y = actualHeight / 2;
+            HighestX = CanvasCenter.X;
+            LowestX = canvasCenter.X;
+            HighestY = canvasCenter.Y;
+            LowestY = CanvasCenter.Y;
             clearCanvas();
             drawFromList();
         }
@@ -143,23 +90,21 @@ namespace DP_WpfApp
         public void drawFromList()
         {
             clearCanvas();
-            Point pointBefore = null;
+            pointBefore = null;
             renderedPointList.ForEach(point =>
             {
                 if (pointBefore == null)
                 {
-                    drawPoint(point);
+                    drawPoint(point, false);
                 }
                 else
                 {
                     drawLine(point, pointBefore);
-                    drawPoint(point);
+                    drawPoint(point, false);
                 }
                 pointBefore = point;
             });
         }
-
-
 
         private void checkResizePossibility(Point point)
         {
@@ -233,7 +178,7 @@ namespace DP_WpfApp
             LowestY = CanvasCenter.Y - (CanvasCenter.Y - LowestY) * ScalePoint;
         }
 
-        private void drawPoint(Point point)
+        private void drawPoint(Point point, bool isActualPosition)
         {
             checkResizePossibility(point);
 
@@ -241,13 +186,33 @@ namespace DP_WpfApp
             ellipse.Height = diameterPoint;
             ellipse.Width = diameterPoint;
             ellipse.StrokeThickness = 1;
+            /*
+            if (isActualPosition)
+            {
+                ellipse.Fill = System.Windows.Media.Brushes.Yellow;
+            }
+            else
+            {
+                ellipse.Fill = System.Windows.Media.Brushes.Green;
+            }
+            */
             ellipse.Fill = System.Windows.Media.Brushes.Green;
             ellipse.Stroke = System.Windows.Media.Brushes.Black;
 
-            Canvas.SetLeft(ellipse, CanvasCenter.X + (point.X * ScalePoint + ResizeX));
-            Canvas.SetTop(ellipse, CanvasCenter.Y + (point.Y * ScalePoint + ResizeY));
+            Canvas.SetLeft(ellipse, pointPositionX(point.X));
+            Canvas.SetTop(ellipse, pointPositionY(point.Y));
 
             ObjectCollection.Add(ellipse);
+        }
+
+        public double pointPositionX(double number) { return (CanvasCenter.X + (number * ScalePoint + ResizeX)); }
+
+        public double pointPositionY(double number) { return (CanvasCenter.Y + (number * ScalePoint + ResizeY)); }
+
+        public Boolean comparePoitInListWithRederedPoint(Point pointFromList, System.Windows.Point pointFromCanvas)
+        {
+            return (((pointPositionX(pointFromList.X) <= pointFromCanvas.X) && ((pointPositionX(pointFromList.X) + diameterPoint) >= pointFromCanvas.X)) &&
+            ((pointPositionY(pointFromList.Y) <= pointFromCanvas.Y) && ((pointPositionY(pointFromList.Y) + diameterPoint) >= pointFromCanvas.Y)));
         }
 
         private void drawLine(Point point1, Point point2)
@@ -257,7 +222,7 @@ namespace DP_WpfApp
             l.X2 = CanvasCenter.X + ((point2.X * ScalePoint + diameterPoint / 2) + ResizeX);
             l.Y1 = CanvasCenter.Y + ((point1.Y * ScalePoint + diameterPoint / 2) + ResizeY);
             l.Y2 = CanvasCenter.Y + ((point2.Y * ScalePoint + diameterPoint / 2) + ResizeY);
-            l.Stroke = System.Windows.Media.Brushes.Gray;
+            l.Stroke = System.Windows.Media.Brushes.Red;
             l.StrokeThickness = 2;
 
             ObjectCollection.Add(l);
@@ -279,14 +244,5 @@ namespace DP_WpfApp
             Canvas.SetTop(r, 0);
             ObjectCollection.Add(r);
         }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        public void OnPropertyChanged(string propertyName)
-        {
-            if (PropertyChanged != null)
-                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-        }
-
     }
 }

@@ -12,10 +12,12 @@ namespace DP_WpfApp
         ViewGraph viewGraph;
         ViewTables viewTables;
         ViewLap viewLap;
+        ViewActualMsg viewActualMsg;
 
         public ViewGraph ViewGraph { get => viewGraph; set => viewGraph = value; }
         public ViewTables ViewTables { get => viewTables; set => viewTables = value; }
         public ViewLap ViewLap { get => viewLap; set => viewLap = value; }
+        public ViewActualMsg ViewActualMsg { get => viewActualMsg; set => viewActualMsg = value; }
 
         public ObservableCollection<Msg> BBOXPowerList { get; set; } = new ObservableCollection<Msg>();
         public ObservableCollection<Msg> BBOXStatusList { get; } = new ObservableCollection<Msg>();
@@ -36,6 +38,7 @@ namespace DP_WpfApp
             ViewGraph = new ViewGraph();
             ViewTables = new ViewTables();
             ViewLap = new ViewLap();
+            ViewActualMsg = new ViewActualMsg();
             setViewTable();
         }
 

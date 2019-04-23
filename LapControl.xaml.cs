@@ -40,9 +40,8 @@ namespace lapVisualization
         private void Canvas_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             var canvas = (Canvas)sender;
-            System.Windows.Point point = e.GetPosition(canvas);
-            
-            Console.WriteLine("Selected point x: " + point.X + ", y: " + point.Y);
+            System.Windows.Point point = e.GetPosition(canvas);         
+            AppController.get.SelectedDiscipline.setSelectedMsg(point);
         }
 
         private void canvas_my_SizeChanged(object sender, SizeChangedEventArgs e)

@@ -7,16 +7,16 @@
              mc:Ignorable="d" >
     <Grid>
         <ItemsControl Name="LapControlItem" ItemsSource="{Binding ObjectCollection}">
-            <ItemsControl.ItemsPanel>
-                <ItemsPanelTemplate>
-                    <Canvas  Name="canvas_my" 
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <Canvas  Name="canvas_my" 
                              MouseLeftButtonDown="Canvas_MouseLeftButtonDown" 
                              SizeChanged="canvas_my_SizeChanged"
                              Background="LightGoldenrodYellow"
                              >
-                    </Canvas>
-                </ItemsPanelTemplate>
-            </ItemsControl.ItemsPanel>
-        </ItemsControl>
+                        </Canvas>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+            </ItemsControl>
     </Grid>
 </UserControl>

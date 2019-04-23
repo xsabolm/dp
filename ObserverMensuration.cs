@@ -25,7 +25,13 @@ namespace DP_WpfApp
 
         public override void Update()
         {
-            if (ObserverState) { view.viewNewMeranie(Mensuration); }
+            if (ObserverState)
+            {
+                view.viewNewMeranie(Mensuration);
+                view.setDisciplineCombobox(Mensuration.ListDiscipline);
+                view.MensurationComment = Mensuration.Comment;
+                view.MensurationLocality = Mensuration.Locality;
+            }
         }
 
     }

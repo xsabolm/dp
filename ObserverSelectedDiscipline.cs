@@ -32,13 +32,25 @@ namespace DP_WpfApp
                 {
                     if (SelectedDiscipline.IsLiveData)
                     {
-                        App.Current.Dispatcher.BeginInvoke(DispatcherPriority.Input, new Action(() =>
+                        if (SelectedDiscipline.IsLiveAndActual)
                         {
-                            if (SelectedDiscipline.ActualMsg != null)
+                            App.Current.Dispatcher.BeginInvoke(DispatcherPriority.Input, new Action(() =>
                             {
-                                setView(SelectedDiscipline.ActualMsg);
-                            }
-                        }));
+                                if (SelectedDiscipline.NewMsg != null)
+                                {
+                                    //setView(SelectedDiscipline.NewMsg);
+                                    while (SelectedDiscipline.QueueMsg.Count > 0) {
+                                        setView(SelectedDiscipline.QueueMsg.Dequeue());
+                                    }
+                                }
+                            }));
+                        }
+                        else
+                        {
+                            List<Msg> list = SelectedDiscipline.SelectedRun.ListMsg;
+                            foreach (Msg msg in list) { setView(msg); }
+                            ViewMain.ViewLap.addPointList(SelectedDiscipline.SelectedRun.PointList);
+                        }
                     }
                     else
                     {
@@ -52,9 +64,17 @@ namespace DP_WpfApp
 
         private void setView(Msg msg)
         {
-            if (msg.IsBBOXPower) { ViewMain.BBOXPowerList.Add(msg); ViewMain.ViewGraph.addBBOXPower(msg);}
+            if (msg.IsBBOXPower) { ViewMain.BBOXPowerList.Add(msg); ViewMain.ViewGraph.addBBOXPower(msg); }
             if (msg.IsBBOXStatus) { ViewMain.BBOXStatusList.Add(msg); ViewMain.ViewGraph.addBBOXStatus(msg); }
-            if (msg.IsGPSData) { ViewMain.GPSDataList.Add(msg); ViewMain.ViewGraph.addGPSData(msg); ViewMain.ViewLap.addNewGpsMsg(msg.GPSData, (selectedDiscipline.SelectedRun.ListMsg.Count-1)); }
+            if (msg.IsGPSData)
+            {
+                ViewMain.GPSDataList.Add(msg);
+                ViewMain.ViewGraph.addGPSData(msg);
+                if (SelectedDiscipline.IsLiveAndActual)
+                {
+                        ViewMain.ViewLap.addPoint(SelectedDiscipline.LiveRunTrack.pointQueue.Dequeue());
+                }
+            }
             if (msg.IsECUState) { ViewMain.ECUStateList.Add(msg); ViewMain.ViewGraph.addECUState(msg); }
             if (msg.IsBBOXCommand) { ViewMain.BBOXCommandList.Add(msg); ViewMain.ViewGraph.addBBOXCommand(msg); }
             if (msg.IsFUValues1) { ViewMain.FUValues1List.Add(msg); ViewMain.ViewGraph.addFuValues1(msg); }

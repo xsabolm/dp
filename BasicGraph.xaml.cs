@@ -133,7 +133,7 @@ namespace graphVisualization
 
         private void btn_clearGraph_Click(object sender, RoutedEventArgs e)
         {
-            AppController.get.ViewMain.ViewGraph.clearLists();
+            AppController.get.ViewMain.ViewGraph.clearView();
         }
     }
 }

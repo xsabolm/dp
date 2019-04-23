@@ -84,7 +84,7 @@ namespace DP_WpfApp
         public int right_w_pump { get; set; } = -1;
         public int brake_red { get; set; } = -1;
         public int brake_white { get; set; } = -1;
-        public int tsas { get; set; }
+        public int tsas { get; set; } = -1;
         public int killswitch_R { get; set; } = -1;
         public int killswitch_L { get; set; } = -1;
         public int reserve { get; set; } = -1;

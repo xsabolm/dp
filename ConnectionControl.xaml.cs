@@ -18,6 +18,7 @@ using System.Data.SqlServerCe;
 using static connection.DataBaseServices;
 using System.Data;
 using System.Collections;
+using connection;
 using DP_WpfApp;
 
 namespace connection
@@ -34,7 +35,15 @@ namespace connection
         {
             InitializeComponent();
             comboBoxMensuration.DataContext = AppController.get.ViewMeranie;
+            comboBoxDiscipline.DataContext = AppController.get.ViewMeranie;
+            textDisciplineComment.DataContext = AppController.get.ViewMeranie;
+            textDisciplineName.DataContext = AppController.get.ViewMeranie;
+            textMensurationComment.DataContext = AppController.get.ViewMeranie;
+            textMensurationLocality.DataContext = AppController.get.ViewMeranie;
+            textViewDiscipline.DataContext = AppController.get.ViewMeranie;
             textView.DataContext = AppController.get.ViewMeranie;
+
+
             comboBoxPorts.DataContext = AppController.get.ViewLiveConnection;
             btnLiveConnectionClose.DataContext = AppController.get.ViewLiveConnection;
             btnLiveConnectionOpen.DataContext = AppController.get.ViewLiveConnection;
@@ -109,6 +118,47 @@ namespace connection
         {
             AppController.get.Model.loadMensurations();
             AppController.get.ViewMeranie.refreshMensuration();
+
+        }
+
+
+        private void comboBoxDiscipline_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void btnChoose_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnChooseDiscipline_Click(object sender, RoutedEventArgs e)
+        {
+            if (ComboboxIsSelected(comboBoxDiscipline))
+            {
+                AppController.get.ViewMeranie.setDisciplinePartOfView();
+            }
+        }
+
+        private void btnUpdateDisciplineComment_Click(object sender, RoutedEventArgs e)
+        {
+            DataBaseServices.updateDisciplineComment(AppController.get.ViewMeranie.CurrentSelectionFromDisciplineCombobox.ID, textDisciplineComment.Text.ToString());
+        }
+
+        private void btnUpdateDisciplineName_Click(object sender, RoutedEventArgs e)
+        {
+            DataBaseServices.updateDisciplineName(AppController.get.ViewMeranie.CurrentSelectionFromDisciplineCombobox.ID, textDisciplineName.Text.ToString());
+        }
+
+        private void btnUpdateMensurationLocality_Click(object sender, RoutedEventArgs e)
+        {
+            DataBaseServices.updateMensurationLocality(AppController.get.ViewMeranie.CurrentSelectionFromCombobox.ID, textMensurationLocality.Text.ToString());
+
+        }
+
+        private void btnUpdateMensurationComment_Click(object sender, RoutedEventArgs e)
+        {
+            DataBaseServices.updateMensurationComment(AppController.get.ViewMeranie.CurrentSelectionFromCombobox.ID, textMensurationComment.Text.ToString());
 
         }
     }

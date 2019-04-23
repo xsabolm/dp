@@ -116,10 +116,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ActualMsgControl.xaml.cs">
+      <DependentUpon>ActualMsgControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="AppController.cs" />
     <Compile Include="BasicGraph.xaml.cs">
       <DependentUpon>BasicGraph.xaml</DependentUpon>
     </Compile>
+    <Compile Include="BMSBatteryVoltages.cs" />
     <Compile Include="ComboboxValue.cs" />
     <Compile Include="ConnectionControl.xaml.cs">
       <DependentUpon>ConnectionControl.xaml</DependentUpon>
@@ -136,7 +140,11 @@
     </Compile>
     <Compile Include="LiveConnection.cs" />
     <Compile Include="ObserverSelectedDiscipline.cs" />
+    <Compile Include="ObserverSelectedMsg.cs" />
+    <Compile Include="RunTrack.cs" />
     <Compile Include="SelectedDiscipline.cs" />
+    <Compile Include="SelectedMsges.cs" />
+    <Compile Include="ViewActualMsg.cs" />
     <Compile Include="ViewGraph.cs" />
     <Compile Include="ViewLap.cs" />
     <Compile Include="ViewMain.cs" />
@@ -164,6 +172,10 @@
     <Compile Include="ViewDiscipline.cs" />
     <Compile Include="ViewMensuration.cs" />
     <Compile Include="ViewModel.cs" />
+    <Page Include="ActualMsgControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="BasicGraph.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

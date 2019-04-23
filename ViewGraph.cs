@@ -121,164 +121,166 @@ namespace DP_WpfApp
         public GearedValues<DateTimePoint> BBOX_Power_power_List { get; set; } = new GearedValues<DateTimePoint>();
         public GearedValues<DateTimePoint> BBOX_Power_current_List { get; set; } = new GearedValues<DateTimePoint>();
         public GearedValues<DateTimePoint> BBOX_Power_voltage_List { get; set; } = new GearedValues<DateTimePoint>();
-
+        //public GearedValues<DateTimePoint> Empty_List { get; set; } = new GearedValues<DateTimePoint>();
         private SeriesCollection seriesCollection = new SeriesCollection();
 
         internal void addLines(String selectedValue1, String selectedValue2)
         {
-            
-            seriesCollection.Add(new GLineSeries
+            GearedValues<DateTimePoint> Empty_List = getValueList(selectedValue1, selectedValue2).WithQuality(Quality.Low);
+            if ((Empty_List != null) && (Empty_List.Count > 0))
             {
-                Title = selectedValue1 + ": " + selectedValue2,
-                Values = getValueList(selectedValue1, selectedValue2).WithQuality(Quality.Low),
-                PointGeometry = DefaultGeometries.Circle,
-                PointGeometrySize = 5
-            });
-            
-           // Formatter = x => new DateTime((long)x).ToString("yyyy");
+                seriesCollection.Add(new GLineSeries
+                {
+                    Title = selectedValue1 + ": " + selectedValue2,
+                    Values = getValueList(selectedValue1, selectedValue2).WithQuality(Quality.Low),
+                    PointGeometry = DefaultGeometries.Circle,
+                    PointGeometrySize = 5
+                });
+            }
+            // Formatter = x => new DateTime((long)x).ToString("yyyy");
         }
 
 
 
         private GearedValues<DateTimePoint> getValueList(string v1, string v2)
-    {
-        if (v1.Equals("BBOX_power"))
         {
-            if (v2.Equals("power")) { return BBOX_Power_power_List; }
-            if (v2.Equals("current")) { return BBOX_Power_current_List; }
-            if (v2.Equals("voltage")) { return BBOX_Power_voltage_List; }
+            if (v1.Equals("BBOX_power"))
+            {
+                if (v2.Equals("power")) { return BBOX_Power_power_List; }
+                if (v2.Equals("current")) { return BBOX_Power_current_List; }
+                if (v2.Equals("voltage")) { return BBOX_Power_voltage_List; }
+            }
+            if (v1.Equals("BBOX_status"))
+            {
+                if (v2.Equals("SHD_IN")) { return BBOXStatus_SHD_IN_List; }
+                if (v2.Equals("SHD_OUT")) { return BBOXStatus_SHD_OUT_List; }
+                if (v2.Equals("TSMS")) { return BBOXStatus_TSMS_List; }
+                if (v2.Equals("AIR_N")) { return BBOXStatus_AIR_N_List; }
+                if (v2.Equals("AIR_P")) { return BBOXStatus_AIR_P_List; }
+                if (v2.Equals("PRECH_60V")) { return BBOXStatus_PRECH_60V_List; }
+                if (v2.Equals("IMD_OK")) { return BBOXStatus_IMD_OK_List; }
+                if (v2.Equals("BMS_OK")) { return BBOXStatus_BMS_OK_List; }
+                if (v2.Equals("SIGNAL_ERROR")) { return BBOXStatus_SIGNAL_ERROR_List; }
+                if (v2.Equals("SHD_RESET")) { return BBOXStatus_SHD_RESET_List; }
+                if (v2.Equals("SHD_EN")) { return BBOXStatus_SHD_EN_List; }
+                if (v2.Equals("POLARITY")) { return BBOXStatus_POLARITY_List; }
+                if (v2.Equals("FANS")) { return BBOXStatus_FANS_List; }
+                if (v2.Equals("STM_temp")) { return BBOXStatus_STM_TEMP_List; }
+            }
+            if (v1.Equals("GPS_data"))
+            {
+                if (v2.Equals("latitude")) { return GPS_data_LATITUDE_List; }
+                //if (v2.Equals("latitude_char")) { ViewGraph.Values[listIndex] = ViewGraph.BBOXStatus_STM_TEMP_List; } } }
+                if (v2.Equals("longitude")) { return GPS_data_LONGTITUDE_List; }
+                //if (v2.Equals("longitude_char")) { foreach (var msg in BBOXPowerList) { ViewGraph.Values[listIndex].Add(msg.BBOXPower.power); } }
+                if (v2.Equals("speed")) { return GPS_data_SPEED_List; }
+                if (v2.Equals("course")) { return GPS_data_COURSE_List; }
+                if (v2.Equals("altitude")) { return GPS_data_ALTITUDE_List; }
+            }
+            if (v1.Equals("ECU_State"))
+            {
+                if (v2.Equals("ECU_Status")) { return ECU_State_ECU_STATE_List; }
+                if (v2.Equals("FL_AMK_Status")) { return ECU_State_FL_AMK_STATUS_List; }
+                if (v2.Equals("FR_AMK_Status")) { return ECU_State_FR_AMK_STATUS_List; }
+                if (v2.Equals("RL_AMK_Status")) { return ECU_State_RL_AMK_STATUS_List; }
+                if (v2.Equals("RR_AMK_Status")) { return ECU_State_RR_AMK_Status_List; }
+                if (v2.Equals("TempMotor_H")) { return ECU_State_TempMotor_H_List; }
+                if (v2.Equals("TempInverter_H")) { return ECU_State_TempInverter_H_List; }
+                if (v2.Equals("TempIGBT_H")) { return ECU_State_TempIGBT_H_List; }
+            }
+            if (v1.Equals("BBOX_command"))
+            {
+                if (v2.Equals("FANS")) { return BBOX_Command_FANS_List; }
+                if (v2.Equals("SHD_EN")) { return BBOX_Command_SHD_EN_List; }
+            }
+            if (v1.Equals("FU_Values_1"))
+            {
+                if (v2.Equals("apps1")) { return FU_Values_1_apps1_List; }
+                if (v2.Equals("apps2")) { return FU_Values_1_apps2_List; }
+                if (v2.Equals("brake1")) { return FU_Values_1_brake1_List; }
+                if (v2.Equals("brake2")) { return FU_Values_1_brake2_List; }
+                if (v2.Equals("error")) { return FU_Values_1_error_List; }
+            }
+            if (v1.Equals("Interconnect"))
+            {
+                if (v2.Equals("car_state")) { return Interconnect_car_state_List; }
+                if (v2.Equals("left_w_pump")) { return Interconnect_left_w_pump_List; }
+                if (v2.Equals("right_w_pump")) { return Interconnect_right_w_pump_List; }
+                if (v2.Equals("brake_red")) { return Interconnect_brake_red_List; }
+                if (v2.Equals("brake_white")) { return Interconnect_brake_white_List; }
+                if (v2.Equals("tsas")) { return Interconnect_tsas_List; }
+                if (v2.Equals("killswitch_R")) { return Interconnect_killswitch_R_List; }
+                if (v2.Equals("reserve")) { return Interconnect_reserve_List; }
+                if (v2.Equals("susp_RR")) { return Interconnect_susp_RR_List; }
+                if (v2.Equals("susp_RL")) { return Interconnect_susp_RL_List; }
+            }
+            if (v1.Equals("FU_Values_2"))
+            {
+                if (v2.Equals("steer")) { return FU_Values_2_steer_List; }
+                if (v2.Equals("susp_FL")) { return FU_Values_2_susp_FL_List; }
+                if (v2.Equals("susp_FR")) { return FU_Values_2_susp_FR_List; }
+                if (v2.Equals("brake_pos")) { return FU_Values_2_brake_pos_List; }
+                if (v2.Equals("RTD")) { return FU_Values_2_RTD_List; }
+                if (v2.Equals("BOTS")) { return FU_Values_2_BOTS_List; }
+                if (v2.Equals("SHDB")) { return FU_Values_2_SHDB_List; }
+                if (v2.Equals("INERTIA_SW")) { return FU_Values_2_INERTIA_SW_List; }
+                if (v2.Equals("reserve")) { return FU_Values_2_reserve_List; }
+            }
+            if (v1.Equals("BMS_Command"))
+            {
+                if (v2.Equals("BMS_Balanc")) { return BMS_Command_BMS_Balanc_List; }
+                if (v2.Equals("BMS_FullMode")) { return BMS_Command_BMS_FullMode_List; }
+                if (v2.Equals("BMS_OK")) { return BMS_Command_BMS_OK_List; }
+                if (v2.Equals("BMS_ONOFF")) { return BMS_Command_BMS_ONOFF_List; }
+                if (v2.Equals("BMS_CAN")) { return BMS_Command_BMS_CAN_List; }
+            }
+            if (v1.Equals("BMS_State"))
+            {
+                if (v2.Equals("BMS_Mode")) { return BMS_State_BMS_Mode_List; }
+                if (v2.Equals("BMS_Faults")) { return BMS_State_BMS_Faults_List; }
+                if (v2.Equals("CellVolt_L")) { return BMS_State_CellVolt_L_List; }
+                if (v2.Equals("CellVolt_H")) { return BMS_State_CellVolt_H_List; }
+                if (v2.Equals("CellTemp_L")) { return BMS_State_CellTemp_L_List; }
+                if (v2.Equals("CellTemp_H")) { return BMS_State_CellTemp_H_List; }
+                if (v2.Equals("BMS_Ident")) { return BMS_State_BMS_Ident_List; }
+            }
+            if (v1.Equals("wheel_RPM"))
+            {
+                if (v2.Equals("front_right")) { return wheel_RPM_front_right_List; }
+                if (v2.Equals("front_left")) { return wheel_RPM_front_left_List; }
+                if (v2.Equals("rear_right")) { return wheel_RPM_rear_right_List; }
+                if (v2.Equals("rear_left")) { return wheel_RPM_BMS_rear_left_List; }
+            }
+            if (v1.Equals("BMS_Voltages"))
+            {
+                if (v2.Equals("BMS_VoltIdent")) { return BMS_VoltIdent_BMS_VoltIdentt_List; }
+                if (v2.Equals("BMS_Volt1")) { return BMS_VoltIdent_BMS_Volt1_List; }
+                if (v2.Equals("BMS_Volt2")) { return BMS_VoltIdent_BMS_Volt2_List; }
+                if (v2.Equals("BMS_Volt3")) { return BMS_VoltIdent_BMS_Volt3_List; }
+                if (v2.Equals("BMS_Volt4")) { return BMS_VoltIdent_BMS_Volt4_List; }
+                if (v2.Equals("BMS_Volt5")) { return BMS_VoltIdent_BMS_Volt5_List; }
+                if (v2.Equals("BMS_Volt6")) { return BMS_VoltIdent_BMS_Volt6_List; }
+                if (v2.Equals("BMS_Volt7")) { return BMS_VoltIdent_BMS_Volt7_List; }
+            }
+            if (v1.Equals("BMS_Temps"))
+            {
+                if (v2.Equals("BMS_TempIdent")) { return BMS_Temps_BMS_TempIdent_List; }
+                if (v2.Equals("BMS_Temp1")) { return BMS_Temps_BMS_Temp1_List; }
+                if (v2.Equals("BMS_Temp2")) { return BMS_Temps_BMS_Temp2_List; }
+                if (v2.Equals("BMS_Temp3")) { return BMS_Temps_BMS_Temp3_List; }
+                if (v2.Equals("BMS_Temp4")) { return BMS_Temps_BMS_Temp4_List; }
+                if (v2.Equals("BMS_Temp5")) { return BMS_Temps_BMS_Temp5_List; }
+                if (v2.Equals("BMS_Temp6")) { return BMS_Temps_BMS_Temp6_List; }
+                if (v2.Equals("BMS_Temp7")) { return BMS_Temps_BMS_Temp7_List; }
+            }
+            return null;
         }
-        if (v1.Equals("BBOX_status"))
-        {
-            if (v2.Equals("SHD_IN")) { return BBOXStatus_SHD_IN_List; }
-            if (v2.Equals("SHD_OUT")) { return BBOXStatus_SHD_OUT_List; }
-            if (v2.Equals("TSMS")) { return BBOXStatus_TSMS_List; }
-            if (v2.Equals("AIR_N")) { return BBOXStatus_AIR_N_List; }
-            if (v2.Equals("AIR_P")) { return BBOXStatus_AIR_P_List; }
-            if (v2.Equals("PRECH_60V")) { return BBOXStatus_PRECH_60V_List; }
-            if (v2.Equals("IMD_OK")) { return BBOXStatus_IMD_OK_List; }
-            if (v2.Equals("BMS_OK")) { return BBOXStatus_BMS_OK_List; }
-            if (v2.Equals("SIGNAL_ERROR")) { return BBOXStatus_SIGNAL_ERROR_List; }
-            if (v2.Equals("SHD_RESET")) { return BBOXStatus_SHD_RESET_List; }
-            if (v2.Equals("SHD_EN")) { return BBOXStatus_SHD_EN_List; }
-            if (v2.Equals("POLARITY")) { return BBOXStatus_POLARITY_List; }
-            if (v2.Equals("FANS")) { return BBOXStatus_FANS_List; }
-            if (v2.Equals("STM_temp")) { return BBOXStatus_STM_TEMP_List; }
-        }
-        if (v1.Equals("GPS_data"))
-        {
-            if (v2.Equals("latitude")) { return GPS_data_LATITUDE_List; }
-            //if (v2.Equals("latitude_char")) { ViewGraph.Values[listIndex] = ViewGraph.BBOXStatus_STM_TEMP_List; } } }
-            if (v2.Equals("longitude")) { return GPS_data_LONGTITUDE_List; }
-            //if (v2.Equals("longitude_char")) { foreach (var msg in BBOXPowerList) { ViewGraph.Values[listIndex].Add(msg.BBOXPower.power); } }
-            if (v2.Equals("speed")) { return GPS_data_SPEED_List; }
-            if (v2.Equals("course")) { return GPS_data_COURSE_List; }
-            if (v2.Equals("altitude")) { return GPS_data_ALTITUDE_List; }
-        }
-        if (v1.Equals("ECU_State"))
-        {
-            if (v2.Equals("ECU_Status")) { return ECU_State_ECU_STATE_List; }
-            if (v2.Equals("FL_AMK_Status")) { return ECU_State_FL_AMK_STATUS_List; }
-            if (v2.Equals("FR_AMK_Status")) { return ECU_State_FR_AMK_STATUS_List; }
-            if (v2.Equals("RL_AMK_Status")) { return ECU_State_RL_AMK_STATUS_List; }
-            if (v2.Equals("RR_AMK_Status")) { return ECU_State_RR_AMK_Status_List; }
-            if (v2.Equals("TempMotor_H")) { return ECU_State_TempMotor_H_List; }
-            if (v2.Equals("TempInverter_H")) { return ECU_State_TempInverter_H_List; }
-            if (v2.Equals("TempIGBT_H")) { return ECU_State_TempIGBT_H_List; }
-        }
-        if (v1.Equals("BBOX_command"))
-        {
-            if (v2.Equals("FANS")) { return BBOX_Command_FANS_List; }
-            if (v2.Equals("SHD_EN")) { return BBOX_Command_SHD_EN_List; }
-        }
-        if (v1.Equals("FU_Values_1"))
-        {
-            if (v2.Equals("apps1")) { return FU_Values_1_apps1_List; }
-            if (v2.Equals("apps2")) { return FU_Values_1_apps2_List; }
-            if (v2.Equals("brake1")) { return FU_Values_1_brake1_List; }
-            if (v2.Equals("brake2")) { return FU_Values_1_brake2_List; }
-            if (v2.Equals("error")) { return FU_Values_1_error_List; }
-        }
-        if (v1.Equals("Interconnect"))
-        {
-            if (v2.Equals("car_state")) { return Interconnect_car_state_List; }
-            if (v2.Equals("left_w_pump")) { return Interconnect_left_w_pump_List; }
-            if (v2.Equals("right_w_pump")) { return Interconnect_right_w_pump_List; }
-            if (v2.Equals("brake_red")) { return Interconnect_brake_red_List; }
-            if (v2.Equals("brake_white")) { return Interconnect_brake_white_List; }
-            if (v2.Equals("tsas")) { return Interconnect_tsas_List; }
-            if (v2.Equals("killswitch_R")) { return Interconnect_killswitch_R_List; }
-            if (v2.Equals("reserve")) { return Interconnect_reserve_List; }
-            if (v2.Equals("susp_RR")) { return Interconnect_susp_RR_List; }
-            if (v2.Equals("susp_RL")) { return Interconnect_susp_RL_List; }
-        }
-        if (v1.Equals("FU_Values_2"))
-        {
-            if (v2.Equals("steer")) { return FU_Values_2_steer_List; }
-            if (v2.Equals("susp_FL")) { return FU_Values_2_susp_FL_List; }
-            if (v2.Equals("susp_FR")) { return FU_Values_2_susp_FR_List; }
-            if (v2.Equals("brake_pos")) { return FU_Values_2_brake_pos_List; }
-            if (v2.Equals("RTD")) { return FU_Values_2_RTD_List; }
-            if (v2.Equals("BOTS")) { return FU_Values_2_BOTS_List; }
-            if (v2.Equals("SHDB")) { return FU_Values_2_SHDB_List; }
-            if (v2.Equals("INERTIA_SW")) { return FU_Values_2_INERTIA_SW_List; }
-            if (v2.Equals("reserve")) { return FU_Values_2_reserve_List; }
-        }
-        if (v1.Equals("BMS_Command"))
-        {
-            if (v2.Equals("BMS_Balanc")) { return BMS_Command_BMS_Balanc_List; }
-            if (v2.Equals("BMS_FullMode")) { return BMS_Command_BMS_FullMode_List; }
-            if (v2.Equals("BMS_OK")) { return BMS_Command_BMS_OK_List; }
-            if (v2.Equals("BMS_ONOFF")) { return BMS_Command_BMS_ONOFF_List; }
-            if (v2.Equals("BMS_CAN")) { return BMS_Command_BMS_CAN_List; }
-        }
-        if (v1.Equals("BMS_State"))
-        {
-            if (v2.Equals("BMS_Mode")) { return BMS_State_BMS_Mode_List; }
-            if (v2.Equals("BMS_Faults")) { return BMS_State_BMS_Faults_List; }
-            if (v2.Equals("CellVolt_L")) { return BMS_State_CellVolt_L_List; }
-            if (v2.Equals("CellVolt_H")) { return BMS_State_CellVolt_H_List; }
-            if (v2.Equals("CellTemp_L")) { return BMS_State_CellTemp_L_List; }
-            if (v2.Equals("CellTemp_H")) { return BMS_State_CellTemp_H_List; }
-            if (v2.Equals("BMS_Ident")) { return BMS_State_BMS_Ident_List; }
-        }
-        if (v1.Equals("wheel_RPM"))
-        {
-            if (v2.Equals("front_right")) { return wheel_RPM_front_right_List; }
-            if (v2.Equals("front_left")) { return wheel_RPM_front_left_List; }
-            if (v2.Equals("rear_right")) { return wheel_RPM_rear_right_List; }
-            if (v2.Equals("rear_left")) { return wheel_RPM_BMS_rear_left_List; }
-        }
-        if (v1.Equals("BMS_Voltages"))
-        {
-            if (v2.Equals("BMS_VoltIdent")) { return BMS_VoltIdent_BMS_VoltIdentt_List; }
-            if (v2.Equals("BMS_Volt1")) { return BMS_VoltIdent_BMS_Volt1_List; }
-            if (v2.Equals("BMS_Volt2")) { return BMS_VoltIdent_BMS_Volt2_List; }
-            if (v2.Equals("BMS_Volt3")) { return BMS_VoltIdent_BMS_Volt3_List; }
-            if (v2.Equals("BMS_Volt4")) { return BMS_VoltIdent_BMS_Volt4_List; }
-            if (v2.Equals("BMS_Volt5")) { return BMS_VoltIdent_BMS_Volt5_List; }
-            if (v2.Equals("BMS_Volt6")) { return BMS_VoltIdent_BMS_Volt6_List; }
-            if (v2.Equals("BMS_Volt7")) { return BMS_VoltIdent_BMS_Volt7_List; }
-        }
-        if (v1.Equals("BMS_Temps"))
-        {
-            if (v2.Equals("BMS_TempIdent")) { return BMS_Temps_BMS_TempIdent_List; }
-            if (v2.Equals("BMS_Temp1")) { return BMS_Temps_BMS_Temp1_List; }
-            if (v2.Equals("BMS_Temp2")) { return BMS_Temps_BMS_Temp2_List; }
-            if (v2.Equals("BMS_Temp3")) { return BMS_Temps_BMS_Temp3_List; }
-            if (v2.Equals("BMS_Temp4")) { return BMS_Temps_BMS_Temp4_List; }
-            if (v2.Equals("BMS_Temp5")) { return BMS_Temps_BMS_Temp5_List; }
-            if (v2.Equals("BMS_Temp6")) { return BMS_Temps_BMS_Temp6_List; }
-            if (v2.Equals("BMS_Temp7")) { return BMS_Temps_BMS_Temp7_List; }
-        }
-        return null;
-    }
 
         internal void addBBOXPower(Msg msg)
         {
             BBOX_Power_power_List.Add(new DateTimePoint(msg.ReceiptTime, msg.BBOXPower.power));
             BBOX_Power_current_List.Add(new DateTimePoint(msg.ReceiptTime, msg.BBOXPower.current));
-            BBOX_Power_voltage_List.Add(new DateTimePoint(msg.ReceiptTime, msg.BBOXPower.voltage)); 
+            BBOX_Power_voltage_List.Add(new DateTimePoint(msg.ReceiptTime, msg.BBOXPower.voltage));
         }
         internal void addBBOXStatus(Msg msg)
         {
@@ -401,10 +403,102 @@ namespace DP_WpfApp
             BMS_Temps_BMS_Temp6_List.Add(new DateTimePoint(msg.ReceiptTime, msg.BMSTemps.BMS_Temp6));
             BMS_Temps_BMS_Temp7_List.Add(new DateTimePoint(msg.ReceiptTime, msg.BMSTemps.BMS_Temp7));
         }
+
+        internal void clearView() { SeriesCollection.Clear(); }
+
         internal void clearLists()
-    {
-            SeriesCollection.Clear();
+        {
+            clearView();
+            BBOXStatus_SHD_IN_List.Clear();
+            BMS_VoltIdent_BMS_VoltIdentt_List.Clear();
+            BMS_Temps_BMS_TempIdent_List.Clear();
+            BMS_Temps_BMS_Temp1_List.Clear();
+            BMS_Temps_BMS_Temp2_List.Clear();
+            BMS_Temps_BMS_Temp3_List.Clear();
+            BMS_Temps_BMS_Temp4_List.Clear();
+            BMS_Temps_BMS_Temp5_List.Clear();
+            BMS_Temps_BMS_Temp6_List.Clear();
+            BMS_Temps_BMS_Temp7_List.Clear();
+            BMS_VoltIdent_BMS_Volt7_List.Clear();
+            BMS_VoltIdent_BMS_Volt6_List.Clear();
+            BMS_VoltIdent_BMS_Volt5_List.Clear();
+            BMS_VoltIdent_BMS_Volt4_List.Clear();
+            BMS_VoltIdent_BMS_Volt3_List.Clear();
+            BMS_VoltIdent_BMS_Volt2_List.Clear();
+            BMS_VoltIdent_BMS_Volt1_List.Clear();
+            wheel_RPM_BMS_rear_left_List.Clear();
+            wheel_RPM_front_right_List.Clear();
+            wheel_RPM_front_left_List.Clear();
+            wheel_RPM_rear_right_List.Clear();
+            BMS_State_BMS_Mode_List.Clear();
+            BMS_State_BMS_Faults_List.Clear();
+            BMS_State_CellVolt_L_List.Clear();
+            BMS_State_CellVolt_H_List.Clear();
+            BMS_State_CellTemp_L_List.Clear();
+            BMS_State_CellTemp_H_List.Clear();
+            BMS_State_BMS_Ident_List.Clear();
+            BMS_Command_BMS_Balanc_List.Clear();
+            BMS_Command_BMS_FullMode_List.Clear();
+            BMS_Command_BMS_OK_List.Clear();
+            BMS_Command_BMS_ONOFF_List.Clear();
+            BMS_Command_BMS_CAN_List.Clear();
+            FU_Values_2_reserve_List.Clear();
+            FU_Values_2_INERTIA_SW_List.Clear();
+            FU_Values_2_SHDB_List.Clear();
+            FU_Values_2_BOTS_List.Clear();
+            FU_Values_2_RTD_List.Clear();
+            FU_Values_2_steer_List.Clear();
+            FU_Values_2_susp_FL_List.Clear();
+            FU_Values_2_susp_FR_List.Clear();
+            FU_Values_2_brake_pos_List.Clear();
+            Interconnect_car_state_List.Clear();
+            Interconnect_left_w_pump_List.Clear();
+            Interconnect_right_w_pump_List.Clear();
+            Interconnect_brake_red_List.Clear();
+            Interconnect_brake_white_List.Clear();
+            Interconnect_tsas_List.Clear();
+            Interconnect_killswitch_R_List.Clear();
+            Interconnect_reserve_List.Clear();
+            Interconnect_susp_RR_List.Clear();
+            Interconnect_susp_RL_List.Clear();
+            FU_Values_1_error_List.Clear();
+            FU_Values_1_apps1_List.Clear();
+            FU_Values_1_apps2_List.Clear();
+            FU_Values_1_brake1_List.Clear();
+            FU_Values_1_brake2_List.Clear();
+            BBOX_Command_SHD_EN_List.Clear();
+            BBOX_Command_FANS_List.Clear();
+            BBOXStatus_SHD_OUT_List.Clear();
+            BBOXStatus_TSMS_List.Clear();
+            BBOXStatus_AIR_N_List.Clear();
+            BBOXStatus_AIR_P_List.Clear();
+            BBOXStatus_PRECH_60V_List.Clear();
+            BBOXStatus_IMD_OK_List.Clear();
+            BBOXStatus_BMS_OK_List.Clear();
+            BBOXStatus_SIGNAL_ERROR_List.Clear();
+            BBOXStatus_SHD_RESET_List.Clear();
+            BBOXStatus_SHD_EN_List.Clear();
+            BBOXStatus_POLARITY_List.Clear();
+            BBOXStatus_FANS_List.Clear();
+            BBOXStatus_STM_TEMP_List.Clear();
+            GPS_data_LATITUDE_List.Clear();
+            GPS_data_LONGTITUDE_List.Clear();
+            GPS_data_SPEED_List.Clear();
+            GPS_data_COURSE_List.Clear();
+            GPS_data_ALTITUDE_List.Clear();
+            ECU_State_ECU_STATE_List.Clear();
+            ECU_State_FL_AMK_STATUS_List.Clear();
+            ECU_State_FR_AMK_STATUS_List.Clear();
+            ECU_State_RL_AMK_STATUS_List.Clear();
+            ECU_State_RR_AMK_Status_List.Clear();
+            ECU_State_TempMotor_H_List.Clear();
+            ECU_State_TempInverter_H_List.Clear();
+            ECU_State_TempIGBT_H_List.Clear();
+            BBOX_Power_power_List.Clear();
+            BBOX_Power_current_List.Clear();
+            BBOX_Power_voltage_List.Clear();
+        }
     }
-}}
+}
 
 

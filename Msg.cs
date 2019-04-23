@@ -75,6 +75,11 @@ namespace DP_WpfApp
         public BMSTemps BMSTemps { get => bMSTemps; set => bMSTemps = value; }
         public int IdJson { get => idJson; set => idJson = value; }
 
+
+        public Msg()
+        {
+        }
+
         public Msg(DataRow row)
         {
             ID = Convert.ToInt32(row[DatabaseQueries.ID]);
